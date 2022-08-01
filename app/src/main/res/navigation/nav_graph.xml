@@ -9,5 +9,30 @@
         android:id="@+id/dailyTasksFragment"
         android:name="com.greemoid.ithelps.presentation.dailyTasks.DailyTasksFragment"
         android:label="fragment_daily_tasks"
-        tools:layout="@layout/fragment_daily_tasks" />
+        tools:layout="@layout/fragment_daily_tasks" >
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_choiceMoodFragment"
+            app:destination="@id/choiceMoodFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_meditationFragment"
+            app:destination="@id/meditationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceMoodFragment"
+        android:name="com.greemoid.ithelps.presentation.choiceMood.ChoiceMoodFragment"
+        android:label="fragment_choice_mood"
+        tools:layout="@layout/fragment_choice_mood" />
+    <fragment
+        android:id="@+id/diaryFragment"
+        android:name="com.greemoid.ithelps.presentation.diary.DiaryFragment"
+        android:label="fragment_diary"
+        tools:layout="@layout/fragment_diary" />
+    <fragment
+        android:id="@+id/meditationFragment"
+        android:name="com.greemoid.ithelps.presentation.meditation.MeditationFragment"
+        android:label="fragment_meditation"
+        tools:layout="@layout/fragment_meditation" />
 </navigation>
