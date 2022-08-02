@@ -29,7 +29,11 @@
         android:id="@+id/diaryFragment"
         android:name="com.greemoid.ithelps.presentation.diary.DiaryFragment"
         android:label="fragment_diary"
-        tools:layout="@layout/fragment_diary" />
+        tools:layout="@layout/fragment_diary" >
+        <action
+            android:id="@+id/action_diaryFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
+    </fragment>
     <fragment
         android:id="@+id/meditationFragment"
         android:name="com.greemoid.ithelps.presentation.meditation.MeditationFragment"

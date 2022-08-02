@@ -6,8 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "diary_table")
 data class DiaryNoteDB(
-    @PrimaryKey(autoGenerate = true) val id: Int,
-    @ColumnInfo val title: String,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
     @ColumnInfo val description: String,
     @ColumnInfo val date: String,
 )

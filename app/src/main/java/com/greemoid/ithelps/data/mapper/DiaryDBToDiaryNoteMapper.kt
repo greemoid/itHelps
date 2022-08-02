@@ -24,8 +24,6 @@ class DiaryDBToDiaryNoteMapper : Mapper<List<DiaryNoteDB>, List<DiaryNote>> {
         val list = mutableListOf<DiaryNote>()
         input.forEach {
             list.add(DiaryNote(
-                it.id,
-                it.title,
                 it.description,
                 it.date
             ))

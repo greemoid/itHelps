@@ -11,21 +11,4 @@ abstract class DiaryDatabase : RoomDatabase() {
 
     abstract fun getDiaryDao(): DiaryDao
 
-    companion object {
-        private var database: DiaryDatabase? = null
-
-        @Synchronized
-        fun getInstance(context: Context): DiaryDatabase {
-            return if (database == null) {
-                database = Room.databaseBuilder(
-                    context,
-                    DiaryDatabase::class.java,
-                    "diary_table.db")
-                    .build()
-                database as DiaryDatabase
-            } else {
-                database as DiaryDatabase
-            }
-        }
-    }
 }

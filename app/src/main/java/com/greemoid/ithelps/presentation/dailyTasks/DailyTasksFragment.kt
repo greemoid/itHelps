@@ -9,12 +9,13 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentDailyTasksBinding
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
 class DailyTasksFragment : Fragment() {
 
     private lateinit var binding: FragmentDailyTasksBinding
-    private val viewModel: DailyTasksViewModel by viewModels()
+    private val viewModel: DailyTasksViewModel by sharedViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,7 +28,7 @@ class DailyTasksFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tvDate.text = viewModel.getCurrentDate()
+        binding.tvDate.text = viewModel.day
         binding.diaryLayout.setOnClickListener {
             findNavController().navigate(R.id.action_dailyTasksFragment_to_diaryFragment)
         }
