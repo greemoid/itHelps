@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable/black_cursor.xml" value="0.408" />
         <entry key="..\:/Project/itHelps/app/src/main/res/drawable/corners.xml" value="0.408" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable/ic_update.xml" value="0.408" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable/multi_line_text_style.xml" value="0.408" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/activity_main.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_choice_mood.xml" value="0.42239583333333336" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_daily_tasks.xml" value="0.4" />
-        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_meditation.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_diary.xml" value="0.4" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_meditation.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/item.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/plan_items_layout.xml" value="0.4395833333333333" />
       </map>
