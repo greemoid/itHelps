@@ -29,6 +29,9 @@ class DailyTasksFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.tvDate.text = viewModel.day
+        binding.ivAvatar.setOnClickListener {
+            findNavController().navigate(R.id.action_dailyTasksFragment_to_accountFragment)
+        }
         binding.diaryLayout.setOnClickListener {
             findNavController().navigate(R.id.action_dailyTasksFragment_to_diaryFragment)
         }

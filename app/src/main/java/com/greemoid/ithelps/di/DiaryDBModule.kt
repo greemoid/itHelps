@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.room.Room
 import com.greemoid.ithelps.data.db.diaryDB.DiaryDao
 import com.greemoid.ithelps.data.db.diaryDB.DiaryDatabase
+import com.greemoid.ithelps.data.db.diaryDB.MoodDao
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 
@@ -14,9 +15,14 @@ val diaryDBModule = module {
             .build()
     }
 
-    fun provideDao(dataBase: DiaryDatabase): DiaryDao {
+    fun provideDiaryDao(dataBase: DiaryDatabase): DiaryDao {
         return dataBase.getDiaryDao()
     }
+
+    fun provideMoodDao(database: DiaryDatabase): MoodDao {
+        return database.getMoodDao()
+    }
     single { provideDataBase(androidApplication()) }
-    single { provideDao(get()) }
+    single { provideDiaryDao(get()) }
+    single { provideMoodDao(get()) }
 }

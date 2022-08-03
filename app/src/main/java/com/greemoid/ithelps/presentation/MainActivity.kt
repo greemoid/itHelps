@@ -2,6 +2,7 @@ package com.greemoid.ithelps.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.navigation.fragment.NavHostFragment
 import com.greemoid.ithelps.R
 

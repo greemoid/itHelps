@@ -13,12 +13,12 @@ class DiaryCacheDataSource(
 ) : DiaryRepository {
     override fun allDiaryNotes(): List<DiaryNote> {
         val list = diaryDao.getAllDiaryNotes()
-        return mapperToDomain(list)
+        return mapperToDomain.map(list)
     }
 
 
     override suspend fun upsertDiaryNote(diaryNote: DiaryNote) {
-        val diaryNoteDB = mapperToData.invoke(diaryNote)
+        val diaryNoteDB = mapperToData.map(diaryNote)
         diaryDao.upsertDiaryNote(diaryNote = diaryNoteDB)
     }
 }

@@ -44,6 +44,8 @@ dependencies {
     def retrofit_version = '2.9.0'
     def room_version = '2.4.3'
 
+    implementation 'joda-time:joda-time:2.10.14'
+
     // Architectural Components
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
 
