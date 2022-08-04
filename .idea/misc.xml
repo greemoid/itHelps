@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Project/itHelps/app/src/main/res/drawable/black_cursor.xml" value="0.408" />
         <entry key="..\:/Project/itHelps/app/src/main/res/drawable/corners.xml" value="0.408" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable/ic_create.xml" value="0.408" />
         <entry key="..\:/Project/itHelps/app/src/main/res/drawable/ic_update.xml" value="0.408" />
         <entry key="..\:/Project/itHelps/app/src/main/res/drawable/mood_item_background.xml" value="0.408" />
         <entry key="..\:/Project/itHelps/app/src/main/res/drawable/multi_line_text_style.xml" value="0.408" />
@@ -18,9 +19,12 @@
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_mood_add.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_mood_description.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo_add.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo_list_tasks.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/item.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/mood_items_layout.xml" value="0.8800000000000001" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/plan_items_layout.xml" value="0.4395833333333333" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/task_item_layout.xml" value="0.6" />
         <entry key="..\:/Project/itHelps/app/src/main/res/menu/bottom_menu.xml" value="0.440625" />
       </map>
     </option>

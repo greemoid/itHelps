@@ -14,7 +14,13 @@ class Date {
     }
 
     fun getCurrentFullDate() : String {
-        return getCurrentDateTime().toString("dd.MM.yyyy")
+        return getCurrentDateTime().toString("d.M.yyyy")
+    }
+
+    fun getTomorrow(): String {
+        val today = getCurrentFullDate()
+        val tomorrow = today.substring(0,1).toInt() + 1
+        return "${tomorrow}${today.substring(1, today.length)}"
     }
 
     private fun Date.toString(format: String, locale: Locale = Locale.getDefault()): String {

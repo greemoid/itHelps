@@ -28,20 +28,20 @@ class DiaryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.editTextTextOfDiary.requestFocus()
+        binding.etAnswer.requestFocus()
 
         binding.tvToday.text = viewModel.currentDay
 
         binding.btnSave.setOnClickListener {
 
-            if (binding.editTextTextOfDiary.text.isNotEmpty()) {
-                val description = binding.editTextTextOfDiary.text.toString()
+            if (binding.etAnswer.text.isNotEmpty()) {
+                val description = binding.etAnswer.text.toString()
                 val diaryNote = DiaryNote(
                     description = description,
                     date = viewModel.fullyDate
                 )
                 viewModel.save(diaryNote)
-                binding.editTextTextOfDiary.text = null
+                binding.etAnswer.text = null
                 findNavController().navigate(R.id.action_diaryFragment_to_dailyTasksFragment)
             } else {
                 Snackbar

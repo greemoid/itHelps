@@ -1,7 +1,6 @@
 package com.greemoid.ithelps.di
 
-import com.greemoid.ithelps.domain.usecases.SaveDiaryNoteUseCase
-import com.greemoid.ithelps.domain.usecases.SaveMoodUseCase
+import com.greemoid.ithelps.domain.usecases.*
 import org.koin.dsl.module
 
 val domainModule = module {
@@ -15,6 +14,24 @@ val domainModule = module {
     single {
         SaveMoodUseCase(
             moodRepository = get()
+        )
+    }
+
+    single {
+        SaveTaskUseCase(
+            taskRepository = get()
+        )
+    }
+
+    single {
+        GetAllTasksUseCase(
+            taskRepository = get()
+        )
+    }
+
+    single {
+        GetTasksByTaskTypeUseCase(
+            taskRepository = get()
         )
     }
 }
