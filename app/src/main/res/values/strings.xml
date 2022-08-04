@@ -2,4 +2,13 @@
     <string name="app_name">.itHelps</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <array name="array_of_chapters">
+        <item>Термінові і важливі</item>
+        <item>Важливі, але не термінові</item>
+        <item>Термінові, але не важливі</item>
+        <item>Не термінові і не важливі</item>
+        <item>Мій день</item>
+        <item>Покупки</item>
+        <item>Історія</item>
+    </array>
 </resources>

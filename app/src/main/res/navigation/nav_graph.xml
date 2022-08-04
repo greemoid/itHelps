@@ -1,6 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dailyTasksFragment">
 
+    <fragment
+        android:id="@+id/dailyTasksFragment"
+        android:name="com.greemoid.ithelps.presentation.dailyTasks.DailyTasksFragment"
+        android:label="fragment_daily_tasks"
+        tools:layout="@layout/fragment_daily_tasks" >
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_choiceMoodFragment"
+            app:destination="@id/choiceMoodFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_meditationFragment"
+            app:destination="@id/meditationFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_habitTrackerFragment"
+            app:destination="@id/habitTrackerFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceMoodFragment"
+        android:name="com.greemoid.ithelps.presentation.choiceMood.ChoiceMoodFragment"
+        android:label="fragment_choice_mood"
+        tools:layout="@layout/fragment_choice_mood" >
+        <action
+            android:id="@+id/action_choiceMoodFragment_to_moodAddFragment"
+            app:destination="@id/moodAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diaryFragment"
+        android:name="com.greemoid.ithelps.presentation.diary.DiaryFragment"
+        android:label="fragment_diary"
+        tools:layout="@layout/fragment_diary" >
+        <action
+            android:id="@+id/action_diaryFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/meditationFragment"
+        android:name="com.greemoid.ithelps.presentation.meditation.MeditationFragment"
+        android:label="fragment_meditation"
+        tools:layout="@layout/fragment_meditation" />
+    <fragment
+        android:id="@+id/moodAddFragment"
+        android:name="com.greemoid.ithelps.presentation.moodAdd.MoodAddFragment"
+        android:label="fragment_mood_add"
+        tools:layout="@layout/fragment_mood_add" >
+        <argument
+            android:name="moodType"
+            app:argType="com.greemoid.ithelps.domain.models.MoodType" />
+        <action
+            android:id="@+id/action_moodAddFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.greemoid.ithelps.presentation.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/habitTrackerFragment"
+        android:name="com.greemoid.ithelps.presentation.habitTracker.HabitTrackerFragment"
+        android:label="fragment_habit_tracker"
+        tools:layout="@layout/fragment_habit_tracker" />
+    <fragment
+        android:id="@+id/instrumentsFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.InstrumentsFragment"
+        android:label="fragment_instruments"
+        tools:layout="@layout/fragment_instruments" />
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.TodoFragment"
+        android:label="fragment_todo"
+        tools:layout="@layout/fragment_todo" >
+        <action
+            android:id="@+id/action_todoFragment_to_todoAddFragment"
+            app:destination="@id/todoAddFragment" />
+        <action
+            android:id="@+id/action_todoFragment_to_todoListTasksFragment"
+            app:destination="@id/todoListTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoAddFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.TodoAddFragment"
+        android:label="fragment_todo_add"
+        tools:layout="@layout/fragment_todo_add" >
+        <action
+            android:id="@+id/action_todoAddFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoListTasksFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.TodoListTasksFragment"
+        android:label="fragment_todo_list_tasks"
+        tools:layout="@layout/fragment_todo_list_tasks" >
+        <action
+            android:id="@+id/action_todoListTasksFragment_self"
+            app:destination="@id/todoListTasksFragment" />
+        <action
+            android:id="@+id/action_todoListTasksFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+        <argument
+            android:name="type"
+            app:argType="string"
+            android:defaultValue="Мій день" />
+    </fragment>
 </navigation>
