@@ -12,20 +12,26 @@
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/activity_main.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_account.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_choice_mood.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_choice_of_time_for_meditation.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_daily_tasks.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_diary.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_instruments.xml" value="0.42239583333333336" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_meditation.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_mood_add.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_mood_description.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_search_task.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_task_item.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo.xml" value="0.42239583333333336" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo_add.xml" value="0.42239583333333336" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo_list_tasks.xml" value="0.4" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo_task.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_update_task.xml" value="0.42239583333333336" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/item.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/mood_items_layout.xml" value="0.8800000000000001" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/plan_items_layout.xml" value="0.4395833333333333" />
-        <entry key="..\:/Project/itHelps/app/src/main/res/layout/task_item_layout.xml" value="0.6" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/task_item_layout.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/menu/bottom_menu.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/menu/edit_and_delete_menu.xml" value="0.440625" />
       </map>
     </option>
   </component>

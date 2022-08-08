@@ -10,7 +10,6 @@ import com.greemoid.ithelps.R
 
 class TodoTaskFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,

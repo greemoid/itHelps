@@ -108,9 +108,7 @@
         android:name="com.greemoid.ithelps.presentation.todo.TodoListTasksFragment"
         android:label="fragment_todo_list_tasks"
         tools:layout="@layout/fragment_todo_list_tasks" >
-        <action
-            android:id="@+id/action_todoListTasksFragment_self"
-            app:destination="@id/todoListTasksFragment" />
+
         <action
             android:id="@+id/action_todoListTasksFragment_to_todoFragment"
             app:destination="@id/todoFragment" />
@@ -118,5 +116,35 @@
             android:name="type"
             app:argType="string"
             android:defaultValue="Мій день" />
+        <action
+            android:id="@+id/action_todoListTasksFragment_to_taskItemFragment"
+            app:destination="@id/taskItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskItemFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.TaskItemFragment"
+        android:label="fragment_task_item"
+        tools:layout="@layout/fragment_task_item" >
+        <action
+            android:id="@+id/action_taskItemFragment_to_todoListTasksFragment"
+            app:destination="@id/todoListTasksFragment" />
+        <argument
+            android:name="task"
+            app:argType="com.greemoid.ithelps.data.models.TaskDB" />
+        <action
+            android:id="@+id/action_taskItemFragment_to_updateTaskFragment"
+            app:destination="@id/updateTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTaskFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.UpdateTaskFragment"
+        android:label="fragment_update_task"
+        tools:layout="@layout/fragment_update_task" >
+        <action
+            android:id="@+id/action_updateTaskFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+        <argument
+            android:name="task"
+            app:argType="com.greemoid.ithelps.data.models.TaskDB" />
     </fragment>
 </navigation>

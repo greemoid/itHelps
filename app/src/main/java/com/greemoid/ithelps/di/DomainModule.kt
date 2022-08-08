@@ -34,4 +34,17 @@ val domainModule = module {
             taskRepository = get()
         )
     }
+
+    single {
+        DeleteTaskUseCase(
+            taskRepository = get()
+        )
+    }
+
+    single {
+        UpdateTaskUseCase(
+            repository = get()
+        )
+    }
+
 }

@@ -3,6 +3,7 @@ package com.greemoid.ithelps.data.models
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(tableName = "tasks_table")
 data class TaskDB(
@@ -12,4 +13,4 @@ data class TaskDB(
     @ColumnInfo val taskType: String,
     @ColumnInfo val date: String,
     @ColumnInfo val isDone: Boolean,
-)
+) : Serializable

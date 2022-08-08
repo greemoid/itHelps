@@ -8,27 +8,27 @@ import java.util.*
 
 class MeditationViewModel : ViewModel() {
 
-    /*private val _millisL: Long = 0
-    val millis: LiveData<Long> = _millis
+    private val _millis = MutableLiveData<String>("")
+    val millis: LiveData<String> = _millis
+    lateinit var timer: CountDownTimer
 
-    fun addFiveMinutes(millis: LiveData<Long>): String {
-        millis.value?.minus(30000)
-        return convert(millis)
+    fun startTimer(time: Long) {
+        timer = object : CountDownTimer(time, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                val seconds = millisUntilFinished / 1000
+                val minutes = (seconds % 3600) / 60
+                val secs = seconds % 60
+
+                _millis.value = String.format(Locale.getDefault(), "%02d:%02d", minutes, secs)
+            }
+
+            override fun onFinish() {
+                _millis.value = "Done!"
+            }
+        }.start()
     }
 
-    fun minusFiveMinutes(millis: LiveData<Long>): String {
-        millis.value?.plus(30000)
-        return convert(millis)
+    fun cancelTimer() {
+        timer.cancel()
     }
-
-
-
-    private fun convert(millis: Long): String {
-
-        val seconds = millis / 1000
-        val minutes = (seconds % 3600) / 60
-        val secs = seconds % 60
-
-        return String.format(Locale.getDefault(), "%02d:%02d", minutes, secs)
-    }*/
 }
