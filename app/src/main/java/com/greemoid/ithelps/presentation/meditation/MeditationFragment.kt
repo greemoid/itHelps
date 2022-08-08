@@ -27,26 +27,6 @@ class MeditationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        /*val timer = object : CountDownTimer(900000, 1000) {
-
-            // Callback function, fired on regular interval
-            override fun onTick(millisUntilFinished: Long) {
-                val seconds = millisUntilFinished / 1000
-                val minutes = (seconds % 3600) / 60
-                val secs = seconds % 60
-
-                val time = String.format(Locale.getDefault(), "%02d:%02d", minutes, secs)
-
-                binding.tvTimer.text = time
-            }
-
-            // Callback function, fired
-            // when the time is up
-            override fun onFinish() {
-                binding.tvTimer.text = "done!"
-            }
-        }*/
-
         var etTime: String = ""
         var time: Long = 0
         binding.btnSetTime.setOnClickListener {
