@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.RecyclerView
+import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentTodoListTasksBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -32,8 +34,18 @@ class TodoListTasksFragment : Fragment() {
         setupRecyclerView()
         val type: String = args.type
 
+
+
         viewModel.getByType(type).observe(viewLifecycleOwner) { list ->
-            adapter.submitList(list)
+            adapter.submitList(list.asReversed())
+        }
+        adapter.setOnItemClickListener {
+            val bundle = Bundle()
+            bundle.putSerializable("task", it)
+            findNavController().navigate(
+                R.id.action_todoListTasksFragment_to_taskItemFragment,
+                bundle
+            )
         }
     }
 

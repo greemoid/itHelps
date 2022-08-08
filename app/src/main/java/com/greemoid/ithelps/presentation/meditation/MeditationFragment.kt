@@ -1,14 +1,12 @@
 package com.greemoid.ithelps.presentation.meditation
 
 import android.os.Bundle
-import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.greemoid.ithelps.databinding.FragmentMeditationBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import java.util.*
 
 
 class MeditationFragment : Fragment() {

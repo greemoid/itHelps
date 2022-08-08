@@ -118,5 +118,20 @@
             android:name="type"
             app:argType="string"
             android:defaultValue="Мій день" />
+        <action
+            android:id="@+id/action_todoListTasksFragment_to_taskItemFragment"
+            app:destination="@id/taskItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskItemFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.TaskItemFragment"
+        android:label="fragment_task_item"
+        tools:layout="@layout/fragment_task_item" >
+        <action
+            android:id="@+id/action_taskItemFragment_to_todoListTasksFragment"
+            app:destination="@id/todoListTasksFragment" />
+        <argument
+            android:name="task"
+            app:argType="com.greemoid.ithelps.data.models.TaskDB" />
     </fragment>
 </navigation>
