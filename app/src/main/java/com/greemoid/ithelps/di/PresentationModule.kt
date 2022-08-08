@@ -5,6 +5,7 @@ import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
 import com.greemoid.ithelps.presentation.diary.DiaryViewModel
 import com.greemoid.ithelps.presentation.meditation.MeditationViewModel
 import com.greemoid.ithelps.presentation.moodAdd.MoodAddViewModel
+import com.greemoid.ithelps.presentation.todo.TaskItemViewModel
 import com.greemoid.ithelps.presentation.todo.TodoAddViewModel
 import com.greemoid.ithelps.presentation.todo.TodoListTasksViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -47,5 +48,11 @@ val presentationModule = module {
 
     viewModel {
         MeditationViewModel()
+    }
+
+    viewModel {
+        TaskItemViewModel(
+            useCase = get()
+        )
     }
 }

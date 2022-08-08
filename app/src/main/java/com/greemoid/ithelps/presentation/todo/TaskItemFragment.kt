@@ -9,12 +9,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentTaskItemBinding
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
 class TaskItemFragment : Fragment() {
 
     private lateinit var binding: FragmentTaskItemBinding
     private val args: TaskItemFragmentArgs by navArgs()
+    private val viewModel: TaskItemViewModel by sharedViewModel()
 
 
     override fun onCreateView(
@@ -35,7 +37,15 @@ class TaskItemFragment : Fragment() {
             tvDateOfTask.text = task.date
         }
         binding.btnClose.setOnClickListener {
-            findNavController().navigate(R.id.action_taskItemFragment_to_todoListTasksFragment)
+            val bundle = Bundle()
+            bundle.putString("type", task.taskType)
+            findNavController().navigate(R.id.action_taskItemFragment_to_todoListTasksFragment, bundle)
+        }
+        binding.btnDelete.setOnClickListener {
+            viewModel.delete(task)
+            val bundle = Bundle()
+            bundle.putString("type", task.taskType)
+            findNavController().navigate(R.id.action_taskItemFragment_to_todoListTasksFragment, bundle)
         }
     }
 

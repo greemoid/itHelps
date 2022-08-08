@@ -1,10 +1,7 @@
 package com.greemoid.ithelps.data.db.diaryDB
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.greemoid.ithelps.data.models.TaskDB
 
 @Dao
@@ -18,4 +15,7 @@ interface TasksDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertTask(taskDB: TaskDB)
+
+    @Delete
+    suspend fun deleteTask(taskDB: TaskDB)
 }

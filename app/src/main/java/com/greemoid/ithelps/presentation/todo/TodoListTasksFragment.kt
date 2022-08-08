@@ -33,12 +33,13 @@ class TodoListTasksFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
         val type: String = args.type
-
-
-
+        binding.btnClose.setOnClickListener {
+            findNavController().navigate(R.id.action_todoListTasksFragment_to_todoFragment)
+        }
         viewModel.getByType(type).observe(viewLifecycleOwner) { list ->
             adapter.submitList(list.asReversed())
         }
+
         adapter.setOnItemClickListener {
             val bundle = Bundle()
             bundle.putSerializable("task", it)

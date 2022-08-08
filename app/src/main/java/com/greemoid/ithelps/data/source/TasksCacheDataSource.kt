@@ -27,4 +27,10 @@ class TasksCacheDataSource(
         val taskDB = domainToDataMapper.map(task)
         tasksDao.insertTask(taskDB = taskDB)
     }
+
+    override suspend fun deleteTask(task: TaskDB) {
+        tasksDao.deleteTask(task)
+    }
+
+
 }

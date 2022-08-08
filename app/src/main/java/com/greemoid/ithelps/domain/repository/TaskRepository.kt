@@ -10,6 +10,7 @@ interface TaskRepository {
 
     fun getTasksByTasksType(taskType: String): LiveData<List<TaskDB>>
 
-
     suspend fun insertTask(task: Task)
+
+    suspend fun deleteTask(task: TaskDB)
 }
