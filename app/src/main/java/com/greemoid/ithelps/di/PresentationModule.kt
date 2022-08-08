@@ -3,6 +3,7 @@ package com.greemoid.ithelps.di
 import com.greemoid.ithelps.presentation.core.Date
 import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
 import com.greemoid.ithelps.presentation.diary.DiaryViewModel
+import com.greemoid.ithelps.presentation.meditation.MeditationViewModel
 import com.greemoid.ithelps.presentation.moodAdd.MoodAddViewModel
 import com.greemoid.ithelps.presentation.todo.TodoAddViewModel
 import com.greemoid.ithelps.presentation.todo.TodoListTasksViewModel
@@ -42,5 +43,9 @@ val presentationModule = module {
             getAllTasksUseCase = get(),
             getTasksByTaskTypeUseCase = get()
         )
+    }
+
+    viewModel {
+        MeditationViewModel()
     }
 }
