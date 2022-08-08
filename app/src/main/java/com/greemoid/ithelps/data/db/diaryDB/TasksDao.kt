@@ -13,8 +13,11 @@ interface TasksDao {
     @Query("SELECT * FROM tasks_table WHERE taskType = :taskType")
     fun getTasksByTasksType(taskType: String): LiveData<List<TaskDB>>
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertTask(taskDB: TaskDB)
+
+    @Update
+    suspend fun updateTask(taskDB: TaskDB)
 
     @Delete
     suspend fun deleteTask(taskDB: TaskDB)

@@ -41,6 +41,13 @@ class TaskItemFragment : Fragment() {
             bundle.putString("type", task.taskType)
             findNavController().navigate(R.id.action_taskItemFragment_to_todoListTasksFragment, bundle)
         }
+
+        binding.btnEdit.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putSerializable("task", task)
+            findNavController().navigate(R.id.action_taskItemFragment_to_updateTaskFragment, bundle)
+        }
+
         binding.btnDelete.setOnClickListener {
             viewModel.delete(task)
             val bundle = Bundle()

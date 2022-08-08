@@ -40,4 +40,11 @@ val domainModule = module {
             taskRepository = get()
         )
     }
+
+    single {
+        UpdateTaskUseCase(
+            repository = get()
+        )
+    }
+
 }

@@ -131,5 +131,20 @@
         <argument
             android:name="task"
             app:argType="com.greemoid.ithelps.data.models.TaskDB" />
+        <action
+            android:id="@+id/action_taskItemFragment_to_updateTaskFragment"
+            app:destination="@id/updateTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTaskFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.UpdateTaskFragment"
+        android:label="fragment_update_task"
+        tools:layout="@layout/fragment_update_task" >
+        <action
+            android:id="@+id/action_updateTaskFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+        <argument
+            android:name="task"
+            app:argType="com.greemoid.ithelps.data.models.TaskDB" />
     </fragment>
 </navigation>

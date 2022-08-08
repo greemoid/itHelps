@@ -1,5 +1,6 @@
 package com.greemoid.ithelps.di
 
+import com.greemoid.ithelps.data.mapper.TaskToTaskDBMapper
 import com.greemoid.ithelps.presentation.core.Date
 import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
 import com.greemoid.ithelps.presentation.diary.DiaryViewModel
@@ -8,6 +9,7 @@ import com.greemoid.ithelps.presentation.moodAdd.MoodAddViewModel
 import com.greemoid.ithelps.presentation.todo.TaskItemViewModel
 import com.greemoid.ithelps.presentation.todo.TodoAddViewModel
 import com.greemoid.ithelps.presentation.todo.TodoListTasksViewModel
+import com.greemoid.ithelps.presentation.todo.UpdateViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -55,4 +57,11 @@ val presentationModule = module {
             useCase = get()
         )
     }
+
+    viewModel {
+        UpdateViewModel(
+            updateTaskUseCase = get()
+        )
+    }
+
 }

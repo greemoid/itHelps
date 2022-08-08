@@ -28,9 +28,14 @@ class TasksCacheDataSource(
         tasksDao.insertTask(taskDB = taskDB)
     }
 
+    override suspend fun updateTask(task: TaskDB) {
+        tasksDao.updateTask(task)
+    }
+
     override suspend fun deleteTask(task: TaskDB) {
         tasksDao.deleteTask(task)
     }
+
 
 
 }
