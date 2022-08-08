@@ -65,6 +65,9 @@ class UpdateTaskFragment : Fragment() {
             viewModel.updateTask(taskDB)
             findNavController().navigate(R.id.action_updateTaskFragment_to_todoFragment)
         }
+        binding.btnClose.setOnClickListener {
+            findNavController().navigate(R.id.action_updateTaskFragment_to_todoFragment)
+        }
 
     }
 

@@ -51,7 +51,7 @@ class TodoListTasksFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        adapter = TodoTasksAdapter()
+        adapter = TodoTasksAdapter(viewModel)
         recyclerView = binding.recyclerviewListOfTasks
         recyclerView.adapter = adapter
     }

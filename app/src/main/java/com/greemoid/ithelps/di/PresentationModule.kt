@@ -6,14 +6,17 @@ import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
 import com.greemoid.ithelps.presentation.diary.DiaryViewModel
 import com.greemoid.ithelps.presentation.meditation.MeditationViewModel
 import com.greemoid.ithelps.presentation.moodAdd.MoodAddViewModel
-import com.greemoid.ithelps.presentation.todo.TaskItemViewModel
-import com.greemoid.ithelps.presentation.todo.TodoAddViewModel
-import com.greemoid.ithelps.presentation.todo.TodoListTasksViewModel
-import com.greemoid.ithelps.presentation.todo.UpdateViewModel
+import com.greemoid.ithelps.presentation.todo.*
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val presentationModule = module {
+
+    single {
+        TodoTasksAdapter(
+            viewModel = get()
+        )
+    }
 
     viewModel {
         DiaryViewModel(
@@ -44,7 +47,8 @@ val presentationModule = module {
     viewModel {
         TodoListTasksViewModel(
             getAllTasksUseCase = get(),
-            getTasksByTaskTypeUseCase = get()
+            getTasksByTaskTypeUseCase = get(),
+            updateTaskUseCase = get()
         )
     }
 

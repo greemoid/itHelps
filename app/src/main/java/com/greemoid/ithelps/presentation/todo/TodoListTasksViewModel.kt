@@ -8,11 +8,13 @@ import com.greemoid.ithelps.data.models.TaskDB
 import com.greemoid.ithelps.domain.models.Task
 import com.greemoid.ithelps.domain.usecases.GetAllTasksUseCase
 import com.greemoid.ithelps.domain.usecases.GetTasksByTaskTypeUseCase
+import com.greemoid.ithelps.domain.usecases.UpdateTaskUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class TodoListTasksViewModel(
+    private val updateTaskUseCase: UpdateTaskUseCase,
     private val getAllTasksUseCase: GetAllTasksUseCase,
     private val getTasksByTaskTypeUseCase: GetTasksByTaskTypeUseCase,
 ) : ViewModel() {
@@ -23,5 +25,11 @@ class TodoListTasksViewModel(
 
     fun getByType(taskType: String) : LiveData<List<TaskDB>> {
         return getTasksByTaskTypeUseCase.getTasksByTasksType(taskType)
+    }
+
+    fun update(taskDB: TaskDB) {
+        viewModelScope.launch {
+            updateTaskUseCase.updateTask(taskDB)
+        }
     }
 }
