@@ -53,7 +53,11 @@ val presentationModule = module {
     }
 
     viewModel {
-        MeditationViewModel()
+        MeditationViewModel(
+            saveMeditationSessionUseCase = get(),
+            date = Date(),
+            getLastMeditationSessionUseCase = get()
+        )
     }
 
     viewModel {

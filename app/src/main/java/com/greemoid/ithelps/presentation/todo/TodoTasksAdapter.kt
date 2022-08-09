@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.greemoid.ithelps.data.models.TaskDB
 import com.greemoid.ithelps.databinding.TaskItemLayoutBinding
-import com.greemoid.ithelps.domain.models.Task
-import com.greemoid.ithelps.domain.models.TaskTypes
+import com.greemoid.ithelps.domain.models.todo.TaskTypes
 
 
 class TodoTasksAdapter(

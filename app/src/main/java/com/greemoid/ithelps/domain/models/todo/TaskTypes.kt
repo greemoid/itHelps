@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.domain.models
+package com.greemoid.ithelps.domain.models.todo
 
 enum class TaskTypes(val chapter: String) {
     IMPORTANTANDURGENT("Термінові і важливі"),

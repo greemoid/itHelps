@@ -1,6 +1,10 @@
 package com.greemoid.ithelps.di
 
-import com.greemoid.ithelps.domain.usecases.*
+import com.greemoid.ithelps.domain.usecases.diary.SaveDiaryNoteUseCase
+import com.greemoid.ithelps.domain.usecases.meditation.GetLastMeditationSessionUseCase
+import com.greemoid.ithelps.domain.usecases.meditation.SaveMeditationSessionUseCase
+import com.greemoid.ithelps.domain.usecases.mood.SaveMoodUseCase
+import com.greemoid.ithelps.domain.usecases.todo.*
 import org.koin.dsl.module
 
 val domainModule = module {
@@ -44,6 +48,18 @@ val domainModule = module {
     single {
         UpdateTaskUseCase(
             repository = get()
+        )
+    }
+
+    single {
+        SaveMeditationSessionUseCase(
+            meditationRepository = get()
+        )
+    }
+
+    single {
+        GetLastMeditationSessionUseCase(
+            meditationRepository = get()
         )
     }
 

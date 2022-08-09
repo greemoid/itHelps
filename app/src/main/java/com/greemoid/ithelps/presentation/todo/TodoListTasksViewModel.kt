@@ -5,13 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.greemoid.ithelps.data.models.TaskDB
-import com.greemoid.ithelps.domain.models.Task
-import com.greemoid.ithelps.domain.usecases.GetAllTasksUseCase
-import com.greemoid.ithelps.domain.usecases.GetTasksByTaskTypeUseCase
-import com.greemoid.ithelps.domain.usecases.UpdateTaskUseCase
-import kotlinx.coroutines.Dispatchers
+import com.greemoid.ithelps.domain.usecases.todo.GetAllTasksUseCase
+import com.greemoid.ithelps.domain.usecases.todo.GetTasksByTaskTypeUseCase
+import com.greemoid.ithelps.domain.usecases.todo.UpdateTaskUseCase
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class TodoListTasksViewModel(
     private val updateTaskUseCase: UpdateTaskUseCase,

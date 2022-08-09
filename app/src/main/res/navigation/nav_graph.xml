@@ -54,7 +54,11 @@
         android:id="@+id/meditationFragment"
         android:name="com.greemoid.ithelps.presentation.meditation.MeditationFragment"
         android:label="fragment_meditation"
-        tools:layout="@layout/fragment_meditation" />
+        tools:layout="@layout/fragment_meditation" >
+        <action
+            android:id="@+id/action_meditationFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
+    </fragment>
     <fragment
         android:id="@+id/moodAddFragment"
         android:name="com.greemoid.ithelps.presentation.moodAdd.MoodAddFragment"
@@ -62,7 +66,7 @@
         tools:layout="@layout/fragment_mood_add" >
         <argument
             android:name="moodType"
-            app:argType="com.greemoid.ithelps.domain.models.MoodType" />
+            app:argType="com.greemoid.ithelps.domain.models.mood.MoodType" />
         <action
             android:id="@+id/action_moodAddFragment_to_dailyTasksFragment"
             app:destination="@id/dailyTasksFragment" />

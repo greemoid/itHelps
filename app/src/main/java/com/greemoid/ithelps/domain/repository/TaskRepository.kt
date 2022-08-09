@@ -2,7 +2,7 @@ package com.greemoid.ithelps.domain.repository
 
 import androidx.lifecycle.LiveData
 import com.greemoid.ithelps.data.models.TaskDB
-import com.greemoid.ithelps.domain.models.Task
+import com.greemoid.ithelps.domain.models.todo.Task
 
 interface TaskRepository {
 

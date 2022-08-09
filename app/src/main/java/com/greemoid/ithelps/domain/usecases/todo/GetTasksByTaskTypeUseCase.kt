@@ -1,8 +1,7 @@
-package com.greemoid.ithelps.domain.usecases
+package com.greemoid.ithelps.domain.usecases.todo
 
 import androidx.lifecycle.LiveData
 import com.greemoid.ithelps.data.models.TaskDB
-import com.greemoid.ithelps.domain.models.Task
 import com.greemoid.ithelps.domain.repository.TaskRepository
 
 class GetTasksByTaskTypeUseCase(

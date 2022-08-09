@@ -1,6 +1,6 @@
-package com.greemoid.ithelps.domain.usecases
+package com.greemoid.ithelps.domain.usecases.mood
 
-import com.greemoid.ithelps.domain.models.Mood
+import com.greemoid.ithelps.domain.models.mood.Mood
 import com.greemoid.ithelps.domain.repository.MoodRepository
 
 class SaveMoodUseCase(

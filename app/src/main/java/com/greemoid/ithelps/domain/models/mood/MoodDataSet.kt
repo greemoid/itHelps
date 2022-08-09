@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.domain.models
+package com.greemoid.ithelps.domain.models.mood
 
 import com.greemoid.ithelps.R
 

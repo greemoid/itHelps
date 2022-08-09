@@ -1,7 +1,7 @@
 package com.greemoid.ithelps.data.mapper
 
 import com.greemoid.ithelps.data.models.MoodDB
-import com.greemoid.ithelps.domain.models.Mood
+import com.greemoid.ithelps.domain.models.mood.Mood
 
 
 class MoodToMoodDBMapper : Mapper<Mood, MoodDB> {

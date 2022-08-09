@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.domain.models
+package com.greemoid.ithelps.domain.models.mood
 
 import androidx.annotation.DrawableRes
 import java.io.Serializable

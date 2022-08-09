@@ -1,6 +1,6 @@
-package com.greemoid.ithelps.domain.usecases
+package com.greemoid.ithelps.domain.usecases.todo
 
-import com.greemoid.ithelps.domain.models.Task
+import com.greemoid.ithelps.domain.models.todo.Task
 import com.greemoid.ithelps.domain.repository.TaskRepository
 
 class SaveTaskUseCase(

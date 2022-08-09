@@ -1,6 +1,6 @@
 package com.greemoid.ithelps.domain.repository
 
-import com.greemoid.ithelps.domain.models.Mood
+import com.greemoid.ithelps.domain.models.mood.Mood
 
 interface MoodRepository {
 

@@ -2,10 +2,7 @@ package com.greemoid.ithelps.di
 
 import android.app.Application
 import androidx.room.Room
-import com.greemoid.ithelps.data.db.diaryDB.DiaryDao
-import com.greemoid.ithelps.data.db.diaryDB.DiaryDatabase
-import com.greemoid.ithelps.data.db.diaryDB.MoodDao
-import com.greemoid.ithelps.data.db.diaryDB.TasksDao
+import com.greemoid.ithelps.data.db.diaryDB.*
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 
@@ -28,8 +25,13 @@ val diaryDBModule = module {
         return database.getTasksDao()
     }
 
+    fun provideMeditationDao(database: DiaryDatabase): MeditationDao {
+        return database.getMeditationDao()
+    }
+
     single { provideDataBase(androidApplication()) }
     single { provideDiaryDao(get()) }
     single { provideMoodDao(get()) }
     single { provideTasksDao(get()) }
+    single { provideMeditationDao(get()) }
 }

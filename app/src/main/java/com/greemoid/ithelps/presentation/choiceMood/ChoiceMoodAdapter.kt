@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.greemoid.ithelps.databinding.MoodItemsLayoutBinding
-import com.greemoid.ithelps.domain.models.MoodType
+import com.greemoid.ithelps.domain.models.mood.MoodType
 
 class ChoiceMoodAdapter(
     private val dataSource: List<MoodType>
