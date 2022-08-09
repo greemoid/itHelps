@@ -5,17 +5,48 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager.widget.ViewPager
 import com.greemoid.ithelps.R
+import com.greemoid.ithelps.data.models.Affirmation
+import com.greemoid.ithelps.data.models.Quote
+import com.greemoid.ithelps.data.source.AffirmationDataSource
+import com.greemoid.ithelps.data.source.QuotesDataSource
+import com.greemoid.ithelps.databinding.FragmentAffirmationsBinding
+import com.greemoid.ithelps.databinding.FragmentQuotesBinding
+import com.greemoid.ithelps.presentation.MainActivity
+import com.greemoid.ithelps.presentation.instruments.affirmations.AffirmationsViewPagerAdapter
 
 
 class QuotesFragment : Fragment() {
+
+    private lateinit var binding: FragmentQuotesBinding
+    private lateinit var viewPager: ViewPager
+    private lateinit var viewPagerAdapter: QuotesViewPagerAdapter
+    private lateinit var quotesList: List<Quote>
+    private val quotesDataSource = QuotesDataSource()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quotes, container, false)
+        binding = FragmentQuotesBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        quotesList = quotesDataSource.load().shuffled()
+        viewPager = binding.viewPager
+        viewPagerAdapter = QuotesViewPagerAdapter(requireContext(), quotesList)
+        viewPager.adapter = viewPagerAdapter
+        viewPager.offscreenPageLimit = 10
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if(activity is MainActivity) {
+            val mainActivity = activity as MainActivity
+            mainActivity.setBottomNavigationVisibility(View.GONE)
+        }
+    }
 }

@@ -11,4 +11,31 @@
         <item>Покупки</item>
         <item>Історія</item>
     </array>
+
+
+    <!--Affirmations-->
+    <string name="affirmation1">I am strong.</string>
+    <string name="affirmation2">I believe in myself.</string>
+    <string name="affirmation3">Each day is a new opportunity to grow and be a better version of myself.</string>
+    <string name="affirmation4">Every challenge in my life is an opportunity to learn from.</string>
+    <string name="affirmation5">I have so much to be grateful for.</string>
+    <string name="affirmation6">Good things are always coming into my life.</string>
+    <string name="affirmation7">New opportunities await me at every turn.</string>
+    <string name="affirmation8">I have the courage to follow my heart.</string>
+    <string name="affirmation9">Things will unfold at precisely the right time.</string>
+    <string name="affirmation10">I will be present in all the moments that this day brings.</string>
+
+
+    <!--Quotes-->
+    <string name="quote1">Успіх нічому не вчить. Він тільки переконує розумних людей, що вони не можуть програти (Білл Ґейтс)</string>
+    <string name="quote2">Успіх — єдиний непростимий гріх по відношенню до свого близького (Ф. Раневська)</string>
+    <string name="quote3">Успіх — це рух від невдачі до невдачі без втрати ентузіазму (Черчіль Вінстон)</string>
+    <string name="quote4">Успіх не прийде до Вас. Ви самі повинні дійти до нього (Марва Коллінз)</string>
+    <string name="quote5">Успіх — це не стільки те, що ми маємо, скільки те, ким ми стаємо в результаті (Джим Рон)</string>
+    <string name="quote6">Секрет життєвого успіху: будь готовий до можливості до того, як вона виникне (Бенджамін Дізраелі)</string>
+    <string name="quote7">Шість частин ключа до успіху: щирість, особистісна цілісність, скромність, ввічливість, мудрість, милосердя (Вільям Меннінгер)</string>
+    <string name="quote8">Успіх не є ключем до щастя. Щастя — ось ключ до успіху. Якщо ви любите те, що робите, ви будете успішним (Альберт Швейцер)</string>
+    <string name="quote9">Немає шляху до успіху. Успіх — є шлях (Михайло Шувалов)</string>
+    <string name="quote10">Про секрети успіху найпевніше міркують невдахи (Марсель Ашарі)</string>
+
 </resources>

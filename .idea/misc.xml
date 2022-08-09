@@ -10,7 +10,9 @@
         <entry key="..\:/Project/itHelps/app/src/main/res/drawable/mood_item_background.xml" value="0.408" />
         <entry key="..\:/Project/itHelps/app/src/main/res/drawable/multi_line_text_style.xml" value="0.408" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/activity_main.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/affirmations_slider_item_layout.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_account.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_affirmations.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_articles.xml" value="0.42239583333333336" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_choice_mood.xml" value="0.42239583333333336" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_choice_of_time_for_meditation.xml" value="0.440625" />
