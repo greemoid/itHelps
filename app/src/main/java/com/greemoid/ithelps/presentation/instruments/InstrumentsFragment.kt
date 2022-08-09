@@ -1,5 +1,7 @@
 package com.greemoid.ithelps.presentation.instruments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -54,7 +56,9 @@ class InstrumentsFragment : Fragment() {
         }
 
         binding.btnArticles.setOnClickListener {
-            findNavController().navigate(R.id.action_instrumentsFragment_to_articlesFragment)
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://t.me/thewaytoit")
+            startActivity(intent)
         }
 
         binding.btnBreathing.setOnClickListener {

@@ -101,9 +101,6 @@
             android:id="@+id/action_instrumentsFragment_to_affirmationsFragment"
             app:destination="@id/affirmationsFragment" />
         <action
-            android:id="@+id/action_instrumentsFragment_to_articlesFragment"
-            app:destination="@id/articlesFragment" />
-        <action
             android:id="@+id/action_instrumentsFragment_to_conditionControlFragment"
             app:destination="@id/conditionControlFragment" />
         <action
@@ -182,15 +179,6 @@
         tools:layout="@layout/fragment_affirmations" >
         <action
             android:id="@+id/action_affirmationsFragment_to_instrumentsFragment"
-            app:destination="@id/instrumentsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/articlesFragment"
-        android:name="com.greemoid.ithelps.presentation.instruments.articles.ArticlesFragment"
-        android:label="fragment_articles"
-        tools:layout="@layout/fragment_articles" >
-        <action
-            android:id="@+id/action_articlesFragment_to_instrumentsFragment"
             app:destination="@id/instrumentsFragment" />
     </fragment>
     <fragment
