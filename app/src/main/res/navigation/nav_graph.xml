@@ -81,7 +81,35 @@
         android:id="@+id/instrumentsFragment"
         android:name="com.greemoid.ithelps.presentation.instruments.InstrumentsFragment"
         android:label="fragment_instruments"
-        tools:layout="@layout/fragment_instruments" />
+        tools:layout="@layout/fragment_instruments" >
+        <action
+            android:id="@+id/action_instrumentsFragment_to_choiceMoodFragment"
+            app:destination="@id/choiceMoodFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_meditationFragment"
+            app:destination="@id/meditationFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_questionsAndAnswersFragment"
+            app:destination="@id/questionsAndAnswersFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_breathingFragment"
+            app:destination="@id/breathingFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_affirmationsFragment"
+            app:destination="@id/affirmationsFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_articlesFragment"
+            app:destination="@id/articlesFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_conditionControlFragment"
+            app:destination="@id/conditionControlFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_quotesFragment"
+            app:destination="@id/quotesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/todoFragment"
         android:name="com.greemoid.ithelps.presentation.todo.TodoFragment"
@@ -146,5 +174,59 @@
         <argument
             android:name="task"
             app:argType="com.greemoid.ithelps.data.models.TaskDB" />
+    </fragment>
+    <fragment
+        android:id="@+id/affirmationsFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.affirmations.AffirmationsFragment"
+        android:label="fragment_affirmations"
+        tools:layout="@layout/fragment_affirmations" >
+        <action
+            android:id="@+id/action_affirmationsFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.articles.ArticlesFragment"
+        android:label="fragment_articles"
+        tools:layout="@layout/fragment_articles" >
+        <action
+            android:id="@+id/action_articlesFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/breathingFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.breathing.BreathingFragment"
+        android:label="fragment_breathing"
+        tools:layout="@layout/fragment_breathing" >
+        <action
+            android:id="@+id/action_breathingFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/conditionControlFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.condition.ConditionControlFragment"
+        android:label="fragment_condition_control"
+        tools:layout="@layout/fragment_condition_control" >
+        <action
+            android:id="@+id/action_conditionControlFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionsAndAnswersFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.answers.QuestionsAndAnswersFragment"
+        android:label="fragment_questions_and_answers"
+        tools:layout="@layout/fragment_questions_and_answers" >
+        <action
+            android:id="@+id/action_questionsAndAnswersFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quotesFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.quotes.QuotesFragment"
+        android:label="fragment_quotes"
+        tools:layout="@layout/fragment_quotes" >
+        <action
+            android:id="@+id/action_quotesFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
     </fragment>
 </navigation>
