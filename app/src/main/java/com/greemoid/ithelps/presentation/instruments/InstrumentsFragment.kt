@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentInstrumentsBinding
+import com.greemoid.ithelps.presentation.MainActivity
 
 
 class InstrumentsFragment : Fragment() {
@@ -63,6 +64,14 @@ class InstrumentsFragment : Fragment() {
 
         binding.btnBreathing.setOnClickListener {
             findNavController().navigate(R.id.action_instrumentsFragment_to_breathingFragment)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if(activity is MainActivity) {
+            val mainActivity = activity as MainActivity
+            mainActivity.setBottomNavigationVisibility(View.VISIBLE)
         }
     }
 

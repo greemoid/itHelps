@@ -55,6 +55,7 @@ class MeditationFragment : Fragment() {
 
         binding.btnBack.setOnClickListener {
             findNavController().navigate(R.id.action_meditationFragment_to_dailyTasksFragment)
+
         }
 
         viewModel.millis.observe(viewLifecycleOwner) {
@@ -69,5 +70,8 @@ class MeditationFragment : Fragment() {
             mainActivity.setBottomNavigationVisibility(View.GONE)
         }
     }
+
+
+
 
 }
