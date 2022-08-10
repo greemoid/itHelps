@@ -63,7 +63,7 @@ class InstrumentsFragment : Fragment() {
         }
 
         binding.btnBreathing.setOnClickListener {
-            findNavController().navigate(R.id.action_instrumentsFragment_to_breathingFragment)
+            findNavController().navigate(R.id.action_instrumentsFragment_to_choiceOfExerciseFragment)
         }
     }
 

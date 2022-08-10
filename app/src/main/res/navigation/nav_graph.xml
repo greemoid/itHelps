@@ -99,9 +99,6 @@
             android:id="@+id/action_instrumentsFragment_to_questionsAndAnswersFragment"
             app:destination="@id/questionsAndAnswersFragment" />
         <action
-            android:id="@+id/action_instrumentsFragment_to_breathingFragment"
-            app:destination="@id/breathingFragment" />
-        <action
             android:id="@+id/action_instrumentsFragment_to_affirmationsFragment"
             app:destination="@id/affirmationsFragment" />
         <action
@@ -110,6 +107,9 @@
         <action
             android:id="@+id/action_instrumentsFragment_to_quotesFragment"
             app:destination="@id/quotesFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_choiceOfExerciseFragment"
+            app:destination="@id/choiceOfExerciseFragment" />
     </fragment>
     <fragment
         android:id="@+id/todoFragment"
@@ -219,6 +219,15 @@
         tools:layout="@layout/fragment_quotes" >
         <action
             android:id="@+id/action_quotesFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceOfExerciseFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.breathing.ChoiceOfExerciseFragment"
+        android:label="fragment_choice_of_exercise"
+        tools:layout="@layout/fragment_choice_of_exercise" >
+        <action
+            android:id="@+id/action_choiceOfExerciseFragment_to_instrumentsFragment"
             app:destination="@id/instrumentsFragment" />
     </fragment>
 </navigation>
