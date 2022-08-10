@@ -186,15 +186,6 @@
             app:destination="@id/instrumentsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/breathingFragment"
-        android:name="com.greemoid.ithelps.presentation.instruments.breathing.BreathingFragment"
-        android:label="fragment_breathing"
-        tools:layout="@layout/fragment_breathing" >
-        <action
-            android:id="@+id/action_breathingFragment_to_instrumentsFragment"
-            app:destination="@id/instrumentsFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/conditionControlFragment"
         android:name="com.greemoid.ithelps.presentation.instruments.condition.ConditionControlFragment"
         android:label="fragment_condition_control"
@@ -229,5 +220,17 @@
         <action
             android:id="@+id/action_choiceOfExerciseFragment_to_instrumentsFragment"
             app:destination="@id/instrumentsFragment" />
+        <action
+            android:id="@+id/action_choiceOfExerciseFragment_to_breathingFragment"
+            app:destination="@id/breathingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/breathingFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.breathing.BreathingFragment"
+        android:label="fragment_breathing"
+        tools:layout="@layout/fragment_breathing" >
+        <argument
+            android:name="breathingType"
+            app:argType="com.greemoid.ithelps.domain.models.breathing.BreathingType" />
     </fragment>
 </navigation>
