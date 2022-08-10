@@ -3,7 +3,7 @@ package com.greemoid.ithelps.data.source
 import com.greemoid.ithelps.data.db.diaryDB.DiaryDao
 import com.greemoid.ithelps.data.mapper.DiaryDBToDiaryNoteMapper
 import com.greemoid.ithelps.data.mapper.DiaryNoteToDiaryDBMapper
-import com.greemoid.ithelps.domain.models.DiaryNote
+import com.greemoid.ithelps.domain.models.diary.DiaryNote
 import com.greemoid.ithelps.domain.repository.DiaryRepository
 
 class DiaryCacheDataSource(

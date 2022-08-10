@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentDiaryBinding
-import com.greemoid.ithelps.domain.models.DiaryNote
+import com.greemoid.ithelps.domain.models.diary.DiaryNote
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 

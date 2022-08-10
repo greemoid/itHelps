@@ -5,7 +5,7 @@ import com.greemoid.ithelps.data.db.diaryDB.TasksDao
 import com.greemoid.ithelps.data.mapper.TaskDBToTaskMapper
 import com.greemoid.ithelps.data.mapper.TaskToTaskDBMapper
 import com.greemoid.ithelps.data.models.TaskDB
-import com.greemoid.ithelps.domain.models.Task
+import com.greemoid.ithelps.domain.models.todo.Task
 import com.greemoid.ithelps.domain.repository.TaskRepository
 
 class TasksCacheDataSource(

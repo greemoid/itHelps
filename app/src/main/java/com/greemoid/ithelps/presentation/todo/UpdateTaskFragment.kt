@@ -7,12 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.google.android.material.snackbar.Snackbar
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.data.models.TaskDB
 import com.greemoid.ithelps.databinding.FragmentUpdateTaskBinding
-import com.greemoid.ithelps.domain.models.Task
-import com.greemoid.ithelps.domain.models.TaskTypes
+import com.greemoid.ithelps.domain.models.todo.TaskTypes
 import com.greemoid.ithelps.presentation.core.Date
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 

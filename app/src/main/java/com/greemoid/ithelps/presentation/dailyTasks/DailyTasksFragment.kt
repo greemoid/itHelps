@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentDailyTasksBinding
+import com.greemoid.ithelps.presentation.MainActivity
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
@@ -42,6 +43,15 @@ class DailyTasksFragment : Fragment() {
             findNavController().navigate(R.id.action_dailyTasksFragment_to_meditationFragment)
         }
 
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        if(activity is MainActivity) {
+            val mainActivity = activity as MainActivity
+            mainActivity.setBottomNavigationVisibility(View.VISIBLE)
+        }
     }
 }
 

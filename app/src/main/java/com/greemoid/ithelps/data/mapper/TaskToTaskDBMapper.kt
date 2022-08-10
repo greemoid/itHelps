@@ -1,7 +1,7 @@
 package com.greemoid.ithelps.data.mapper
 
 import com.greemoid.ithelps.data.models.TaskDB
-import com.greemoid.ithelps.domain.models.Task
+import com.greemoid.ithelps.domain.models.todo.Task
 
 class TaskToTaskDBMapper : Mapper<Task, TaskDB> {
     override fun map(input: Task): TaskDB {

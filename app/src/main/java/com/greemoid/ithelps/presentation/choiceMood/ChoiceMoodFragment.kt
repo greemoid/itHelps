@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentChoiceMoodBinding
-import com.greemoid.ithelps.domain.models.MoodDataSet
+import com.greemoid.ithelps.domain.models.mood.MoodDataSet
 
 
 class ChoiceMoodFragment : Fragment() {

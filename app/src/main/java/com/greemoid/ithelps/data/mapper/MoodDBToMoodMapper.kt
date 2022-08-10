@@ -1,7 +1,7 @@
 package com.greemoid.ithelps.data.mapper
 
 import com.greemoid.ithelps.data.models.MoodDB
-import com.greemoid.ithelps.domain.models.Mood
+import com.greemoid.ithelps.domain.models.mood.Mood
 
 class MoodDBToMoodMapper : Mapper<List<MoodDB>, List<Mood>> {
     override fun map(input: List<MoodDB>): List<Mood> {

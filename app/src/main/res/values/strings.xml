@@ -11,4 +11,73 @@
         <item>Покупки</item>
         <item>Історія</item>
     </array>
+
+
+    <!--Affirmations-->
+    <string name="affirmation1">I am strong.</string>
+    <string name="affirmation2">I believe in myself.</string>
+    <string name="affirmation3">Each day is a new opportunity to grow and be a better version of myself.</string>
+    <string name="affirmation4">Every challenge in my life is an opportunity to learn from.</string>
+    <string name="affirmation5">I have so much to be grateful for.</string>
+    <string name="affirmation6">Good things are always coming into my life.</string>
+    <string name="affirmation7">New opportunities await me at every turn.</string>
+    <string name="affirmation8">I have the courage to follow my heart.</string>
+    <string name="affirmation9">Things will unfold at precisely the right time.</string>
+    <string name="affirmation10">I will be present in all the moments that this day brings.</string>
+    <string name="affirmation11">Я нескінченно вірю в себе і свої сили.</string>
+    <string name="affirmation12">Я люблю себе за все від кінчиків пальців ніг до самої верхівки.</string>
+    <string name="affirmation13">Я всюди бачу можливість заробити гроші! Я легко реалізую найкращі з можливостей!</string>
+    <string name="affirmation14">Я отримую свої гроші творчим, творчим та чесним шляхом!</string>
+    <string name="affirmation15">Я завжди притягую у своє життя багатих та успішних людей.</string>
+    <string name="affirmation16">Я завжди притягую у своє життя величезну кількість ресурсів та ідей.</string>
+    <string name="affirmation17">Я гідний багатства, я йду до нього впевнено та невблаганно.</string>
+    <string name="affirmation18">Мої доходи визначаються лише моїм ставленням до життя. Я успішний і досягаю всього чого захочу.</string>
+    <string name="affirmation19">Гроші допомагають мені духовно розвиватися і досягати моїх духовних цілей.</string>
+    <string name="affirmation20">Я заробляю гроші, щоб купувати те, що хочу.</string>
+    <string name="affirmation21">Я вартий великих грошей. Я гідний жити у розкоші!</string>
+    <string name="affirmation22">Я довіряю життю!</string>
+    <string name="affirmation23">Я з легкістю і радістю віддаю і отримую гроші!</string>
+    <string name="affirmation24">Кожен з моїх задумів реалізується!</string>
+    <string name="affirmation25">Я приймаю все найкраще в цьому світі, адже я цього заслуговую!</string>
+    <string name="affirmation26">Я поширюю любов і створюю свій люблячий світ!</string>
+    <string name="affirmation27">Я віддаю величезну кількість любові, а отримую ще більше!</string>
+    <string name="affirmation28">Мій світ наповнений щастям і гармонією, за що я вдячна!</string>
+    <string name="affirmation29">Робота задовольняє мене в усьому!</string>
+    <string name="affirmation30">Я відкидаю всі страхи і сумніви!</string>
+    <string name="affirmation31">Я люблю своє тіло!</string>
+    <string name="affirmation32">У моєму світі все вже добре!</string>
+
+
+    <!--Quotes-->
+    <string name="quote1">Успіх нічому не вчить. Він тільки переконує розумних людей, що вони не можуть програти (Білл Ґейтс)</string>
+    <string name="quote2">Успіх — єдиний непростимий гріх по відношенню до свого близького (Ф. Раневська)</string>
+    <string name="quote3">Успіх — це рух від невдачі до невдачі без втрати ентузіазму (Черчіль Вінстон)</string>
+    <string name="quote4">Успіх не прийде до Вас. Ви самі повинні дійти до нього (Марва Коллінз)</string>
+    <string name="quote5">Успіх — це не стільки те, що ми маємо, скільки те, ким ми стаємо в результаті (Джим Рон)</string>
+    <string name="quote6">Секрет життєвого успіху: будь готовий до можливості до того, як вона виникне (Бенджамін Дізраелі)</string>
+    <string name="quote7">Шість частин ключа до успіху: щирість, особистісна цілісність, скромність, ввічливість, мудрість, милосердя (Вільям Меннінгер)</string>
+    <string name="quote8">Успіх не є ключем до щастя. Щастя — ось ключ до успіху. Якщо ви любите те, що робите, ви будете успішним (Альберт Швейцер)</string>
+    <string name="quote9">Немає шляху до успіху. Успіх — є шлях (Михайло Шувалов)</string>
+    <string name="quote10">Удосконалення – це зміни, бути досконалим – означає змінюватися постійно. (Вінстон Черчилль)</string>
+    <string name="quote11">Про секрети успіху найпевніше міркують невдахи (Марсель Ашарі)</string>
+    <string name="quote12">Життя на 10% складається з того, що з вами відбувається і 90%, з того, як ви на це реагуєте. (Чарльз Свіндол) </string>
+    <string name="quote13">Ти ніколи не перепливеш океан, якщо боятимешся втратити берег із виду. (Христофор Колумб)</string>
+    <string name="quote14">Говорять, що мотивація триває не довго. Що ж, свіжість після ванни – теж. Тому піклуватися про них варто щодня. (Зіг Зиглар)</string>
+    <string name="quote15">Досконалість – це не тоді, коли нічого додати, а тоді, коли нічого відняти. (Антуан де Сент-Екзюпері)</string>
+    <string name="quote16">Повірте, що зможете, і пів шляху вже пройдено. (Теодор Рузвельт)</string>
+    <string name="quote17">Одна перемога не веде до успіху, на відміну від постійного бажання перемагати. (Вінс Ломбарді)</string>
+    <string name="quote18">Людина, яка ніколи не здійснювала помилок, ніколи не пробувала зробити щось по-іншому. (Альберт Ейнштейн)</string>
+    <string name="quote19">Здійснюйте свої мрії, або хтось візьме вас на роботу для здійснення своїх. (Фарра Грей)</string>
+    <string name="quote20">Запам’ятайте, іноді не отримати бажаного – найбільша удача. (Далай-лама)</string>
+    <string name="quote21">Або напишіть книгу, варту уваги, або зробіть щось, варте написання книги. (Бенджамін Франклін)</string>
+    <string name="quote22">Єдиний спосіб зробити видатну роботу – щиро любити те, що робиш. (Стів Джобс)</string>
+    <string name="quote23">Якщо ти можеш щось уявити – ти можеш цього досягти! (Зіг Зіглар)</string>
+    <string name="quote24">Спочатку робіть, що потрібно. Тоді – те, що можливо. Лиш тоді ви побачите, що робите неможливе. (Св. Франциск Асізський)</string>
+    <string name="quote25">Найкращий метод, щоб почати щось робити – перестати говорити і почати робити. (Волт Дісней)</string>
+    <string name="quote26">Від життя ви отримуєте тільки те, що просите. Не бійтеся просити більше. (Опра Вінфрі)</string>
+    <string name="quote27">Постійне прагнення бути кращим є обов’язком людини. Це вже винагорода. Все інше в Божих руках. (Магатма Ґанді)</string>
+    <string name="quote28">Щаслива людина настільки задоволена сьогоденням, що не маю часу думати про майбутнє. (Альберт Ейнштейн)</string>
+    <string name="quote29">Ви не повинні зупинятися, навіть якщо щось може йти не так, як би хотілось. (Майкл Джордан)</string>
+    <string name="quote30">Нічого не досягне у житті той, хто не має сміливості ризикувати. (Мухаммед Алі)</string>
+
 </resources>

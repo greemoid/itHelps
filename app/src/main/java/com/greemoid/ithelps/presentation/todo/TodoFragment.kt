@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentTodoBinding
-import com.greemoid.ithelps.domain.models.TaskTypes
+import com.greemoid.ithelps.domain.models.todo.TaskTypes
 
 
 class TodoFragment : Fragment() {

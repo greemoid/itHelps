@@ -2,9 +2,11 @@ package com.greemoid.ithelps.di
 
 import com.greemoid.ithelps.data.mapper.*
 import com.greemoid.ithelps.data.source.DiaryCacheDataSource
+import com.greemoid.ithelps.data.source.MeditationCacheDataSource
 import com.greemoid.ithelps.data.source.MoodCacheDataSource
 import com.greemoid.ithelps.data.source.TasksCacheDataSource
 import com.greemoid.ithelps.domain.repository.DiaryRepository
+import com.greemoid.ithelps.domain.repository.MeditationRepository
 import com.greemoid.ithelps.domain.repository.MoodRepository
 import com.greemoid.ithelps.domain.repository.TaskRepository
 import org.koin.dsl.module
@@ -32,6 +34,15 @@ val dataModule = module {
             tasksDao = get(),
             dataToDomainMapper = TaskDBToTaskMapper(),
             domainToDataMapper = TaskToTaskDBMapper()
+        )
+    }
+
+    single<MeditationRepository> {
+        MeditationCacheDataSource(
+            meditationDao = get(),
+            meditationDBToMeditationMapper = MeditationDBToMeditationMapper(),
+            meditationToMeditationDBMapper = MeditationToMeditationDBMapper(),
+            meditationListMapper = MeditationListMapper()
         )
     }
 }

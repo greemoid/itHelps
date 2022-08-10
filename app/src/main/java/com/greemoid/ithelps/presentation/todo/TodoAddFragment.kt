@@ -9,12 +9,10 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentTodoAddBinding
-import com.greemoid.ithelps.databinding.FragmentTodoBinding
-import com.greemoid.ithelps.domain.models.Task
-import com.greemoid.ithelps.domain.models.TaskTypes
+import com.greemoid.ithelps.domain.models.todo.Task
+import com.greemoid.ithelps.domain.models.todo.TaskTypes
 import com.greemoid.ithelps.presentation.core.Date
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
-import java.util.*
 
 
 class TodoAddFragment : Fragment() {
