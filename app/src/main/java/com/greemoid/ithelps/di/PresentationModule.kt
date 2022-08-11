@@ -4,6 +4,7 @@ import com.greemoid.ithelps.data.mapper.TaskToTaskDBMapper
 import com.greemoid.ithelps.presentation.core.Date
 import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
 import com.greemoid.ithelps.presentation.diary.DiaryViewModel
+import com.greemoid.ithelps.presentation.instruments.breathing.ExerciseBreathingViewModel
 import com.greemoid.ithelps.presentation.meditation.MeditationViewModel
 import com.greemoid.ithelps.presentation.moodAdd.MoodAddViewModel
 import com.greemoid.ithelps.presentation.todo.*
@@ -56,7 +57,8 @@ val presentationModule = module {
         MeditationViewModel(
             saveMeditationSessionUseCase = get(),
             date = Date(),
-            getLastMeditationSessionUseCase = get()
+            getLastMeditationSessionUseCase = get(),
+            context = get()
         )
     }
 
@@ -70,6 +72,10 @@ val presentationModule = module {
         UpdateViewModel(
             updateTaskUseCase = get()
         )
+    }
+
+    viewModel {
+        ExerciseBreathingViewModel()
     }
 
 }

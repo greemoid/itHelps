@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.greemoid.ithelps">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:name=".di.App"
         android:allowBackup="true"
