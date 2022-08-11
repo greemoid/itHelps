@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
@@ -15,7 +14,6 @@ import com.greemoid.ithelps.databinding.FragmentBreathingBinding
 
 class BreathingFragment : Fragment() {
 
-    //private lateinit var binding: FragmentBreathingBinding
     private var _binding: FragmentBreathingBinding? = null
     private val binding get() = _binding!!
     private val args: BreathingFragmentArgs by navArgs()
@@ -42,12 +40,15 @@ class BreathingFragment : Fragment() {
         binding.tvExhalationTime.text = exhalation.toString()
         binding.tvSecondDelayTime.text = secondDelay.toString()
 
-        val timeOfOneItteration =
-            (breathingType.breath + breathingType.firstDelay + breathingType.exhalation + breathingType.secondDelay) * 4
+        val timeOfOneIteration =
+            (breathingType.breath
+                    + breathingType.firstDelay
+                    + breathingType.exhalation
+                    + breathingType.secondDelay) * 4
 
 
-        val minutes = timeOfOneItteration / 60
-        val seconds = timeOfOneItteration % 60
+        val minutes = timeOfOneIteration / 60
+        val seconds = timeOfOneIteration % 60
         binding.tvTotalTime.text = "$minutes хв $seconds сек"
         binding.tvCountOfSets.text = "1 set"
 
@@ -64,7 +65,7 @@ class BreathingFragment : Fragment() {
             }
 
             override fun onStopTrackingTouch(seek: SeekBar) {
-                totalTimeWithSeek = timeOfOneItteration * seek.progress
+                totalTimeWithSeek = timeOfOneIteration * seek.progress
                 val minutesSeek = totalTimeWithSeek / 60
                 val secondsSeek = totalTimeWithSeek % 60
                 binding.tvTotalTime.text = "$minutesSeek хв $secondsSeek сек"
@@ -82,7 +83,9 @@ class BreathingFragment : Fragment() {
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingTime", breathingTime)
-            findNavController().navigate(R.id.action_breathingFragment_to_exerciseBreathingFragment, bundle)
+            findNavController()
+                .navigate(R.id.action_breathingFragment_to_exerciseBreathingFragment,
+                    bundle)
         }
     }
 

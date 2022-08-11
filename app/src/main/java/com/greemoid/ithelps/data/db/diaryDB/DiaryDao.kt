@@ -5,7 +5,6 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.greemoid.ithelps.data.models.DiaryNoteDB
-import com.greemoid.ithelps.data.models.MoodDB
 
 @Dao
 interface DiaryDao {

@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager.widget.PagerAdapter
 import com.greemoid.ithelps.R
-import com.greemoid.ithelps.data.models.Affirmation
 import com.greemoid.ithelps.data.models.Quote
 import java.util.*
 
@@ -28,7 +27,8 @@ class QuotesViewPagerAdapter(
         val layoutInflater =
             context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-        val itemView = layoutInflater.inflate(R.layout.affirmations_slider_item_layout, container, false)
+        val itemView = layoutInflater
+            .inflate(R.layout.affirmations_slider_item_layout, container, false)
 
 
         val ivAffirmation = itemView.findViewById<ImageView>(R.id.ivAffirmation)

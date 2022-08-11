@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.presentation.todo
+package com.greemoid.ithelps.presentation.todo.list
 
 import android.graphics.Paint
 import android.view.LayoutInflater
@@ -20,7 +20,8 @@ class TodoTasksAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoTasksViewHolder {
         val binding =
-            TaskItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            TaskItemLayoutBinding
+                .inflate(LayoutInflater.from(parent.context), parent, false)
         return TodoTasksViewHolder(binding)
     }
 

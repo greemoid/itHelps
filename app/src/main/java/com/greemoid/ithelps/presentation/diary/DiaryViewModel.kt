@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class DiaryViewModel(
     private val useCase: SaveDiaryNoteUseCase,
-    private val date: Date
+    private val date: Date,
 ) : ViewModel() {
 
     val fullyDate = date.getCurrentFullDate()

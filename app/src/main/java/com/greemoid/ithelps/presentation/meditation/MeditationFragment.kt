@@ -59,7 +59,8 @@ class MeditationFragment : Fragment() {
 
         binding.btnBack.setOnClickListener {
             viewModel.cancelTimer()
-            findNavController().navigate(R.id.action_meditationFragment_to_dailyTasksFragment)
+            findNavController()
+                .navigate(R.id.action_meditationFragment_to_dailyTasksFragment)
         }
 
         viewModel.millis.observe(viewLifecycleOwner) {
@@ -78,7 +79,8 @@ class MeditationFragment : Fragment() {
     private fun Context.hideKeyboard(view: View) {
         val inputMethodManager =
             getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+        inputMethodManager
+            .hideSoftInputFromWindow(view.windowToken, 0)
     }
 
 

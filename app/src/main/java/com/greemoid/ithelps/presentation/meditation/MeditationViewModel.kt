@@ -21,7 +21,7 @@ class MeditationViewModel(
     private val saveMeditationSessionUseCase: SaveMeditationSessionUseCase,
     private val getLastMeditationSessionUseCase: GetLastMeditationSessionUseCase,
     private val date: Date,
-    private val context: Context
+    private val context: Context,
 ) : ViewModel() {
 
     /*
@@ -37,8 +37,9 @@ class MeditationViewModel(
     fun startTimer(time: Long) {
         var totalTime: Long = 0
         viewModelScope.launch {
-            Log.d("TOTALTIME","${getLastMeditationSessionUseCase.getLastMeditationSession().totalTime + time}")
-            totalTime =  getLastMeditationSessionUseCase.getLastMeditationSession().totalTime + time
+            Log.d("TOTALTIME",
+                "${getLastMeditationSessionUseCase.getLastMeditationSession().totalTime + time}")
+            totalTime = getLastMeditationSessionUseCase.getLastMeditationSession().totalTime + time
         }
         timer = object : CountDownTimer(time, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -62,7 +63,9 @@ class MeditationViewModel(
                 }
                 val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                 if (Build.VERSION.SDK_INT >= 26) {
-                    vibrator.vibrate(VibrationEffect.createOneShot(400, VibrationEffect.DEFAULT_AMPLITUDE))
+                    vibrator.vibrate(
+                        VibrationEffect.createOneShot(
+                            400, VibrationEffect.DEFAULT_AMPLITUDE))
                 } else {
                     vibrator.vibrate(400)
                 }
@@ -73,7 +76,6 @@ class MeditationViewModel(
     fun cancelTimer() {
         timer.cancel()
     }
-
 
 
 }

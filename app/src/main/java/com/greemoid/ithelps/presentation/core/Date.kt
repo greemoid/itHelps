@@ -1,25 +1,24 @@
 package com.greemoid.ithelps.presentation.core
 
-import org.joda.time.Days
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.Date
 
 class Date {
 
-    fun getCurrentDayAndDate() : String {
+    fun getCurrentDayAndDate(): String {
         val date = getCurrentDateTime().toString("dd")
         val day = getCurrentDay()
         return "$day, $date"
     }
 
-    fun getCurrentFullDate() : String {
+    fun getCurrentFullDate(): String {
         return getCurrentDateTime().toString("d.M.yyyy")
     }
 
     fun getTomorrow(): String {
         val today = getCurrentFullDate()
-        val tomorrow = today.substring(0,1).toInt() + 1
+        val tomorrow = today.substring(0, 1).toInt() + 1
         return "${tomorrow}${today.substring(1, today.length)}"
     }
 

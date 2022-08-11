@@ -2,8 +2,8 @@ package com.greemoid.ithelps.data.source
 
 import androidx.lifecycle.LiveData
 import com.greemoid.ithelps.data.db.diaryDB.TasksDao
-import com.greemoid.ithelps.data.mapper.TaskDBToTaskMapper
-import com.greemoid.ithelps.data.mapper.TaskToTaskDBMapper
+import com.greemoid.ithelps.data.mapper.todo.TaskDBToTaskMapper
+import com.greemoid.ithelps.data.mapper.todo.TaskToTaskDBMapper
 import com.greemoid.ithelps.data.models.TaskDB
 import com.greemoid.ithelps.domain.models.todo.Task
 import com.greemoid.ithelps.domain.repository.TaskRepository
@@ -35,7 +35,6 @@ class TasksCacheDataSource(
     override suspend fun deleteTask(task: TaskDB) {
         tasksDao.deleteTask(task)
     }
-
 
 
 }

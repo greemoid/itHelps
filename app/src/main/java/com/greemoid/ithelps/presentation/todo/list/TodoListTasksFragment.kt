@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.presentation.todo
+package com.greemoid.ithelps.presentation.todo.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -34,7 +34,8 @@ class TodoListTasksFragment : Fragment() {
         setupRecyclerView()
         val type: String = args.type
         binding.btnClose.setOnClickListener {
-            findNavController().navigate(R.id.action_todoListTasksFragment_to_todoFragment)
+            findNavController()
+                .navigate(R.id.action_todoListTasksFragment_to_todoFragment)
         }
         viewModel.getByType(type).observe(viewLifecycleOwner) { list ->
             adapter.submitList(list.asReversed())
@@ -43,10 +44,9 @@ class TodoListTasksFragment : Fragment() {
         adapter.setOnItemClickListener {
             val bundle = Bundle()
             bundle.putSerializable("task", it)
-            findNavController().navigate(
-                R.id.action_todoListTasksFragment_to_taskItemFragment,
-                bundle
-            )
+            findNavController()
+                .navigate(R.id.action_todoListTasksFragment_to_taskItemFragment,
+                    bundle)
         }
     }
 
