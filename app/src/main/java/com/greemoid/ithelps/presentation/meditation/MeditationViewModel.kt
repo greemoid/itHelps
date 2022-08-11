@@ -1,6 +1,10 @@
 package com.greemoid.ithelps.presentation.meditation
 
+import android.content.Context
+import android.os.Build
 import android.os.CountDownTimer
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,7 +21,14 @@ class MeditationViewModel(
     private val saveMeditationSessionUseCase: SaveMeditationSessionUseCase,
     private val getLastMeditationSessionUseCase: GetLastMeditationSessionUseCase,
     private val date: Date,
+    private val context: Context
 ) : ViewModel() {
+
+    /*
+     * What I ended up doing instead of having a Context directly in the ViewModel,
+     * I made provider classes such as ResourceProvider that would give me the resources I need,
+     * and I had those provider classes injected into my ViewModel
+     */
 
     private val _millis = MutableLiveData<String>("")
     val millis: LiveData<String> = _millis
@@ -48,6 +59,12 @@ class MeditationViewModel(
                         date = date.getCurrentFullDate()
                     )
                     saveMeditationSessionUseCase.saveMeditationSession(meditation)
+                }
+                val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                if (Build.VERSION.SDK_INT >= 26) {
+                    vibrator.vibrate(VibrationEffect.createOneShot(400, VibrationEffect.DEFAULT_AMPLITUDE))
+                } else {
+                    vibrator.vibrate(400)
                 }
             }
         }.start()

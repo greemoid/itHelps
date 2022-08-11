@@ -232,5 +232,20 @@
         <argument
             android:name="breathingType"
             app:argType="com.greemoid.ithelps.domain.models.breathing.BreathingType" />
+        <action
+            android:id="@+id/action_breathingFragment_to_exerciseBreathingFragment"
+            app:destination="@id/exerciseBreathingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseBreathingFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.breathing.ExerciseBreathingFragment"
+        android:label="fragment_exercise_breathing"
+        tools:layout="@layout/fragment_exercise_breathing" >
+        <action
+            android:id="@+id/action_exerciseBreathingFragment_to_choiceOfExerciseFragment"
+            app:destination="@id/choiceOfExerciseFragment" />
+        <argument
+            android:name="breathingTime"
+            app:argType="com.greemoid.ithelps.presentation.instruments.breathing.BreathingTime" />
     </fragment>
 </navigation>

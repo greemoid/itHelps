@@ -38,7 +38,7 @@ class ChoiceOfExerciseFragment : Fragment() {
                 breath = 3,
                 firstDelay = 2,
                 exhalation = 4,
-                secondDelay = 0
+                secondDelay = 1
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
@@ -64,7 +64,9 @@ class ChoiceOfExerciseFragment : Fragment() {
                 drawableId = R.drawable.alarm,
                 breathingName = "Пробудження",
                 breath = 2,
+                firstDelay = 1,
                 exhalation = 2,
+                secondDelay = 1
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
@@ -78,6 +80,7 @@ class ChoiceOfExerciseFragment : Fragment() {
                 breath = 6,
                 firstDelay = 7,
                 exhalation = 8,
+                secondDelay = 1
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
@@ -91,6 +94,7 @@ class ChoiceOfExerciseFragment : Fragment() {
                 breath = 4,
                 firstDelay = 4,
                 exhalation = 6,
+                secondDelay = 1
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
@@ -103,6 +107,7 @@ class ChoiceOfExerciseFragment : Fragment() {
                 breathingName = "SOS",
                 breath = 3,
                 exhalation = 3,
+                secondDelay = 1
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
