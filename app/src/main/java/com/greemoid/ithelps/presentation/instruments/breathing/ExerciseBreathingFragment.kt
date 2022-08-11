@@ -12,7 +12,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentExerciseBreathingBinding
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -36,8 +35,17 @@ class ExerciseBreathingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val breathingTime = args.breathingTime
-        viewModel.startTotalTimer(breathingTime.totalTime, breathingTime.breath, breathingTime.firstDelay, breathingTime.exhalation, breathingTime.secondDelay)
-        viewModel.startBreathTimer(breathingTime.breath, breathingTime.firstDelay, breathingTime.exhalation, breathingTime.secondDelay)
+        viewModel.startTotalTimer(
+            breathingTime.totalTime,
+            breathingTime.breath,
+            breathingTime.firstDelay,
+            breathingTime.exhalation,
+            breathingTime.secondDelay)
+        viewModel.startBreathTimer(
+            breathingTime.breath,
+            breathingTime.firstDelay,
+            breathingTime.exhalation,
+            breathingTime.secondDelay)
         val zoomIn = AnimationUtils.loadAnimation(requireContext(), R.anim.zoom_in)
         val zoomOut = AnimationUtils.loadAnimation(requireContext(), R.anim.zoom_out)
         viewModel.millisBreath.observe(viewLifecycleOwner) {
@@ -55,10 +63,11 @@ class ExerciseBreathingFragment : Fragment() {
         }
         binding.btnBack.setOnClickListener {
             viewModel.cancelTimer()
-            findNavController().navigate(R.id.action_exerciseBreathingFragment_to_choiceOfExerciseFragment)
+            findNavController()
+                .navigate(R.id.action_exerciseBreathingFragment_to_choiceOfExerciseFragment)
         }
 
-        viewModel.isBreathTimer.observe(viewLifecycleOwner){
+        viewModel.isBreathTimer.observe(viewLifecycleOwner) {
             if (it) {
                 lifecycleScope.launch {
                     withContext(Dispatchers.Main) {
@@ -68,7 +77,7 @@ class ExerciseBreathingFragment : Fragment() {
                 }
             }
         }
-        viewModel.isExhalationTimer.observe(viewLifecycleOwner){
+        viewModel.isExhalationTimer.observe(viewLifecycleOwner) {
             if (it) {
                 lifecycleScope.launch {
                     withContext(Dispatchers.Main) {

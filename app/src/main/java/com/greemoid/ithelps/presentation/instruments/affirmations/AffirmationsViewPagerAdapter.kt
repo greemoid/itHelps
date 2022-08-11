@@ -27,7 +27,9 @@ class AffirmationsViewPagerAdapter(
         val layoutInflater =
             context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-        val itemView = layoutInflater.inflate(R.layout.affirmations_slider_item_layout, container, false)
+        val itemView =
+            layoutInflater
+                .inflate(R.layout.affirmations_slider_item_layout, container, false)
 
 
         val ivAffirmation = itemView.findViewById<ImageView>(R.id.ivAffirmation)

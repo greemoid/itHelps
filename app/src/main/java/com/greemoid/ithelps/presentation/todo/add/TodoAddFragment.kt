@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.presentation.todo
+package com.greemoid.ithelps.presentation.todo.add
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -55,7 +55,7 @@ class TodoAddFragment : Fragment() {
             if (binding.etTitle.text.isNotEmpty()) {
                 val title = binding.etTitle.text.toString()
                 val description = binding.etDescription.text.toString()
-                val taskType = when(binding.spinnerChapters.selectedItemId.toInt()) {
+                val taskType = when (binding.spinnerChapters.selectedItemId.toInt()) {
                     0 -> TaskTypes.IMPORTANTANDURGENT.chapter
                     1 -> TaskTypes.IMPORTANT.chapter
                     2 -> TaskTypes.URGENT.chapter
@@ -66,7 +66,7 @@ class TodoAddFragment : Fragment() {
                     else -> ""
                 }
                 val dateClass = Date()
-                val date = when(binding.radioGroupDates.checkedRadioButtonId) {
+                val date = when (binding.radioGroupDates.checkedRadioButtonId) {
                     binding.rbToday.id -> dateClass.getCurrentFullDate()
                     binding.rbTomorrow.id -> dateClass.getTomorrow()
                     binding.rbCustom.id -> binding.rbCustom.text.toString()

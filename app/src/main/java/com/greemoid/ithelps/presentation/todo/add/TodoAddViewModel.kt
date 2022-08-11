@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.presentation.todo
+package com.greemoid.ithelps.presentation.todo.add
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,8 +7,8 @@ import com.greemoid.ithelps.domain.usecases.todo.SaveTaskUseCase
 import kotlinx.coroutines.launch
 
 class TodoAddViewModel(
-    private val saveTaskUseCase: SaveTaskUseCase
-): ViewModel() {
+    private val saveTaskUseCase: SaveTaskUseCase,
+) : ViewModel() {
 
     fun saveTask(task: Task) {
         viewModelScope.launch {

@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentChoiceOfExerciseBinding
-import com.greemoid.ithelps.domain.models.breathing.BreathingDataSet
 import com.greemoid.ithelps.domain.models.breathing.BreathingType
 import com.greemoid.ithelps.presentation.MainActivity
 
@@ -29,7 +28,8 @@ class ChoiceOfExerciseFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnBack.setOnClickListener {
-            findNavController().navigate(R.id.action_choiceOfExerciseFragment_to_instrumentsFragment)
+            findNavController()
+                .navigate(R.id.action_choiceOfExerciseFragment_to_instrumentsFragment)
         }
         binding.btnRefresh.setOnClickListener {
             val breathingType = BreathingType(
@@ -42,7 +42,8 @@ class ChoiceOfExerciseFragment : Fragment() {
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
-            findNavController().navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
+            findNavController()
+                .navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
         }
 
         binding.btnDeepBreathing.setOnClickListener {
@@ -56,7 +57,8 @@ class ChoiceOfExerciseFragment : Fragment() {
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
-            findNavController().navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
+            findNavController()
+                .navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
         }
 
         binding.btnWakingUp.setOnClickListener {
@@ -70,7 +72,8 @@ class ChoiceOfExerciseFragment : Fragment() {
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
-            findNavController().navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
+            findNavController()
+                .navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
         }
 
         binding.btnRelax.setOnClickListener {
@@ -84,7 +87,8 @@ class ChoiceOfExerciseFragment : Fragment() {
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
-            findNavController().navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
+            findNavController()
+                .navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
         }
 
         binding.btnPain.setOnClickListener {
@@ -98,7 +102,8 @@ class ChoiceOfExerciseFragment : Fragment() {
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
-            findNavController().navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
+            findNavController()
+                .navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
         }
 
         binding.btnSOS.setOnClickListener {
@@ -111,13 +116,14 @@ class ChoiceOfExerciseFragment : Fragment() {
             )
             val bundle = Bundle()
             bundle.putSerializable("breathingType", breathingType)
-            findNavController().navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
+            findNavController()
+                .navigate(R.id.action_choiceOfExerciseFragment_to_breathingFragment, bundle)
         }
     }
 
     override fun onResume() {
         super.onResume()
-        if(activity is MainActivity) {
+        if (activity is MainActivity) {
             val mainActivity = activity as MainActivity
             mainActivity.setBottomNavigationVisibility(View.GONE)
         }

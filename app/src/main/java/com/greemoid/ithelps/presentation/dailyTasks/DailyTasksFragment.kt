@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.FragmentDailyTasksBinding
@@ -31,16 +30,20 @@ class DailyTasksFragment : Fragment() {
 
         binding.tvDate.text = viewModel.day
         binding.ivAvatar.setOnClickListener {
-            findNavController().navigate(R.id.action_dailyTasksFragment_to_accountFragment)
+            findNavController()
+                .navigate(R.id.action_dailyTasksFragment_to_accountFragment)
         }
         binding.diaryLayout.setOnClickListener {
-            findNavController().navigate(R.id.action_dailyTasksFragment_to_diaryFragment)
+            findNavController()
+                .navigate(R.id.action_dailyTasksFragment_to_diaryFragment)
         }
         binding.moodLayout.setOnClickListener {
-            findNavController().navigate(R.id.action_dailyTasksFragment_to_choiceMoodFragment)
+            findNavController()
+                .navigate(R.id.action_dailyTasksFragment_to_choiceMoodFragment)
         }
         binding.meditationLayout.setOnClickListener {
-            findNavController().navigate(R.id.action_dailyTasksFragment_to_meditationFragment)
+            findNavController()
+                .navigate(R.id.action_dailyTasksFragment_to_meditationFragment)
         }
 
     }
@@ -48,7 +51,7 @@ class DailyTasksFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        if(activity is MainActivity) {
+        if (activity is MainActivity) {
             val mainActivity = activity as MainActivity
             mainActivity.setBottomNavigationVisibility(View.VISIBLE)
         }

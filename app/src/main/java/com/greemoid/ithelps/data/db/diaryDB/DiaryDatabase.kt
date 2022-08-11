@@ -7,7 +7,8 @@ import com.greemoid.ithelps.data.models.MeditationTimeDB
 import com.greemoid.ithelps.data.models.MoodDB
 import com.greemoid.ithelps.data.models.TaskDB
 
-@Database(entities = [DiaryNoteDB::class, MoodDB::class, TaskDB::class, MeditationTimeDB::class], version = 6)
+@Database(entities = [DiaryNoteDB::class, MoodDB::class, TaskDB::class, MeditationTimeDB::class],
+    version = 6)
 abstract class DiaryDatabase : RoomDatabase() {
 
     abstract fun getDiaryDao(): DiaryDao

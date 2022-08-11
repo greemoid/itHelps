@@ -1,9 +1,9 @@
 package com.greemoid.ithelps.data.source
 
 import com.greemoid.ithelps.data.db.diaryDB.MeditationDao
-import com.greemoid.ithelps.data.mapper.MeditationDBToMeditationMapper
-import com.greemoid.ithelps.data.mapper.MeditationListMapper
-import com.greemoid.ithelps.data.mapper.MeditationToMeditationDBMapper
+import com.greemoid.ithelps.data.mapper.meditation.MeditationDBToMeditationMapper
+import com.greemoid.ithelps.data.mapper.meditation.MeditationListMapper
+import com.greemoid.ithelps.data.mapper.meditation.MeditationToMeditationDBMapper
 import com.greemoid.ithelps.domain.models.meditation.Meditation
 import com.greemoid.ithelps.domain.repository.MeditationRepository
 

@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.presentation.todo
+package com.greemoid.ithelps.presentation.todo.list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -20,7 +20,7 @@ class TodoListTasksViewModel(
     private val _list = MutableLiveData<List<TaskDB>>()
     val list: LiveData<List<TaskDB>> = _list
 
-    fun getByType(taskType: String) : LiveData<List<TaskDB>> {
+    fun getByType(taskType: String): LiveData<List<TaskDB>> {
         return getTasksByTaskTypeUseCase.getTasksByTasksType(taskType)
     }
 

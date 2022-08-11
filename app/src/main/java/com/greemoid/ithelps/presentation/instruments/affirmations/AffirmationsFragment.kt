@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.ViewPager
-import com.greemoid.ithelps.R
 import com.greemoid.ithelps.data.models.Affirmation
 import com.greemoid.ithelps.data.source.AffirmationDataSource
 import com.greemoid.ithelps.databinding.FragmentAffirmationsBinding
@@ -41,12 +40,11 @@ class AffirmationsFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        if(activity is MainActivity) {
+        if (activity is MainActivity) {
             val mainActivity = activity as MainActivity
             mainActivity.setBottomNavigationVisibility(View.GONE)
         }
     }
-
 
 
 }

@@ -1,5 +1,6 @@
-package com.greemoid.ithelps.data.mapper
+package com.greemoid.ithelps.data.mapper.diary
 
+import com.greemoid.ithelps.data.mapper.Mapper
 import com.greemoid.ithelps.data.models.DiaryNoteDB
 import com.greemoid.ithelps.domain.models.diary.DiaryNote
 

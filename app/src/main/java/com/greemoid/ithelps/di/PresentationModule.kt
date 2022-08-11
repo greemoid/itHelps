@@ -1,13 +1,16 @@
 package com.greemoid.ithelps.di
 
-import com.greemoid.ithelps.data.mapper.TaskToTaskDBMapper
 import com.greemoid.ithelps.presentation.core.Date
 import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
 import com.greemoid.ithelps.presentation.diary.DiaryViewModel
 import com.greemoid.ithelps.presentation.instruments.breathing.ExerciseBreathingViewModel
 import com.greemoid.ithelps.presentation.meditation.MeditationViewModel
 import com.greemoid.ithelps.presentation.moodAdd.MoodAddViewModel
-import com.greemoid.ithelps.presentation.todo.*
+import com.greemoid.ithelps.presentation.todo.add.TodoAddViewModel
+import com.greemoid.ithelps.presentation.todo.item.TaskItemViewModel
+import com.greemoid.ithelps.presentation.todo.list.TodoListTasksViewModel
+import com.greemoid.ithelps.presentation.todo.list.TodoTasksAdapter
+import com.greemoid.ithelps.presentation.todo.update.UpdateViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

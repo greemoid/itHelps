@@ -42,7 +42,8 @@ class MoodAddFragment : Fragment() {
                 )
                 viewModel.save(mood)
                 binding.editTextTextOfDiary.text = null
-                findNavController().navigate(R.id.action_moodAddFragment_to_dailyTasksFragment)
+                findNavController()
+                    .navigate(R.id.action_moodAddFragment_to_dailyTasksFragment)
             } else {
                 Snackbar
                     .make(
@@ -55,7 +56,8 @@ class MoodAddFragment : Fragment() {
 
 
         binding.btnClose.setOnClickListener {
-            findNavController().navigate(R.id.action_moodAddFragment_to_dailyTasksFragment)
+            findNavController()
+                .navigate(R.id.action_moodAddFragment_to_dailyTasksFragment)
         }
     }
 }

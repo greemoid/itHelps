@@ -6,15 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.ViewPager
-import com.greemoid.ithelps.R
-import com.greemoid.ithelps.data.models.Affirmation
 import com.greemoid.ithelps.data.models.Quote
-import com.greemoid.ithelps.data.source.AffirmationDataSource
 import com.greemoid.ithelps.data.source.QuotesDataSource
-import com.greemoid.ithelps.databinding.FragmentAffirmationsBinding
 import com.greemoid.ithelps.databinding.FragmentQuotesBinding
 import com.greemoid.ithelps.presentation.MainActivity
-import com.greemoid.ithelps.presentation.instruments.affirmations.AffirmationsViewPagerAdapter
 
 
 class QuotesFragment : Fragment() {
@@ -44,7 +39,7 @@ class QuotesFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        if(activity is MainActivity) {
+        if (activity is MainActivity) {
             val mainActivity = activity as MainActivity
             mainActivity.setBottomNavigationVisibility(View.GONE)
         }

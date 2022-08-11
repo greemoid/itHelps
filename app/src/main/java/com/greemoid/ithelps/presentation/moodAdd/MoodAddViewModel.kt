@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class MoodAddViewModel(
     private val useCase: SaveMoodUseCase,
-    date: Date
+    date: Date,
 ) : ViewModel() {
 
     val fullyDate = date.getCurrentFullDate()

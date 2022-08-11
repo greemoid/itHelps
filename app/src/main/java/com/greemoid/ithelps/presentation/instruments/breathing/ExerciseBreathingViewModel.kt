@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import java.util.*
 
-class ExerciseBreathingViewModel: ViewModel() {
+class ExerciseBreathingViewModel : ViewModel() {
 
     private val _millisBreath = MutableLiveData<String>("")
     val millisBreath: LiveData<String> = _millisBreath
@@ -18,12 +18,6 @@ class ExerciseBreathingViewModel: ViewModel() {
     private val _breathTimeForAnim = MutableLiveData<Long>(0)
     val breathTimeForAnim: LiveData<Long> = _breathTimeForAnim
 
-    /*
-    private val _isBreathTimer = MutableLiveData(false)
-    val isBreathTimer: LiveData<Boolean> = _isBreathTimer
-    private val _isFirstDelayTimer = MutableLiveData(false)
-    val isFirstDelayTimer: LiveData<Boolean> = _isFirstDelayTimer
-    val isSecondDelayTimer: LiveData<Boolean> = _isSecondDelayTimer*/
 
     private val _isBreathTimer = MutableLiveData(false)
     val isBreathTimer: LiveData<Boolean> = _isBreathTimer
@@ -55,7 +49,8 @@ class ExerciseBreathingViewModel: ViewModel() {
                 val minutes = (seconds % 3600) / 60
                 val secs = seconds % 60
 
-                _totalTime.value = String.format(Locale.getDefault(), "%02d:%02d", minutes, secs)
+                _totalTime.value = String
+                    .format(Locale.getDefault(), "%02d:%02d", minutes, secs)
 
             }
 
@@ -78,12 +73,9 @@ class ExerciseBreathingViewModel: ViewModel() {
                 val seconds = millisUntilFinished / 1000
                 val secs = seconds % 60
 
-                _millisBreath.value = String.format(Locale.getDefault(), "%1d", secs)/*
-                val seconds = millisUntilFinished / 1000
-                val minutes = (seconds % 3600) / 60
-                val secs = seconds % 60
+                _millisBreath.value = String
+                    .format(Locale.getDefault(), "%1d", secs)
 
-                _millisBreath.value = String.format(Locale.getDefault(), "%02d:%02d", minutes, secs)*/
                 _breath.value = "Вдихай"
             }
 
@@ -101,12 +93,8 @@ class ExerciseBreathingViewModel: ViewModel() {
                 val seconds = millisUntilFinished / 1000
                 val secs = seconds % 60
 
-                _millisBreath.value = String.format(Locale.getDefault(), "%1d", secs)/*
-                val seconds = millisUntilFinished / 1000
-                val minutes = (seconds % 3600) / 60
-                val secs = seconds % 60
-
-                _millisBreath.value = String.format(Locale.getDefault(), "%02d:%02d", minutes, secs)*/
+                _millisBreath.value = String
+                    .format(Locale.getDefault(), "%1d", secs)
                 _breath.value = "Затримай"
             }
 
@@ -125,12 +113,8 @@ class ExerciseBreathingViewModel: ViewModel() {
                 val seconds = millisUntilFinished / 1000
                 val secs = seconds % 60
 
-                _millisBreath.value = String.format(Locale.getDefault(), "%1d", secs)/*
-                val seconds = millisUntilFinished / 1000
-                val minutes = (seconds % 3600) / 60
-                val secs = seconds % 60
-
-                _millisBreath.value = String.format(Locale.getDefault(), "%02d:%02d", minutes, secs)*/
+                _millisBreath.value = String
+                    .format(Locale.getDefault(), "%1d", secs)
                 _breath.value = "Видихай"
             }
 
@@ -148,12 +132,8 @@ class ExerciseBreathingViewModel: ViewModel() {
                 val seconds = millisUntilFinished / 1000
                 val secs = seconds % 60
 
-                _millisBreath.value = String.format(Locale.getDefault(), "%1d", secs)/*
-                val seconds = millisUntilFinished / 1000
-                val minutes = (seconds % 3600) / 60
-                val secs = seconds % 60
-
-                _millisBreath.value = String.format(Locale.getDefault(), "%02d:%02d", minutes, secs)*/
+                _millisBreath.value = String
+                    .format(Locale.getDefault(), "%1d", secs)
                 _breath.value = "Затримай"
             }
 

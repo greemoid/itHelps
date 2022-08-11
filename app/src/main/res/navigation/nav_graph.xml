@@ -125,7 +125,7 @@
     </fragment>
     <fragment
         android:id="@+id/todoAddFragment"
-        android:name="com.greemoid.ithelps.presentation.todo.TodoAddFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.add.TodoAddFragment"
         android:label="fragment_todo_add"
         tools:layout="@layout/fragment_todo_add" >
         <action
@@ -134,7 +134,7 @@
     </fragment>
     <fragment
         android:id="@+id/todoListTasksFragment"
-        android:name="com.greemoid.ithelps.presentation.todo.TodoListTasksFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.list.TodoListTasksFragment"
         android:label="fragment_todo_list_tasks"
         tools:layout="@layout/fragment_todo_list_tasks" >
 
@@ -151,7 +151,7 @@
     </fragment>
     <fragment
         android:id="@+id/taskItemFragment"
-        android:name="com.greemoid.ithelps.presentation.todo.TaskItemFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.item.TaskItemFragment"
         android:label="fragment_task_item"
         tools:layout="@layout/fragment_task_item" >
         <action
@@ -166,7 +166,7 @@
     </fragment>
     <fragment
         android:id="@+id/updateTaskFragment"
-        android:name="com.greemoid.ithelps.presentation.todo.UpdateTaskFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.update.UpdateTaskFragment"
         android:label="fragment_update_task"
         tools:layout="@layout/fragment_update_task" >
         <action

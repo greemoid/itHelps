@@ -42,7 +42,8 @@ class DiaryFragment : Fragment() {
                 )
                 viewModel.save(diaryNote)
                 binding.etAnswer.text = null
-                findNavController().navigate(R.id.action_diaryFragment_to_dailyTasksFragment)
+                findNavController()
+                    .navigate(R.id.action_diaryFragment_to_dailyTasksFragment)
             } else {
                 Snackbar
                     .make(
@@ -53,7 +54,8 @@ class DiaryFragment : Fragment() {
             }
         }
         binding.btnClose.setOnClickListener {
-            findNavController().navigate(R.id.action_diaryFragment_to_dailyTasksFragment)
+            findNavController()
+                .navigate(R.id.action_diaryFragment_to_dailyTasksFragment)
         }
     }
 

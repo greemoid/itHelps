@@ -29,31 +29,38 @@ class InstrumentsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnMoodTracker.setOnClickListener {
-            findNavController().navigate(R.id.action_instrumentsFragment_to_choiceMoodFragment)
+            findNavController()
+                .navigate(R.id.action_instrumentsFragment_to_choiceMoodFragment)
         }
 
         binding.btnDiary.setOnClickListener {
-            findNavController().navigate(R.id.action_instrumentsFragment_to_diaryFragment)
+            findNavController()
+                .navigate(R.id.action_instrumentsFragment_to_diaryFragment)
         }
 
         binding.btnMeditation.setOnClickListener {
-            findNavController().navigate(R.id.action_instrumentsFragment_to_meditationFragment)
+            findNavController()
+                .navigate(R.id.action_instrumentsFragment_to_meditationFragment)
         }
 
         binding.btnAnswers.setOnClickListener {
-            findNavController().navigate(R.id.action_instrumentsFragment_to_questionsAndAnswersFragment)
+            findNavController()
+                .navigate(R.id.action_instrumentsFragment_to_questionsAndAnswersFragment)
         }
 
         binding.btnControl.setOnClickListener {
-            findNavController().navigate(R.id.action_instrumentsFragment_to_conditionControlFragment)
+            findNavController()
+                .navigate(R.id.action_instrumentsFragment_to_conditionControlFragment)
         }
 
         binding.btnAffirmations.setOnClickListener {
-            findNavController().navigate(R.id.action_instrumentsFragment_to_affirmationsFragment)
+            findNavController()
+                .navigate(R.id.action_instrumentsFragment_to_affirmationsFragment)
         }
 
         binding.btnQuotes.setOnClickListener {
-            findNavController().navigate(R.id.action_instrumentsFragment_to_quotesFragment)
+            findNavController()
+                .navigate(R.id.action_instrumentsFragment_to_quotesFragment)
         }
 
         binding.btnArticles.setOnClickListener {
@@ -63,13 +70,14 @@ class InstrumentsFragment : Fragment() {
         }
 
         binding.btnBreathing.setOnClickListener {
-            findNavController().navigate(R.id.action_instrumentsFragment_to_choiceOfExerciseFragment)
+            findNavController()
+                .navigate(R.id.action_instrumentsFragment_to_choiceOfExerciseFragment)
         }
     }
 
     override fun onResume() {
         super.onResume()
-        if(activity is MainActivity) {
+        if (activity is MainActivity) {
             val mainActivity = activity as MainActivity
             mainActivity.setBottomNavigationVisibility(View.VISIBLE)
         }
