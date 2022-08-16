@@ -13,5 +13,5 @@ interface MoodDao {
     suspend fun insertMood(moodDB: MoodDB)
 
     @Query("SELECT * FROM mood_table")
-    fun getAllMoods(): List<MoodDB>
+    suspend fun getAllMoods(): List<MoodDB>
 }

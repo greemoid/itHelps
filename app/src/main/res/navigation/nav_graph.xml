@@ -23,14 +23,14 @@
             android:id="@+id/action_dailyTasksFragment_to_accountFragment"
             app:destination="@id/accountFragment" />
         <action
-            android:id="@+id/action_dailyTasksFragment_to_habitTrackerFragment"
-            app:destination="@id/habitTrackerFragment" />
-        <action
             android:id="@+id/action_dailyTasksFragment_to_instrumentsFragment"
             app:destination="@id/instrumentsFragment" />
         <action
             android:id="@+id/action_dailyTasksFragment_to_todoFragment"
             app:destination="@id/todoFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_insightsFragment"
+            app:destination="@id/insightsFragment" />
     </fragment>
     <fragment
         android:id="@+id/choiceMoodFragment"
@@ -76,11 +76,6 @@
         android:name="com.greemoid.ithelps.presentation.account.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
-    <fragment
-        android:id="@+id/habitTrackerFragment"
-        android:name="com.greemoid.ithelps.presentation.habitTracker.HabitTrackerFragment"
-        android:label="fragment_habit_tracker"
-        tools:layout="@layout/fragment_habit_tracker" />
     <fragment
         android:id="@+id/instrumentsFragment"
         android:name="com.greemoid.ithelps.presentation.instruments.InstrumentsFragment"
@@ -247,5 +242,13 @@
         <argument
             android:name="breathingTime"
             app:argType="com.greemoid.ithelps.presentation.instruments.breathing.BreathingTime" />
+    </fragment>
+    <fragment
+        android:id="@+id/insightsFragment"
+        android:name="com.greemoid.ithelps.presentation.insights.InsightsFragment"
+        android:label="InsightsFragment" >
+        <action
+            android:id="@+id/action_insightsFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
     </fragment>
 </navigation>

@@ -12,7 +12,7 @@ interface MeditationDao {
     suspend fun insertMeditationTime(meditationTimeDB: MeditationTimeDB)
 
     @Query("SELECT * FROM meditation_time_table")
-    fun getAllMeditationSessions(): List<MeditationTimeDB>
+     fun getAllMeditationSessions(): List<MeditationTimeDB>
 
     @Query("SELECT * FROM meditation_time_table ORDER BY id DESC LIMIT 1")
     suspend fun getLastMeditationSession(): MeditationTimeDB

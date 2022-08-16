@@ -3,6 +3,7 @@ package com.greemoid.ithelps.di
 import com.greemoid.ithelps.presentation.core.Date
 import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
 import com.greemoid.ithelps.presentation.diary.DiaryViewModel
+import com.greemoid.ithelps.presentation.insights.InsightsViewModel
 import com.greemoid.ithelps.presentation.instruments.breathing.ExerciseBreathingViewModel
 import com.greemoid.ithelps.presentation.meditation.MeditationViewModel
 import com.greemoid.ithelps.presentation.moodAdd.MoodAddViewModel
@@ -79,6 +80,14 @@ val presentationModule = module {
 
     viewModel {
         ExerciseBreathingViewModel()
+    }
+
+    viewModel {
+        InsightsViewModel(
+            getAllMoodsUseCase = get(),
+            getAllDiaryNotesUseCase = get(),
+            getAllMeditationSessionsUseCase = get()
+        )
     }
 
 }

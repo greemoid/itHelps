@@ -10,6 +10,7 @@ val diaryDBModule = module {
     fun provideDataBase(application: Application): DiaryDatabase {
         return Room.databaseBuilder(application, DiaryDatabase::class.java, "diary_table.db")
             .fallbackToDestructiveMigration()
+            .allowMainThreadQueries()
             .build()
     }
 

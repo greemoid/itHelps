@@ -11,7 +11,7 @@ class MoodCacheDataSource(
     private val mapperToDomain: MoodDBToMoodMapper,
     private val mapperToData: MoodToMoodDBMapper,
 ) : MoodRepository {
-    override fun getAllMoods(): List<Mood> {
+    override suspend fun getAllMoods(): List<Mood> {
         val list = moodDao.getAllMoods()
         return mapperToDomain.map(list)
     }

@@ -11,7 +11,9 @@ class DiaryCacheDataSource(
     private val mapperToDomain: DiaryDBToDiaryNoteMapper,
     private val mapperToData: DiaryNoteToDiaryDBMapper,
 ) : DiaryRepository {
-    override fun allDiaryNotes(): List<DiaryNote> {
+
+
+    override fun getAllDiaryNotes(): List<DiaryNote> {
         val list = diaryDao.getAllDiaryNotes()
         return mapperToDomain.map(list)
     }

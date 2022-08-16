@@ -6,7 +6,7 @@ interface MeditationRepository {
 
     suspend fun insertMeditationTime(meditation: Meditation)
 
-    fun getAllMeditationSessions(): List<Meditation>
+     fun getAllMeditationSessions(): List<Meditation>
 
     suspend fun getLastMeditationSession(): Meditation
 }

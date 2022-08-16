@@ -1,5 +1,6 @@
 package com.greemoid.ithelps.data.source
 
+import android.util.Log
 import com.greemoid.ithelps.data.db.diaryDB.MeditationDao
 import com.greemoid.ithelps.data.mapper.meditation.MeditationDBToMeditationMapper
 import com.greemoid.ithelps.data.mapper.meditation.MeditationListMapper
@@ -18,7 +19,7 @@ class MeditationCacheDataSource(
         meditationDao.insertMeditationTime(meditationDB)
     }
 
-    override fun getAllMeditationSessions(): List<Meditation> {
+    override  fun getAllMeditationSessions(): List<Meditation> {
         val list = meditationDao.getAllMeditationSessions()
         return meditationListMapper.map(list)
     }

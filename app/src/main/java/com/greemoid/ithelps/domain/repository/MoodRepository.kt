@@ -4,7 +4,7 @@ import com.greemoid.ithelps.domain.models.mood.Mood
 
 interface MoodRepository {
 
-    fun getAllMoods(): List<Mood>
+    suspend fun getAllMoods(): List<Mood>
 
     suspend fun insertMood(mood: Mood)
 }

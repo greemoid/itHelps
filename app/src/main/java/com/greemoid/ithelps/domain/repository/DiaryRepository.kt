@@ -4,7 +4,7 @@ import com.greemoid.ithelps.domain.models.diary.DiaryNote
 
 interface DiaryRepository {
 
-    fun allDiaryNotes(): List<DiaryNote>
+    fun getAllDiaryNotes(): List<DiaryNote>
 
     suspend fun upsertDiaryNote(diaryNote: DiaryNote)
 }
