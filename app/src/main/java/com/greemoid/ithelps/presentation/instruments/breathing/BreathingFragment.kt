@@ -1,33 +1,27 @@
 package com.greemoid.ithelps.presentation.instruments.breathing
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
+import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentBreathingBinding
+import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
-class BreathingFragment : Fragment() {
+class BreathingFragment :
+    BaseFragment<DailyTasksViewModel, FragmentBreathingBinding>(FragmentBreathingBinding::inflate) {
 
-    private var _binding: FragmentBreathingBinding? = null
-    private val binding get() = _binding!!
+    //todo clean up init(); move it to customview
+
     private val args: BreathingFragmentArgs by navArgs()
+    override val viewModel: DailyTasksViewModel by sharedViewModel()
+    override val visibility: Int = View.GONE
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        _binding = FragmentBreathingBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun init() {
         val breathingType = args.breathingType
         val breath = breathingType.breath
         val firstDelay = breathingType.firstDelay
@@ -88,10 +82,4 @@ class BreathingFragment : Fragment() {
                     bundle)
         }
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
 }

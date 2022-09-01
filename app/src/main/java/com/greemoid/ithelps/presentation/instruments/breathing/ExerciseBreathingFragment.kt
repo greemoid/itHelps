@@ -1,16 +1,13 @@
 package com.greemoid.ithelps.presentation.instruments.breathing
 
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.view.animation.AnimationUtils
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
+import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentExerciseBreathingBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,22 +15,17 @@ import kotlinx.coroutines.withContext
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
-class ExerciseBreathingFragment : Fragment() {
+class ExerciseBreathingFragment :
+    BaseFragment<ExerciseBreathingViewModel, FragmentExerciseBreathingBinding>(
+        FragmentExerciseBreathingBinding::inflate) {
 
-    private lateinit var binding: FragmentExerciseBreathingBinding
+    //todo clean up init(); move it to customview
+
     private val args: ExerciseBreathingFragmentArgs by navArgs()
-    private val viewModel: ExerciseBreathingViewModel by sharedViewModel()
+    override val visibility: Int = View.GONE
+    override val viewModel: ExerciseBreathingViewModel by sharedViewModel()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        binding = FragmentExerciseBreathingBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun init() {
         val breathingTime = args.breathingTime
         viewModel.startTotalTimer(
             breathingTime.totalTime,
@@ -93,5 +85,4 @@ class ExerciseBreathingFragment : Fragment() {
         super.onStop()
         viewModel.cancelTimer()
     }
-
 }

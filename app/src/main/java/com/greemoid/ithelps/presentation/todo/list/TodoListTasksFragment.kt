@@ -1,36 +1,25 @@
 package com.greemoid.ithelps.presentation.todo.list
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.RecyclerView
 import com.greemoid.ithelps.R
+import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentTodoListTasksBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
-class TodoListTasksFragment : Fragment() {
+class TodoListTasksFragment :
+    BaseFragment<TodoListTasksViewModel, FragmentTodoListTasksBinding>(FragmentTodoListTasksBinding::inflate) {
 
-    private lateinit var binding: FragmentTodoListTasksBinding
-    private lateinit var adapter: TodoTasksAdapter
-    private lateinit var recyclerView: RecyclerView
     private val args: TodoListTasksFragmentArgs by navArgs()
-    private val viewModel: TodoListTasksViewModel by sharedViewModel()
+    override val viewModel: TodoListTasksViewModel by sharedViewModel()
+    private val adapter: TodoTasksAdapter = TodoTasksAdapter(viewModel)
+    override val visibility: Int = View.GONE
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        binding = FragmentTodoListTasksBinding.inflate(inflater, container, false)
-        return binding.root
-    }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun init() {
         setupRecyclerView()
         val type: String = args.type
         binding.btnClose.setOnClickListener {
@@ -51,8 +40,7 @@ class TodoListTasksFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        adapter = TodoTasksAdapter(viewModel)
-        recyclerView = binding.recyclerviewListOfTasks
+        val recyclerView = binding.recyclerviewListOfTasks
         recyclerView.adapter = adapter
     }
 

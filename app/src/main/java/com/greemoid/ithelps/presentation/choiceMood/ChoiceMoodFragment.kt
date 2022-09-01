@@ -1,31 +1,24 @@
 package com.greemoid.ithelps.presentation.choiceMood
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
+import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentChoiceMoodBinding
 import com.greemoid.ithelps.domain.models.mood.MoodDataSet
+import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
-class ChoiceMoodFragment : Fragment() {
+class ChoiceMoodFragment :
+    BaseFragment<DailyTasksViewModel, FragmentChoiceMoodBinding>(FragmentChoiceMoodBinding::inflate) {
 
-    private lateinit var binding: FragmentChoiceMoodBinding
     private lateinit var adapter: ChoiceMoodAdapter
+    override val viewModel: DailyTasksViewModel by sharedViewModel()
+    override val visibility: Int = View.GONE
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        binding = FragmentChoiceMoodBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun init() {
         setupRecyclerView()
         adapter.setOnItemClickListener {
             val bundle = Bundle()
@@ -39,7 +32,5 @@ class ChoiceMoodFragment : Fragment() {
         val recyclerView = binding.rvMoods
         adapter = ChoiceMoodAdapter(dataSource)
         recyclerView.adapter = adapter
-
     }
-
 }

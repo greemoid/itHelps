@@ -30,6 +30,8 @@ class MeditationViewModel(
      * and I had those provider classes injected into my ViewModel
      */
 
+    //todo remove context from vm and make resourcemanager
+
     private val _millis = MutableLiveData<String>("")
     val millis: LiveData<String> = _millis
     lateinit var timer: CountDownTimer

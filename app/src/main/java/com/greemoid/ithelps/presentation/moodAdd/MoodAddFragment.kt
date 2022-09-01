@@ -1,34 +1,23 @@
 package com.greemoid.ithelps.presentation.moodAdd
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
 import com.greemoid.ithelps.R
+import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentMoodAddBinding
 import com.greemoid.ithelps.domain.models.mood.Mood
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-class MoodAddFragment : Fragment() {
+class MoodAddFragment :
+    BaseFragment<MoodAddViewModel, FragmentMoodAddBinding>(FragmentMoodAddBinding::inflate) {
 
-    private lateinit var binding: FragmentMoodAddBinding
     private val args: MoodAddFragmentArgs by navArgs()
-    private val viewModel: MoodAddViewModel by sharedViewModel()
+    override val viewModel: MoodAddViewModel by sharedViewModel()
+    override val visibility: Int = View.GONE
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        binding = FragmentMoodAddBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun init() {
         val moodArgs = args.moodType
         binding.tvMood.text = moodArgs.moodName
         binding.ivMood.setImageResource(moodArgs.drawableId)
@@ -53,8 +42,6 @@ class MoodAddFragment : Fragment() {
                     .show()
             }
         }
-
-
         binding.btnClose.setOnClickListener {
             findNavController()
                 .navigate(R.id.action_moodAddFragment_to_dailyTasksFragment)

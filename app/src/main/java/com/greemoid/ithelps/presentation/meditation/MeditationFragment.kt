@@ -2,35 +2,24 @@ package com.greemoid.ithelps.presentation.meditation
 
 import android.app.Activity
 import android.content.Context
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
+import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentMeditationBinding
-import com.greemoid.ithelps.presentation.MainActivity
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
-class MeditationFragment : Fragment() {
+class MeditationFragment :
+    BaseFragment<MeditationViewModel, FragmentMeditationBinding>(FragmentMeditationBinding::inflate) {
 
-    private lateinit var binding: FragmentMeditationBinding
-    private val viewModel: MeditationViewModel by sharedViewModel()
+    override val viewModel: MeditationViewModel by sharedViewModel()
+    override val visibility: Int = View.GONE
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        binding = FragmentMeditationBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    //todo move it to another file and make init smaller
+    override fun init() {
         var etTime: String = ""
         var time: Long = 0
         binding.btnSetTime.setOnClickListener {
@@ -82,15 +71,4 @@ class MeditationFragment : Fragment() {
         inputMethodManager
             .hideSoftInputFromWindow(view.windowToken, 0)
     }
-
-
-    override fun onResume() {
-        super.onResume()
-        if (activity is MainActivity) {
-            val mainActivity = activity as MainActivity
-            mainActivity.setBottomNavigationVisibility(View.GONE)
-        }
-    }
-
-
 }
