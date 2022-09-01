@@ -52,7 +52,6 @@ class InsightsViewModel(
     private fun getAllMeditations() {
             _listMeditations.value = getAllMeditationSessionsUseCase.getAllMeditationSessions()
             Log.d("TAG", getAllMeditationSessionsUseCase.getAllMeditationSessions().toString())
-
     }
 
 }

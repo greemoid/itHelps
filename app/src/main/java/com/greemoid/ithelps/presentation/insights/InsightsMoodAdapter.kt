@@ -62,7 +62,7 @@ class InsightsMoodAdapter : RecyclerView.Adapter<InsightsMoodAdapter.InsightsMoo
     }
 
 
-    private val limit = 3
+    private val limit = 5
 
     fun submitList(list: List<Mood>) {
         moodsList = list

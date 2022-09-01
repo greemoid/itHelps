@@ -36,7 +36,7 @@ class InsightsDiaryAdapter : RecyclerView.Adapter<InsightsDiaryAdapter.InsightsD
     }
 
 
-    private val limit = 3
+    private val limit = 5
 
     fun submitList(list: List<DiaryNote>) {
         diaryList = list

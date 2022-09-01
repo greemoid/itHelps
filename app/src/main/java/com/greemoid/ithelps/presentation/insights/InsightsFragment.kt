@@ -17,8 +17,6 @@ class InsightsFragment : Fragment() {
     private lateinit var adapterMood: InsightsMoodAdapter
     private lateinit var recyclerViewDiary: RecyclerView
     private lateinit var adapterDiary: InsightsDiaryAdapter
-    private lateinit var recyclerViewMeditation: RecyclerView
-    private lateinit var adapterMeditation: InsightsMeditationAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,21 +38,15 @@ class InsightsFragment : Fragment() {
             adapterDiary.submitList(it.asReversed())
         }
 
-        viewModel.listMeditations.observe(viewLifecycleOwner) {
-            adapterMeditation.submitList(it.asReversed())
-        }
     }
 
     private fun setupRecyclerView() {
         recyclerViewMood = binding.rvMoods
         recyclerViewDiary = binding.rvDiary
-        recyclerViewMeditation = binding.rvMeditation
         adapterMood = InsightsMoodAdapter()
         adapterDiary = InsightsDiaryAdapter()
-        adapterMeditation = InsightsMeditationAdapter()
         recyclerViewMood.adapter = adapterMood
         recyclerViewDiary.adapter = adapterDiary
-        recyclerViewMeditation.adapter = adapterMeditation
     }
 
 }
