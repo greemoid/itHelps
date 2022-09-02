@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.presentation.insights
+package com.greemoid.ithelps.presentation.insights.diary
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,9 +6,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.greemoid.ithelps.databinding.InsightsDiaryItemLayoutBinding
 import com.greemoid.ithelps.domain.models.diary.DiaryNote
 
-class InsightsDiaryAdapter : RecyclerView.Adapter<InsightsDiaryAdapter.InsightsDiaryViewHolder>() {
+class InsightsDiaryAdapter(private val limit: Int) : RecyclerView.Adapter<InsightsDiaryAdapter.InsightsDiaryViewHolder>() {
     inner class InsightsDiaryViewHolder(val binding: InsightsDiaryItemLayoutBinding) :
-        RecyclerView.ViewHolder(binding.root)
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(note: DiaryNote) {
+            with(binding) {
+                tvDateItem.text = note.date
+                tvDiaryTextItem.text = note.description
+            }
+        }
+    }
 
     var diaryList = emptyList<DiaryNote>()
 
@@ -19,24 +26,17 @@ class InsightsDiaryAdapter : RecyclerView.Adapter<InsightsDiaryAdapter.InsightsD
         return InsightsDiaryViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: InsightsDiaryViewHolder, position: Int) {
-        val note = diaryList[position]
-        with(holder.binding) {
-            tvDateItem.text = note.date
-            tvDiaryTextItem.text = note.description
-        }
-    }
+    override fun onBindViewHolder(holder: InsightsDiaryViewHolder, position: Int) =
+        holder.bind(diaryList[position])
+
 
     override fun getItemCount(): Int {
-        if (diaryList.size > limit) {
-            return limit
+        return if (diaryList.size > limit && limit != 0) {
+            limit
         } else {
-            return diaryList.size
+            diaryList.size
         }
     }
-
-
-    private val limit = 5
 
     fun submitList(list: List<DiaryNote>) {
         diaryList = list

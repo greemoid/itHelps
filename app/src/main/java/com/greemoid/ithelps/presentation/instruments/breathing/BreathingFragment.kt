@@ -40,7 +40,6 @@ class BreathingFragment :
                     + breathingType.exhalation
                     + breathingType.secondDelay) * 4
 
-
         val minutes = timeOfOneIteration / 60
         val seconds = timeOfOneIteration % 60
         binding.tvTotalTime.text = "$minutes хв $seconds сек"

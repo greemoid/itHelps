@@ -42,9 +42,6 @@ class MoodAddFragment :
                     .show()
             }
         }
-        binding.btnClose.setOnClickListener {
-            findNavController()
-                .navigate(R.id.action_moodAddFragment_to_dailyTasksFragment)
-        }
+        binding.btnClose.navigate(R.id.action_moodAddFragment_to_dailyTasksFragment)
     }
 }

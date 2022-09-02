@@ -80,9 +80,4 @@ class ExerciseBreathingFragment :
             }
         }
     }
-
-    override fun onStop() {
-        super.onStop()
-        viewModel.cancelTimer()
-    }
 }

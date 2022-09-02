@@ -250,5 +250,29 @@
         <action
             android:id="@+id/action_insightsFragment_to_dailyTasksFragment"
             app:destination="@id/dailyTasksFragment" />
+        <action
+            android:id="@+id/action_insightsFragment_to_diaryListFragment"
+            app:destination="@id/diaryListFragment" />
+        <action
+            android:id="@+id/action_insightsFragment_to_moodListFragment"
+            app:destination="@id/moodListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diaryListFragment"
+        android:name="com.greemoid.ithelps.presentation.insights.diary.DiaryListFragment"
+        android:label="fragment_diary_list"
+        tools:layout="@layout/fragment_diary_list" >
+        <action
+            android:id="@+id/action_diaryListFragment_to_insightsFragment"
+            app:destination="@id/insightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moodListFragment"
+        android:name="com.greemoid.ithelps.presentation.insights.mood.MoodListFragment"
+        android:label="fragment_mood_list"
+        tools:layout="@layout/fragment_mood_list" >
+        <action
+            android:id="@+id/action_moodListFragment_to_insightsFragment"
+            app:destination="@id/insightsFragment" />
     </fragment>
 </navigation>

@@ -34,7 +34,8 @@ class MeditationViewModel(
 
     private val _millis = MutableLiveData<String>("")
     val millis: LiveData<String> = _millis
-    lateinit var timer: CountDownTimer
+    //todo when i exit screen before init timer app crashes
+    private var timer: CountDownTimer? = null
 
     fun startTimer(time: Long) {
         var totalTime: Long = 0
@@ -76,7 +77,7 @@ class MeditationViewModel(
     }
 
     fun cancelTimer() {
-        timer.cancel()
+        timer?.cancel()
     }
 
 

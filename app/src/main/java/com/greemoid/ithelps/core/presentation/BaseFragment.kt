@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
+import androidx.navigation.fragment.findNavController
 import androidx.viewbinding.ViewBinding
 import com.greemoid.ithelps.presentation.MainActivity
 
@@ -36,7 +38,14 @@ abstract class BaseFragment<VM : ViewModel, VB : ViewBinding>(private val inflat
         super.onResume()
         (activity as MainActivity).setBottomNavigationVisibility(visibility)
     }
+
     abstract fun init()
+
+    fun View.navigate(@IdRes dest: Int, bundle: Bundle? = null) {
+        setOnClickListener {
+            findNavController().navigate(dest)
+        }
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
