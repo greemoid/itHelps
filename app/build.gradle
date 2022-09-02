@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -37,11 +38,15 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.databinding:databinding-runtime:7.2.1'
     def koin_version = '3.2.0'
     def coroutines_version = '1.6.2'
     def lifecycle_version = '2.5.1'
     def glide_version = '4.13.2'
     def retrofit_version = '2.9.0'
+    def room_version = '2.4.3'
+
+    implementation 'joda-time:joda-time:2.10.14'
 
     // Architectural Components
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
@@ -62,6 +67,12 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "com.squareup.okhttp3:logging-interceptor:4.10.0"
+
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 
     // Glide
     implementation "com.github.bumptech.glide:glide:$glide_version"

@@ -1,6 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dailyTasksFragment">
 
+    <fragment
+        android:id="@+id/dailyTasksFragment"
+        android:name="com.greemoid.ithelps.presentation.dailyTasks.DailyTasksFragment"
+        android:label="fragment_daily_tasks"
+        tools:layout="@layout/fragment_daily_tasks" >
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_choiceMoodFragment"
+            app:destination="@id/choiceMoodFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_meditationFragment"
+            app:destination="@id/meditationFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+        <action
+            android:id="@+id/action_dailyTasksFragment_to_insightsFragment"
+            app:destination="@id/insightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceMoodFragment"
+        android:name="com.greemoid.ithelps.presentation.choiceMood.ChoiceMoodFragment"
+        android:label="fragment_choice_mood"
+        tools:layout="@layout/fragment_choice_mood" >
+        <action
+            android:id="@+id/action_choiceMoodFragment_to_moodAddFragment"
+            app:destination="@id/moodAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diaryFragment"
+        android:name="com.greemoid.ithelps.presentation.diary.DiaryFragment"
+        android:label="fragment_diary"
+        tools:layout="@layout/fragment_diary" >
+        <action
+            android:id="@+id/action_diaryFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/meditationFragment"
+        android:name="com.greemoid.ithelps.presentation.meditation.MeditationFragment"
+        android:label="fragment_meditation"
+        tools:layout="@layout/fragment_meditation" >
+        <action
+            android:id="@+id/action_meditationFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moodAddFragment"
+        android:name="com.greemoid.ithelps.presentation.moodAdd.MoodAddFragment"
+        android:label="fragment_mood_add"
+        tools:layout="@layout/fragment_mood_add" >
+        <argument
+            android:name="moodType"
+            app:argType="com.greemoid.ithelps.domain.models.mood.MoodType" />
+        <action
+            android:id="@+id/action_moodAddFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.greemoid.ithelps.presentation.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/instrumentsFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.InstrumentsFragment"
+        android:label="fragment_instruments"
+        tools:layout="@layout/fragment_instruments" >
+        <action
+            android:id="@+id/action_instrumentsFragment_to_choiceMoodFragment"
+            app:destination="@id/choiceMoodFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_meditationFragment"
+            app:destination="@id/meditationFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_questionsAndAnswersFragment"
+            app:destination="@id/questionsAndAnswersFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_affirmationsFragment"
+            app:destination="@id/affirmationsFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_conditionControlFragment"
+            app:destination="@id/conditionControlFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_quotesFragment"
+            app:destination="@id/quotesFragment" />
+        <action
+            android:id="@+id/action_instrumentsFragment_to_choiceOfExerciseFragment"
+            app:destination="@id/choiceOfExerciseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.TodoFragment"
+        android:label="fragment_todo"
+        tools:layout="@layout/fragment_todo" >
+        <action
+            android:id="@+id/action_todoFragment_to_todoAddFragment"
+            app:destination="@id/todoAddFragment" />
+        <action
+            android:id="@+id/action_todoFragment_to_todoListTasksFragment"
+            app:destination="@id/todoListTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoAddFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.add.TodoAddFragment"
+        android:label="fragment_todo_add"
+        tools:layout="@layout/fragment_todo_add" >
+        <action
+            android:id="@+id/action_todoAddFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoListTasksFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.list.TodoListTasksFragment"
+        android:label="fragment_todo_list_tasks"
+        tools:layout="@layout/fragment_todo_list_tasks" >
+
+        <action
+            android:id="@+id/action_todoListTasksFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+        <argument
+            android:name="type"
+            app:argType="string"
+            android:defaultValue="Мій день" />
+        <action
+            android:id="@+id/action_todoListTasksFragment_to_taskItemFragment"
+            app:destination="@id/taskItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskItemFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.item.TaskItemFragment"
+        android:label="fragment_task_item"
+        tools:layout="@layout/fragment_task_item" >
+        <action
+            android:id="@+id/action_taskItemFragment_to_todoListTasksFragment"
+            app:destination="@id/todoListTasksFragment" />
+        <argument
+            android:name="task"
+            app:argType="com.greemoid.ithelps.data.models.TaskDB" />
+        <action
+            android:id="@+id/action_taskItemFragment_to_updateTaskFragment"
+            app:destination="@id/updateTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTaskFragment"
+        android:name="com.greemoid.ithelps.presentation.todo.update.UpdateTaskFragment"
+        android:label="fragment_update_task"
+        tools:layout="@layout/fragment_update_task" >
+        <action
+            android:id="@+id/action_updateTaskFragment_to_todoFragment"
+            app:destination="@id/todoFragment" />
+        <argument
+            android:name="task"
+            app:argType="com.greemoid.ithelps.data.models.TaskDB" />
+    </fragment>
+    <fragment
+        android:id="@+id/affirmationsFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.affirmations.AffirmationsFragment"
+        android:label="fragment_affirmations"
+        tools:layout="@layout/fragment_affirmations" >
+        <action
+            android:id="@+id/action_affirmationsFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/conditionControlFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.condition.ConditionControlFragment"
+        android:label="fragment_condition_control"
+        tools:layout="@layout/fragment_condition_control" >
+        <action
+            android:id="@+id/action_conditionControlFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionsAndAnswersFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.answers.QuestionsAndAnswersFragment"
+        android:label="fragment_questions_and_answers"
+        tools:layout="@layout/fragment_questions_and_answers" >
+        <action
+            android:id="@+id/action_questionsAndAnswersFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quotesFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.quotes.QuotesFragment"
+        android:label="fragment_quotes"
+        tools:layout="@layout/fragment_quotes" >
+        <action
+            android:id="@+id/action_quotesFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choiceOfExerciseFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.breathing.ChoiceOfExerciseFragment"
+        android:label="fragment_choice_of_exercise"
+        tools:layout="@layout/fragment_choice_of_exercise" >
+        <action
+            android:id="@+id/action_choiceOfExerciseFragment_to_instrumentsFragment"
+            app:destination="@id/instrumentsFragment" />
+        <action
+            android:id="@+id/action_choiceOfExerciseFragment_to_breathingFragment"
+            app:destination="@id/breathingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/breathingFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.breathing.BreathingFragment"
+        android:label="fragment_breathing"
+        tools:layout="@layout/fragment_breathing" >
+        <argument
+            android:name="breathingType"
+            app:argType="com.greemoid.ithelps.domain.models.breathing.BreathingType" />
+        <action
+            android:id="@+id/action_breathingFragment_to_exerciseBreathingFragment"
+            app:destination="@id/exerciseBreathingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseBreathingFragment"
+        android:name="com.greemoid.ithelps.presentation.instruments.breathing.ExerciseBreathingFragment"
+        android:label="fragment_exercise_breathing"
+        tools:layout="@layout/fragment_exercise_breathing" >
+        <action
+            android:id="@+id/action_exerciseBreathingFragment_to_choiceOfExerciseFragment"
+            app:destination="@id/choiceOfExerciseFragment" />
+        <argument
+            android:name="breathingTime"
+            app:argType="com.greemoid.ithelps.presentation.instruments.breathing.BreathingTime" />
+    </fragment>
+    <fragment
+        android:id="@+id/insightsFragment"
+        android:name="com.greemoid.ithelps.presentation.insights.InsightsFragment"
+        android:label="InsightsFragment" >
+        <action
+            android:id="@+id/action_insightsFragment_to_dailyTasksFragment"
+            app:destination="@id/dailyTasksFragment" />
+        <action
+            android:id="@+id/action_insightsFragment_to_diaryListFragment"
+            app:destination="@id/diaryListFragment" />
+        <action
+            android:id="@+id/action_insightsFragment_to_moodListFragment"
+            app:destination="@id/moodListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diaryListFragment"
+        android:name="com.greemoid.ithelps.presentation.insights.diary.DiaryListFragment"
+        android:label="fragment_diary_list"
+        tools:layout="@layout/fragment_diary_list" >
+        <action
+            android:id="@+id/action_diaryListFragment_to_insightsFragment"
+            app:destination="@id/insightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moodListFragment"
+        android:name="com.greemoid.ithelps.presentation.insights.mood.MoodListFragment"
+        android:label="fragment_mood_list"
+        tools:layout="@layout/fragment_mood_list" >
+        <action
+            android:id="@+id/action_moodListFragment_to_insightsFragment"
+            app:destination="@id/insightsFragment" />
+    </fragment>
 </navigation>

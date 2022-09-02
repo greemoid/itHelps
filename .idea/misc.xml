@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable-v24/corners.xml" value="0.4425" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable/black_cursor.xml" value="0.408" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable/corners.xml" value="0.408" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable/ic_create.xml" value="0.408" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable/ic_update.xml" value="0.408" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable/mood_item_background.xml" value="0.408" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/drawable/multi_line_text_style.xml" value="0.408" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout-v26/fragment_breathing.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/activity_main.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/affirmations_slider_item_layout.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/drawer_header.xml" value="0.3067708333333333" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_about.xml" value="0.3067708333333333" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_account.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_add_habit.xml" value="0.3067708333333333" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_affirmations.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_articles.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.3067708333333333" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_breathing.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_choice_mood.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_choice_of_exercise.xml" value="0.4" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_choice_of_time_for_meditation.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_daily_tasks.xml" value="0.4" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_diary.xml" value="0.4" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_diary_list.xml" value="0.43697916666666664" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_exercise_breathing.xml" value="0.4" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_insights.xml" value="0.43697916666666664" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_instruments.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_meditation.xml" value="0.4" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_mood_add.xml" value="0.4" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_mood_description.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_mood_list.xml" value="0.3888888888888889" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_quotes.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_search_task.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_task_item.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo_add.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo_list_tasks.xml" value="0.4" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_todo_task.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_update_task.xml" value="0.42239583333333336" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/insights_diary_item_layout.xml" value="0.43697916666666664" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/insights_diary_layout.xml" value="0.43697916666666664" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/insights_done_tasks_item_layout.xml" value="0.43697916666666664" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/insights_meditation_item_layout.xml" value="0.43697916666666664" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/insights_mood_item_layout.xml" value="0.43697916666666664" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/item.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/item_habit.xml" value="0.3067708333333333" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/mood_items_layout.xml" value="0.8800000000000001" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/plan_items_layout.xml" value="0.4395833333333333" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/task_item_layout.xml" value="0.4" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/menu/bottom_menu.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/menu/edit_and_delete_menu.xml" value="0.440625" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
