@@ -1,6 +1,5 @@
 package com.greemoid.ithelps.presentation.moodAdd
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.greemoid.ithelps.domain.models.mood.Mood
@@ -17,7 +16,7 @@ class MoodAddViewModel(
 
     fun save(mood: Mood) {
         viewModelScope.launch {
-            Log.d("SAVE", useCase.saveMood(mood).toString())
+            useCase.saveMood(mood).toString()
         }
     }
 }

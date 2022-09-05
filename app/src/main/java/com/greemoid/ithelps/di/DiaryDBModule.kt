@@ -2,7 +2,7 @@ package com.greemoid.ithelps.di
 
 import android.app.Application
 import androidx.room.Room
-import com.greemoid.ithelps.data.db.diaryDB.*
+import com.greemoid.ithelps.data.db.*
 import org.koin.android.ext.koin.androidApplication
 import org.koin.dsl.module
 
@@ -10,6 +10,7 @@ val diaryDBModule = module {
     fun provideDataBase(application: Application): DiaryDatabase {
         return Room.databaseBuilder(application, DiaryDatabase::class.java, "diary_table.db")
             .fallbackToDestructiveMigration()
+            .allowMainThreadQueries()
             .build()
     }
 

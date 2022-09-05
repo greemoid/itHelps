@@ -26,11 +26,11 @@ class ExerciseBreathingViewModel : ViewModel() {
     private val _isExhalationTimer = MutableLiveData(false)
     val isExhalationTimer: LiveData<Boolean> = _isExhalationTimer
 
-    lateinit var totalTimer: CountDownTimer
-    lateinit var breathTimer: CountDownTimer
-    lateinit var firstDelayTimer: CountDownTimer
-    lateinit var exhalationTimer: CountDownTimer
-    lateinit var secondDelayTimer: CountDownTimer
+    private var totalTimer: CountDownTimer? = null
+    private var breathTimer: CountDownTimer? = null
+    private var firstDelayTimer: CountDownTimer? = null
+    private var exhalationTimer: CountDownTimer? = null
+    private var secondDelayTimer: CountDownTimer? = null
 
 
     fun startTotalTimer(
@@ -61,7 +61,11 @@ class ExerciseBreathingViewModel : ViewModel() {
     }
 
     fun cancelTimer() {
-        totalTimer.cancel()
+        totalTimer?.cancel()
+        breathTimer?.cancel()
+        firstDelayTimer?.cancel()
+        exhalationTimer?.cancel()
+        secondDelayTimer?.cancel()
     }
 
     fun startBreathTimer(breath: Int, firstDelay: Int, exhalation: Int, secondDelay: Int) {
@@ -141,5 +145,10 @@ class ExerciseBreathingViewModel : ViewModel() {
                 startBreathTimer(breath, firstDelay, exhalation, secondDelay)
             }
         }.start()
+    }
+
+    override fun onCleared() {
+        cancelTimer()
+        super.onCleared()
     }
 }

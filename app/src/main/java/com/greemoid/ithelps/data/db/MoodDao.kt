@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.data.db.diaryDB
+package com.greemoid.ithelps.data.db
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -13,5 +13,5 @@ interface MoodDao {
     suspend fun insertMood(moodDB: MoodDB)
 
     @Query("SELECT * FROM mood_table")
-    fun getAllMoods(): List<MoodDB>
+    suspend fun getAllMoods(): List<MoodDB>
 }

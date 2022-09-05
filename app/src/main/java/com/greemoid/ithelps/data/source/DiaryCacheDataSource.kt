@@ -1,6 +1,6 @@
 package com.greemoid.ithelps.data.source
 
-import com.greemoid.ithelps.data.db.diaryDB.DiaryDao
+import com.greemoid.ithelps.data.db.DiaryDao
 import com.greemoid.ithelps.data.mapper.diary.DiaryDBToDiaryNoteMapper
 import com.greemoid.ithelps.data.mapper.diary.DiaryNoteToDiaryDBMapper
 import com.greemoid.ithelps.domain.models.diary.DiaryNote
@@ -11,7 +11,9 @@ class DiaryCacheDataSource(
     private val mapperToDomain: DiaryDBToDiaryNoteMapper,
     private val mapperToData: DiaryNoteToDiaryDBMapper,
 ) : DiaryRepository {
-    override fun allDiaryNotes(): List<DiaryNote> {
+
+
+    override fun getAllDiaryNotes(): List<DiaryNote> {
         val list = diaryDao.getAllDiaryNotes()
         return mapperToDomain.map(list)
     }

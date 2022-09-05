@@ -15,9 +15,8 @@
 
     <item
         android:icon="@drawable/habit"
-        android:id="@+id/habitTrackerFragment"
-        android:title="Home"
-        />
+        android:id="@+id/insightsFragment"
+        android:title="Home" />
 
     <item
         android:icon="@drawable/instruments"

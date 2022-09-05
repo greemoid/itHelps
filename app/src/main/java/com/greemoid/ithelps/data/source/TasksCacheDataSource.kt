@@ -1,7 +1,7 @@
 package com.greemoid.ithelps.data.source
 
 import androidx.lifecycle.LiveData
-import com.greemoid.ithelps.data.db.diaryDB.TasksDao
+import com.greemoid.ithelps.data.db.TasksDao
 import com.greemoid.ithelps.data.mapper.todo.TaskDBToTaskMapper
 import com.greemoid.ithelps.data.mapper.todo.TaskToTaskDBMapper
 import com.greemoid.ithelps.data.models.TaskDB

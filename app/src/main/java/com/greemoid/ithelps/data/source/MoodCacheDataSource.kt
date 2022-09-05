@@ -1,6 +1,6 @@
 package com.greemoid.ithelps.data.source
 
-import com.greemoid.ithelps.data.db.diaryDB.MoodDao
+import com.greemoid.ithelps.data.db.MoodDao
 import com.greemoid.ithelps.data.mapper.mood.MoodDBToMoodMapper
 import com.greemoid.ithelps.data.mapper.mood.MoodToMoodDBMapper
 import com.greemoid.ithelps.domain.models.mood.Mood
@@ -11,7 +11,7 @@ class MoodCacheDataSource(
     private val mapperToDomain: MoodDBToMoodMapper,
     private val mapperToData: MoodToMoodDBMapper,
 ) : MoodRepository {
-    override fun getAllMoods(): List<Mood> {
+    override suspend fun getAllMoods(): List<Mood> {
         val list = moodDao.getAllMoods()
         return mapperToDomain.map(list)
     }

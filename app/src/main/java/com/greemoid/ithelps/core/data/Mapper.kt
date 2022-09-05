@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.data.mapper
+package com.greemoid.ithelps.core.data
 
 interface Mapper<in I, out O> {
 

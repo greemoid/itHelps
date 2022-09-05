@@ -1,32 +1,23 @@
 package com.greemoid.ithelps.presentation.todo.item
 
 import android.os.Bundle
-import android.view.*
-import androidx.fragment.app.Fragment
+import android.view.View
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
+import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentTaskItemBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
-class TaskItemFragment : Fragment() {
+class TaskItemFragment :
+    BaseFragment<TaskItemViewModel, FragmentTaskItemBinding>(FragmentTaskItemBinding::inflate) {
 
-    private lateinit var binding: FragmentTaskItemBinding
     private val args: TaskItemFragmentArgs by navArgs()
-    private val viewModel: TaskItemViewModel by sharedViewModel()
+    override val viewModel: TaskItemViewModel by sharedViewModel()
+    override val visibility: Int = View.GONE
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        binding = FragmentTaskItemBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun init() {
         val task = args.task
         with(binding) {
             tvTitle.text = task.title
@@ -56,6 +47,4 @@ class TaskItemFragment : Fragment() {
                 .navigate(R.id.action_taskItemFragment_to_todoListTasksFragment, bundle)
         }
     }
-
-
 }

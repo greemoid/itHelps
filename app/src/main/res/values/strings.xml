@@ -80,4 +80,41 @@
     <string name="quote29">Ви не повинні зупинятися, навіть якщо щось може йти не так, як би хотілось. (Майкл Джордан)</string>
     <string name="quote30">Нічого не досягне у житті той, хто не має сміливості ризикувати. (Мухаммед Алі)</string>
 
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Шерлок Холмс</string>
+    <string name="nav_header_subtitle">sherlock.holmes@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_habits">Мои привычки</string>
+    <string name="menu_about_app">О приложении</string>
+    <string name="action_sort">Сортировать</string>
+    <string name="menu_add_habit">Добавить привычку</string>
+    <string name="tab_good_habit">Хорошие</string>
+    <string name="tab_bad_habit">Плохие</string>
+    <string name="input_name">Название</string>
+    <string name="input_description">Описание</string>
+    <string name="type_bad">Плохая</string>
+    <string name="type_good">Хорошая</string>
+    <string name="input_count">Количество</string>
+    <string name="input_frequency">Периодичность</string>
+    <string name="sort_date">по дате</string>
+    <string name="sort_priority">по приоритету</string>
+    <string name="sort_name">по названию</string>
+    <string name="title_sort">Сортировать:</string>
+    <string name="hint_search">Поиск</string>
+    <string name="btn_ok">Ок</string>
+    <string name="title_about_app">Тестовое задание для Doubletapp</string>
+    <string name="subtitle_about_app">Разработано Зелинской Илоной</string>
+    <string name="btn_add_color">Добавить цвет</string>
+    <string name="btn_choose">Выбрать</string>
+    <string name="btn_cancel">Отмена</string>
+    <string name="btn_clear">Очистить</string>
+    <string name="action_color">Выбрать цвет</string>
+    <string-array name="priorities">
+        <item>Низкий</item>
+        <item>Средний</item>
+        <item>Высокий</item>
+    </string-array>
+
 </resources>

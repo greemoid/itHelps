@@ -30,9 +30,13 @@ class MeditationViewModel(
      * and I had those provider classes injected into my ViewModel
      */
 
+    //todo remove context from vm and make resourcemanager
+
     private val _millis = MutableLiveData<String>("")
     val millis: LiveData<String> = _millis
-    lateinit var timer: CountDownTimer
+
+    //todo when i exit screen before init timer app crashes
+    private var timer: CountDownTimer? = null
 
     fun startTimer(time: Long) {
         var totalTime: Long = 0
@@ -61,7 +65,7 @@ class MeditationViewModel(
                     )
                     saveMeditationSessionUseCase.saveMeditationSession(meditation)
                 }
-                val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                 if (Build.VERSION.SDK_INT >= 26) {
                     vibrator.vibrate(
                         VibrationEffect.createOneShot(
@@ -74,7 +78,7 @@ class MeditationViewModel(
     }
 
     fun cancelTimer() {
-        timer.cancel()
+        timer?.cancel()
     }
 
 

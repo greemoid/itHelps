@@ -1,31 +1,23 @@
 package com.greemoid.ithelps.presentation.todo
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
+import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentTodoBinding
 import com.greemoid.ithelps.domain.models.todo.TaskTypes
+import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
-class TodoFragment : Fragment() {
+class TodoFragment :
+    BaseFragment<DailyTasksViewModel, FragmentTodoBinding>(FragmentTodoBinding::inflate) {
 
+    override val viewModel: DailyTasksViewModel by sharedViewModel()
+    override val visibility: Int = View.VISIBLE
 
-    private lateinit var binding: FragmentTodoBinding
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        binding = FragmentTodoBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun init() {
         binding.floatingActionButton2.setOnClickListener {
             findNavController().navigate(R.id.action_todoFragment_to_todoAddFragment)
         }
@@ -79,6 +71,5 @@ class TodoFragment : Fragment() {
         }
 
     }
-
 
 }
