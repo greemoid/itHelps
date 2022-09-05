@@ -1,6 +1,6 @@
 package com.greemoid.ithelps.data.mapper.todo
 
-import com.greemoid.ithelps.data.mapper.Mapper
+import com.greemoid.ithelps.core.data.Mapper
 import com.greemoid.ithelps.data.models.TaskDB
 import com.greemoid.ithelps.domain.models.todo.Task
 

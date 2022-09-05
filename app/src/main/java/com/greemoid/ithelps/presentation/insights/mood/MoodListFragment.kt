@@ -16,7 +16,7 @@ class MoodListFragment :
         binding.btnBackToInsights.navigate(R.id.action_moodListFragment_to_insightsFragment)
         binding.rvMoods.adapter = adapter
         viewModel.listMoods.observe(this) { list ->
-            adapter.submitList(list.asReversed())
+            adapter.differ.submitList(list.asReversed())
         }
     }
 }

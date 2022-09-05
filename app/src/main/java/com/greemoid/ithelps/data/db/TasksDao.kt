@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.data.db.diaryDB
+package com.greemoid.ithelps.data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

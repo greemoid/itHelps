@@ -2,22 +2,15 @@ package com.greemoid.ithelps.presentation.insights.diary
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.AsyncListDiffer
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.greemoid.ithelps.data.models.TaskDB
 import com.greemoid.ithelps.databinding.InsightsDiaryItemLayoutBinding
 import com.greemoid.ithelps.domain.models.diary.DiaryNote
 
-class InsightsDiaryAdapter(private val limit: Int) : RecyclerView.Adapter<InsightsDiaryAdapter.InsightsDiaryViewHolder>() {
-    inner class InsightsDiaryViewHolder(val binding: InsightsDiaryItemLayoutBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(note: DiaryNote) {
-            with(binding) {
-                tvDateItem.text = note.date
-                tvDiaryTextItem.text = note.description
-            }
-        }
-    }
-
-    var diaryList = emptyList<DiaryNote>()
+class InsightsDiaryAdapter(private val limit: Int) :
+    RecyclerView.Adapter<InsightsDiaryViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InsightsDiaryViewHolder {
         val binding = InsightsDiaryItemLayoutBinding.inflate(LayoutInflater.from(parent.context),
@@ -27,19 +20,26 @@ class InsightsDiaryAdapter(private val limit: Int) : RecyclerView.Adapter<Insigh
     }
 
     override fun onBindViewHolder(holder: InsightsDiaryViewHolder, position: Int) =
-        holder.bind(diaryList[position])
+        holder.bind(differ.currentList[position])
 
 
     override fun getItemCount(): Int {
-        return if (diaryList.size > limit && limit != 0) {
+        return if (differ.currentList.size > limit && limit != 0) {
             limit
         } else {
-            diaryList.size
+            differ.currentList.size
         }
     }
 
-    fun submitList(list: List<DiaryNote>) {
-        diaryList = list
-        notifyDataSetChanged()
+    private val differCallback = object : DiffUtil.ItemCallback<DiaryNote>() {
+        override fun areItemsTheSame(oldItem: DiaryNote, newItem: DiaryNote): Boolean {
+            return oldItem.description == newItem.description
+        }
+
+        override fun areContentsTheSame(oldItem: DiaryNote, newItem: DiaryNote): Boolean {
+            return oldItem == newItem
+        }
     }
+
+    val differ = AsyncListDiffer(this, differCallback)
 }

@@ -34,6 +34,7 @@ class MeditationViewModel(
 
     private val _millis = MutableLiveData<String>("")
     val millis: LiveData<String> = _millis
+
     //todo when i exit screen before init timer app crashes
     private var timer: CountDownTimer? = null
 
@@ -64,7 +65,7 @@ class MeditationViewModel(
                     )
                     saveMeditationSessionUseCase.saveMeditationSession(meditation)
                 }
-                val vibrator = context?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+                val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
                 if (Build.VERSION.SDK_INT >= 26) {
                     vibrator.vibrate(
                         VibrationEffect.createOneShot(

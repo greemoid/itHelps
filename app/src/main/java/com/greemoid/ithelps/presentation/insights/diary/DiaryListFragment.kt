@@ -16,7 +16,7 @@ class DiaryListFragment :
         binding.btnBackToInsights.navigate(R.id.action_diaryListFragment_to_insightsFragment)
         binding.rvDiary.adapter = adapter
         viewModel.listDiary.observe(this) { list ->
-            adapter.submitList(list.asReversed())
+            adapter.differ.submitList(list.asReversed())
         }
     }
 

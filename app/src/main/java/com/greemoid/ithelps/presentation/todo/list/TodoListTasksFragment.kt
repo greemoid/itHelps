@@ -13,21 +13,21 @@ import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 class TodoListTasksFragment :
     BaseFragment<TodoListTasksViewModel, FragmentTodoListTasksBinding>(FragmentTodoListTasksBinding::inflate) {
 
-    private val args: TodoListTasksFragmentArgs by navArgs()
     override val viewModel: TodoListTasksViewModel by sharedViewModel()
-    private val adapter: TodoTasksAdapter = TodoTasksAdapter(viewModel)
+    private lateinit var adapter: TodoTasksAdapter
     override val visibility: Int = View.GONE
 
 
     override fun init() {
         setupRecyclerView()
+        val args: TodoListTasksFragmentArgs by navArgs()
         val type: String = args.type
         binding.btnClose.setOnClickListener {
             findNavController()
                 .navigate(R.id.action_todoListTasksFragment_to_todoFragment)
         }
         viewModel.getByType(type).observe(viewLifecycleOwner) { list ->
-            adapter.submitList(list.asReversed())
+            adapter.differ.submitList(list.asReversed())
         }
 
         adapter.setOnItemClickListener {
@@ -40,6 +40,7 @@ class TodoListTasksFragment :
     }
 
     private fun setupRecyclerView() {
+        adapter = TodoTasksAdapter(viewModel)
         val recyclerView = binding.recyclerviewListOfTasks
         recyclerView.adapter = adapter
     }

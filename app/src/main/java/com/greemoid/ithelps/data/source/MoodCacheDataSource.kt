@@ -1,6 +1,6 @@
 package com.greemoid.ithelps.data.source
 
-import com.greemoid.ithelps.data.db.diaryDB.MoodDao
+import com.greemoid.ithelps.data.db.MoodDao
 import com.greemoid.ithelps.data.mapper.mood.MoodDBToMoodMapper
 import com.greemoid.ithelps.data.mapper.mood.MoodToMoodDBMapper
 import com.greemoid.ithelps.domain.models.mood.Mood

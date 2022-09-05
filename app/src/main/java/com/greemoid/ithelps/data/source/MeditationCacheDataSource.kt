@@ -1,7 +1,6 @@
 package com.greemoid.ithelps.data.source
 
-import android.util.Log
-import com.greemoid.ithelps.data.db.diaryDB.MeditationDao
+import com.greemoid.ithelps.data.db.MeditationDao
 import com.greemoid.ithelps.data.mapper.meditation.MeditationDBToMeditationMapper
 import com.greemoid.ithelps.data.mapper.meditation.MeditationListMapper
 import com.greemoid.ithelps.data.mapper.meditation.MeditationToMeditationDBMapper

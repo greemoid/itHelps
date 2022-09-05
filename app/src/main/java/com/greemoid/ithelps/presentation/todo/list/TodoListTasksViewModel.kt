@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.greemoid.ithelps.data.models.TaskDB
+import com.greemoid.ithelps.domain.models.todo.Task
 import com.greemoid.ithelps.domain.usecases.todo.GetAllTasksUseCase
 import com.greemoid.ithelps.domain.usecases.todo.GetTasksByTaskTypeUseCase
 import com.greemoid.ithelps.domain.usecases.todo.UpdateTaskUseCase

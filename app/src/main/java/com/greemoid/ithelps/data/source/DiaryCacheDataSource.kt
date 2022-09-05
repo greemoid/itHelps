@@ -1,6 +1,6 @@
 package com.greemoid.ithelps.data.source
 
-import com.greemoid.ithelps.data.db.diaryDB.DiaryDao
+import com.greemoid.ithelps.data.db.DiaryDao
 import com.greemoid.ithelps.data.mapper.diary.DiaryDBToDiaryNoteMapper
 import com.greemoid.ithelps.data.mapper.diary.DiaryNoteToDiaryDBMapper
 import com.greemoid.ithelps.domain.models.diary.DiaryNote

@@ -19,11 +19,11 @@ class InsightsFragment :
     override fun init() {
         setupRecyclerView()
         viewModel.listMoods.observe(viewLifecycleOwner) {
-            adapterMood.submitList(it.asReversed())
+            adapterMood.differ.submitList(it.asReversed())
         }
 
         viewModel.listDiary.observe(viewLifecycleOwner) {
-            adapterDiary.submitList(it.asReversed())
+            adapterDiary.differ.submitList(it.asReversed())
         }
         binding.btnDiary.navigate(R.id.action_insightsFragment_to_diaryListFragment)
         binding.btnMoods.navigate(R.id.action_insightsFragment_to_moodListFragment)
