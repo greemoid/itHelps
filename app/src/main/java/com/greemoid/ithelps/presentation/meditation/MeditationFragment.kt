@@ -22,6 +22,8 @@ class MeditationFragment :
     override fun init() {
         var etTime: String = ""
         var time: Long = 0
+        binding.btnStart.visibility = View.VISIBLE
+        binding.btnStop.visibility = View.INVISIBLE
         binding.btnSetTime.setOnClickListener {
             etTime = binding.etTimer.text.toString()
             binding.etTimer.visibility = View.GONE
@@ -35,6 +37,8 @@ class MeditationFragment :
         binding.btnStart.setOnClickListener {
             time = etTime.toLong() * 60000
             viewModel.startTimer(time)
+            binding.btnStart.visibility = View.INVISIBLE
+            binding.btnStop.visibility = View.VISIBLE
         }
 
         binding.btnStop.setOnClickListener {
@@ -44,6 +48,8 @@ class MeditationFragment :
             binding.etTimer.visibility = View.VISIBLE
             binding.btnSetTime.visibility = View.VISIBLE
             binding.tvTimer.visibility = View.GONE
+            binding.btnStart.visibility = View.VISIBLE
+            binding.btnStop.visibility = View.INVISIBLE
         }
 
         binding.btnBack.setOnClickListener {

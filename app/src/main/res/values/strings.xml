@@ -12,6 +12,10 @@
         <item>Історія</item>
     </array>
 
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="schedule_notification">Schedule Notification</string>
+
 
     <!--Affirmations-->
     <string name="affirmation1">I am strong.</string>

@@ -31,7 +31,7 @@ class InstrumentsFragment :
             btnBreathing.navigate(R.id.action_instrumentsFragment_to_choiceOfExerciseFragment)
             btnArticles.setOnClickListener {
                 val intent = Intent(Intent.ACTION_VIEW)
-                intent.data = Uri.parse("https://t.me/architectureofmind")
+                intent.data = Uri.parse("https://t.me/aom_ua")
                 startActivity(intent)
             }
         }
