@@ -63,7 +63,7 @@ class ExerciseBreathingFragment :
             if (it) {
                 lifecycleScope.launch {
                     withContext(Dispatchers.Main) {
-                        binding.ivTest.startAnimation(zoomIn)
+                        binding.ivBreathAnimation.startAnimation(zoomIn)
                         zoomIn.fillAfter = true
                     }
                 }
@@ -73,7 +73,7 @@ class ExerciseBreathingFragment :
             if (it) {
                 lifecycleScope.launch {
                     withContext(Dispatchers.Main) {
-                        binding.ivTest.startAnimation(zoomOut)
+                        binding.ivBreathAnimation.startAnimation(zoomOut)
                         zoomIn.fillAfter = true
                     }
                 }

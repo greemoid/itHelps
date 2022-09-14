@@ -8,8 +8,8 @@
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="64dp"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginTop="@dimen/size_64dp"
         android:background="#D4D4D4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,13 +17,15 @@
 
     <ImageView
         android:id="@+id/btnClose"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="@dimen/size_36dp"
+        android:layout_height="@dimen/size_36dp"
+        android:layout_marginStart="@dimen/size_16dp"
         android:src="@drawable/ic_arrow_back"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/button_back" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewListOfTasks"

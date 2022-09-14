@@ -15,7 +15,6 @@ class TodoTasksAdapter(val viewModel: TodoListTasksViewModel) :
     RecyclerView.Adapter<TodoTasksAdapter.TodoTasksViewHolder>() {
 
     //todo сюда приходить модель з бд а не з презентейшн або домейн хоча б
-    //var tasksList = emptyList<TaskDB>()
 
     inner class TodoTasksViewHolder(
         private val binding: TaskItemLayoutBinding,
@@ -33,7 +32,7 @@ class TodoTasksAdapter(val viewModel: TodoListTasksViewModel) :
                 binding.tvTitleTask.paintFlags =
                     binding.tvTitleTask.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
             }
-            binding.checkboxTask.setOnCheckedChangeListener { buttonView, isChecked ->
+            binding.checkboxTask.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {    // Устанавливаем флаг зачёркивания
                     binding.tvTitleTask.paintFlags =
                         binding.tvTitleTask.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
@@ -65,11 +64,11 @@ class TodoTasksAdapter(val viewModel: TodoListTasksViewModel) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoTasksViewHolder {
-        val binding =
-            TaskItemLayoutBinding
+        val binding = TaskItemLayoutBinding
                 .inflate(LayoutInflater.from(parent.context), parent, false)
         return TodoTasksViewHolder(binding)
     }
+
 
     override fun onBindViewHolder(holder: TodoTasksViewHolder, position: Int) {
         holder.bind(differ.currentList[position])

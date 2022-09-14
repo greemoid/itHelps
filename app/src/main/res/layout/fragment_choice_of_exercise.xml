@@ -8,17 +8,17 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
 
         <TextView
             android:id="@+id/tvBreathingCover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:text="Дихання"
+            android:layout_marginTop="@dimen/size_64dp"
+            android:text="@string/breathing"
             android:textColor="@color/black"
-            android:textSize="32sp"
+            android:textSize="@dimen/textSize_32sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,11 +28,11 @@
             android:id="@+id/tvBreathingDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="@dimen/size_16dp"
+            android:layout_marginTop="@dimen/size_16dp"
+            android:layout_marginEnd="@dimen/size_16dp"
             android:gravity="center"
-            android:text="Дихальні вправи, які допоможуть тобі розслабитись і достигнути ясного стану розуму."
+            android:text="@string/breathing_description"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,175 +41,188 @@
 
         <LinearLayout
             android:id="@+id/btnRefresh"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="@dimen/size_160dp"
+            android:layout_height="@dimen/size_160dp"
+            android:layout_marginStart="@dimen/size_16dp"
+            android:layout_marginTop="@dimen/size_32dp"
             android:background="@drawable/corners"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="32dp"
+            android:padding="@dimen/size_32dp"
             app:layout_constraintEnd_toStartOf="@id/btnDeepBreathing"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvBreathingDescription">
 
             <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="@dimen/size_64dp"
+                android:layout_height="@dimen/size_64dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/breathing_refresh"
                 android:src="@drawable/refresh" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Перезагрузка"
+                android:text="@string/breathing_refresh"
                 android:textColor="@color/black" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/btnDeepBreathing"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="@dimen/size_160dp"
+            android:layout_height="@dimen/size_160dp"
+            android:layout_marginTop="@dimen/size_16dp"
+            android:layout_marginEnd="@dimen/size_16dp"
             android:background="@drawable/corners"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="32dp"
+            android:padding="@dimen/size_32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btnRefresh"
             app:layout_constraintTop_toTopOf="@+id/btnRefresh">
 
             <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="@dimen/size_64dp"
+                android:layout_height="@dimen/size_64dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/deep_breathing"
                 android:src="@drawable/deep" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Глибоке \nдихання"
+                android:text="@string/deep_breathing"
                 android:textColor="@color/black" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/btnWakingUp"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="@dimen/size_160dp"
+            android:layout_height="@dimen/size_160dp"
+            android:layout_marginStart="@dimen/size_16dp"
+            android:layout_marginTop="@dimen/size_16dp"
             android:background="@drawable/corners"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="32dp"
+            android:padding="@dimen/size_32dp"
             app:layout_constraintEnd_toStartOf="@id/btnRelax"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnRefresh">
 
             <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:src="@drawable/alarm" />
+                android:layout_width="@dimen/size_64dp"
+                android:layout_height="@dimen/size_64dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/alarm"
+                android:contentDescription="@string/awakening" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Пробудження"
+                android:text="@string/awakening"
                 android:textColor="@color/black" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/btnRelax"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="@dimen/size_160dp"
+            android:layout_height="@dimen/size_160dp"
+            android:layout_marginTop="@dimen/size_16dp"
+            android:layout_marginEnd="@dimen/size_16dp"
             android:background="@drawable/corners"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="32dp"
+            android:padding="@dimen/size_32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btnWakingUp"
             app:layout_constraintTop_toTopOf="@+id/btnWakingUp">
 
             <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:src="@drawable/relax" />
+                android:layout_width="@dimen/size_64dp"
+                android:layout_height="@dimen/size_64dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/relax"
+                android:contentDescription="@string/rest" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Спокій"
+                android:text="@string/rest"
                 android:textColor="@color/black" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/btnPain"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="@dimen/size_160dp"
+            android:layout_height="@dimen/size_160dp"
+            android:layout_marginStart="@dimen/size_16dp"
+            android:layout_marginTop="@dimen/size_16dp"
             android:background="@drawable/corners"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="32dp"
+            android:padding="@dimen/size_32dp"
             app:layout_constraintEnd_toStartOf="@id/btnSOS"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnWakingUp">
 
             <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:src="@drawable/pain" />
+                android:layout_width="@dimen/size_64dp"
+                android:layout_height="@dimen/size_64dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/pain"
+                android:contentDescription="@string/pain_killer" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Облегчення болю"
+                android:text="@string/pain_killer"
                 android:textColor="@color/black" />
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/btnSOS"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="@dimen/size_160dp"
+            android:layout_height="@dimen/size_160dp"
+            android:layout_marginTop="@dimen/size_16dp"
+            android:layout_marginEnd="@dimen/size_16dp"
             android:background="@drawable/corners"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="32dp"
+            android:padding="@dimen/size_32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btnPain"
             app:layout_constraintTop_toTopOf="@+id/btnPain">
 
             <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:src="@drawable/sos" />
+                android:layout_width="@dimen/size_64dp"
+                android:layout_height="@dimen/size_64dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/sos"
+                android:contentDescription="@string/sos" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SOS"
+                android:text="@string/sos"
                 android:textColor="@color/black" />
 
         </LinearLayout>
 
         <ImageView
             android:id="@+id/btnBack"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="@dimen/size_36dp"
+            android:layout_height="@dimen/size_36dp"
+            android:layout_marginStart="@dimen/size_16dp"
+            android:layout_marginTop="@dimen/size_16dp"
             android:src="@drawable/ic_arrow_back"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/button_back" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

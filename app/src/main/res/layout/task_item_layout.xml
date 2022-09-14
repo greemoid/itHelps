@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_margin="4dp"
-    android:padding="8dp"
-    app:cardCornerRadius="8dp"
+    android:layout_margin="@dimen/size_4dp"
+    android:padding="@dimen/size_8dp"
+    app:cardCornerRadius="@dimen/size_8dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -17,13 +17,14 @@
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:padding="4dp">
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginTop="@dimen/size_4dp"
+        android:padding="@dimen/size_4dp">
 
         <CheckBox
             android:id="@+id/checkboxTask"
             android:layout_width="wrap_content"
-            android:layout_height="72dp"
+            android:layout_height="@dimen/size_72dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,34 +33,27 @@
             android:id="@+id/tvTitleTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="Hello world"
+            android:layout_marginStart="@dimen/size_4dp"
+            tools:text="Hello world"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/textSize_18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/tvItemDate"
             app:layout_constraintStart_toEndOf="@+id/checkboxTask"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:layout_marginStart="4dp"
-            app:layout_constraintStart_toStartOf="@+id/tvTitleTask"
-            app:layout_constraintTop_toTopOf="@+id/tvItemDate"
-            app:srcCompat="@drawable/history" />
-
         <TextView
             android:id="@+id/tvItemDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="Tue, Aug 18"
+            android:layout_marginStart="@dimen/size_4dp"
+            android:drawableStart="@drawable/drawable_icon"
+            android:drawablePadding="2dp"
+            tools:text="Tue, Aug 18"
             android:textColor="@color/black"
-            android:textSize="10dp"
+            android:textSize="11sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@id/tvTitleTask"
             app:layout_constraintTop_toBottomOf="@+id/tvTitleTask" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,11 +11,11 @@
         android:id="@+id/tvYourSpaceCover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Твій простір"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_32dp"
+        android:text="@string/your_space"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="@dimen/textSize_24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,9 +24,9 @@
         android:id="@+id/tvWriteCover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="Записуй і рефлексуй"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:text="@string/write_and_reflect"
         android:textColor="#1A5915"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         android:id="@+id/fristConst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/size_8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvWriteCover">
@@ -46,18 +46,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnDiary"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp">
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:cardCornerRadius="@dimen/size_8dp">
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="@dimen/size_64dp"
+                    android:layout_height="@dimen/size_64dp"
                     android:background="#BFEBBC"
+                    android:contentDescription="@string/mood_tracker"
                     android:src="@drawable/mood" />
             </androidx.cardview.widget.CardView>
 
@@ -65,8 +68,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#202020"
-                android:text="Трекер \nнастрою" />
+                android:text="@string/mood_tracker"
+                android:textColor="#202020" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,18 +77,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintStart_toEndOf="@id/btnMoodTracker"
             app:layout_constraintEnd_toStartOf="@+id/btnAnswers"
+            app:layout_constraintStart_toEndOf="@id/btnMoodTracker"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp">
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:cardCornerRadius="@dimen/size_8dp">
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="@dimen/size_64dp"
+                    android:layout_height="@dimen/size_64dp"
                     android:background="#BFEBBC"
+                    android:contentDescription="@string/your_diary"
                     android:src="@drawable/diary" />
             </androidx.cardview.widget.CardView>
 
@@ -93,8 +99,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#202020"
-                android:text="Твій \nщоденник" />
+                android:text="@string/your_diary"
+                android:textColor="#202020" />
         </LinearLayout>
 
         <LinearLayout
@@ -102,18 +108,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintStart_toEndOf="@id/btnDiary"
             app:layout_constraintEnd_toStartOf="@+id/btnControl"
+            app:layout_constraintStart_toEndOf="@id/btnDiary"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp">
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:cardCornerRadius="@dimen/size_8dp">
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="@dimen/size_64dp"
+                    android:layout_height="@dimen/size_64dp"
                     android:background="#BFEBBC"
+                    android:contentDescription="@string/q_and_a"
                     android:src="@drawable/question" />
             </androidx.cardview.widget.CardView>
 
@@ -121,8 +130,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#202020"
-                android:text="Питання і \nвідповіді" />
+                android:text="@string/q_and_a"
+                android:textColor="#202020" />
         </LinearLayout>
 
         <LinearLayout
@@ -137,11 +146,14 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp">
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:cardCornerRadius="@dimen/size_8dp">
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="@dimen/size_64dp"
+                    android:layout_height="@dimen/size_64dp"
                     android:background="#BFEBBC"
+                    android:contentDescription="@string/condition_control"
                     android:src="@drawable/control" />
             </androidx.cardview.widget.CardView>
 
@@ -149,8 +161,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#202020"
-                android:text="Контроль \nстану" />
+                android:text="@string/condition_control"
+                android:textColor="#202020" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -158,9 +170,9 @@
         android:id="@+id/tvGrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="Довгостроковий ріст"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:text="@string/long_term_growth"
         android:textColor="#671029"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -170,9 +182,9 @@
         android:id="@+id/secondConst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/tvGrow">
 
         <LinearLayout
@@ -180,18 +192,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnQuotes"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp">
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:cardCornerRadius="@dimen/size_8dp">
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="@dimen/size_64dp"
+                    android:layout_height="@dimen/size_64dp"
                     android:background="#F2B3C5"
+                    android:contentDescription="@string/affirmations"
                     android:src="@drawable/affirmation" />
             </androidx.cardview.widget.CardView>
 
@@ -199,8 +214,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#202020"
-                android:text="Аффір\nмації" />
+                android:text="@string/affirmations"
+                android:textColor="#202020" />
         </LinearLayout>
 
         <LinearLayout
@@ -208,18 +223,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintStart_toEndOf="@id/btnAffirmations"
             app:layout_constraintEnd_toStartOf="@+id/btnArticles"
+            app:layout_constraintStart_toEndOf="@id/btnAffirmations"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp">
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:cardCornerRadius="@dimen/size_8dp">
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="@dimen/size_64dp"
+                    android:layout_height="@dimen/size_64dp"
                     android:background="#F2B3C5"
+                    android:contentDescription="@string/quotes"
                     android:src="@drawable/quotation" />
             </androidx.cardview.widget.CardView>
 
@@ -227,8 +245,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#202020"
-                android:text="Цитати" />
+                android:text="@string/quotes"
+                android:textColor="#202020" />
         </LinearLayout>
 
         <LinearLayout
@@ -243,12 +261,14 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp">
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:cardCornerRadius="@dimen/size_8dp">
 
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="@dimen/size_64dp"
+                    android:layout_height="@dimen/size_64dp"
                     android:background="#F2B3C5"
+                    android:contentDescription="@string/articles"
                     android:src="@drawable/articles" />
             </androidx.cardview.widget.CardView>
 
@@ -256,8 +276,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#202020"
-                android:text="Статті" />
+                android:text="@string/articles"
+                android:textColor="#202020" />
         </LinearLayout>
 
 
@@ -268,9 +288,9 @@
         android:id="@+id/tvRelaxCover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="Заспокійливі техніки"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:text="@string/calming_techniques"
         android:textColor="#1F4978"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -280,9 +300,9 @@
         android:id="@+id/thirdConst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/tvRelaxCover">
 
         <LinearLayout
@@ -290,18 +310,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnBreathing"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp">
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:cardCornerRadius="@dimen/size_8dp">
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="@dimen/size_64dp"
+                    android:layout_height="@dimen/size_64dp"
                     android:background="#A5C6EB"
+                    android:contentDescription="@string/meditations"
                     android:src="@drawable/meditation" />
             </androidx.cardview.widget.CardView>
 
@@ -309,8 +332,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#202020"
-                android:text="Меди\nтація" />
+                android:text="@string/meditations"
+                android:textColor="#202020" />
         </LinearLayout>
 
         <LinearLayout
@@ -325,12 +348,14 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="8dp">
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:cardCornerRadius="@dimen/size_8dp">
 
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="@dimen/size_64dp"
+                    android:layout_height="@dimen/size_64dp"
                     android:background="#A5C6EB"
+                    android:contentDescription="@string/breathing"
                     android:src="@drawable/breath" />
             </androidx.cardview.widget.CardView>
 
@@ -338,12 +363,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#202020"
-                android:text="Дихання" />
+                android:text="@string/breathing"
+                android:textColor="#202020" />
         </LinearLayout>
-
-
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
