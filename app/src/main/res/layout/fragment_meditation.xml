@@ -11,9 +11,9 @@
         android:id="@+id/tvTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="00:00"
+        tools:text="00:00"
         android:textColor="@color/black"
-        android:textSize="72sp"
+        android:textSize="@dimen/textSize_72sp"
         android:textStyle="bold"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,58 +24,65 @@
 
     <ImageView
         android:id="@+id/btnStart"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="@dimen/size_64dp"
+        android:layout_height="@dimen/size_64dp"
         android:src="@drawable/ic_play"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTimer" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer"
+        android:contentDescription="@string/button_start" />
 
     <ImageView
         android:id="@+id/btnStop"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="@dimen/size_64dp"
+        android:layout_height="@dimen/size_64dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_baseline_stop_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTimer" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTimer"
+        android:contentDescription="@string/button_stop" />
 
     <EditText
         android:id="@+id/etTimer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginStart="@dimen/size_64dp"
+        android:layout_marginEnd="@dimen/size_64dp"
         android:ems="10"
         android:gravity="center"
         android:inputType="time"
-        android:textSize="72sp"
+        android:textSize="@dimen/textSize_72sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.40" />
+        app:layout_constraintVertical_bias="0.40"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/btnSetTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Set"
+        android:layout_marginTop="@dimen/size_8dp"
+        android:text="@string/button_set"
         app:layout_constraintEnd_toEndOf="@+id/etTimer"
         app:layout_constraintStart_toStartOf="@+id/etTimer"
         app:layout_constraintTop_toBottomOf="@+id/etTimer" />
 
     <ImageView
         android:id="@+id/btnBack"
-        android:layout_width="36dp"
+        android:layout_width="@dimen/size_36dp"
         android:layout_height="36dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/button_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

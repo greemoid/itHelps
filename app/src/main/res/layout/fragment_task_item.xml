@@ -9,8 +9,8 @@
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="64dp"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginTop="@dimen/size_64dp"
         android:background="#D4D4D4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,13 +18,15 @@
 
     <ImageView
         android:id="@+id/btnClose"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="@dimen/size_36dp"
+        android:layout_height="@dimen/size_36dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_baseline_close_24"
         app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/button_back" />
 
     <TextView
         android:id="@+id/tvTodayCover"
@@ -42,13 +44,13 @@
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_64dp"
+        android:layout_marginEnd="@dimen/size_32dp"
         android:gravity="center"
-        android:text="Title of task"
+        tools:text="Title of task"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="@dimen/textSize_24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,12 +60,12 @@
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:text="TextViewLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel,"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginEnd="@dimen/size_32dp"
+        tools:text="TextViewLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel,"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="@dimen/textSize_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
@@ -72,9 +74,9 @@
         android:id="@+id/tvDateOfTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="32dp"
-        android:text="25.05.2020"
+        android:layout_marginTop="@dimen/size_64dp"
+        android:layout_marginEnd="@dimen/size_32dp"
+        tools:text="25.05.2020"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
@@ -83,31 +85,35 @@
         android:id="@+id/tvChapter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
-        android:text="Термінові і важливі"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_64dp"
+        tools:text="Термінові і важливі"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
 
     <ImageView
         android:id="@+id/btnDelete"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="@dimen/size_36dp"
+        android:layout_height="@dimen/size_36dp"
+        android:layout_marginEnd="@dimen/size_16dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_delete"
         app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/button_delete" />
 
     <ImageView
         android:id="@+id/btnEdit"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="@dimen/size_36dp"
+        android:layout_height="@dimen/size_36dp"
+        android:layout_marginEnd="@dimen/size_8dp"
         android:src="@drawable/ic_baseline_create_24"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/button_edit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

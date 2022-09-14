@@ -9,20 +9,21 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/size_32dp"
+        android:layout_height="@dimen/size_32dp"
+        android:layout_marginStart="@dimen/size_64dp"
+        android:layout_marginTop="@dimen/size_16dp"
         android:src="@drawable/delay"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/tvDescriptionOfBreathing" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDescriptionOfBreathing"
+        android:contentDescription="@string/breathing_delay" />
 
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Затримка"
+        android:text="@string/breathing_delay"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
@@ -39,20 +40,21 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/size_32dp"
+        android:layout_height="@dimen/size_32dp"
+        android:layout_marginStart="@dimen/size_64dp"
+        android:layout_marginTop="@dimen/size_16dp"
         android:src="@drawable/wind"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/tvDescriptionOfBreathing" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDescriptionOfBreathing"
+        android:contentDescription="@string/breathing_delay" />
 
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Затримка"
+        android:text="@string/breathing_exhalation"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView7"
         app:layout_constraintStart_toStartOf="@+id/imageView7"
@@ -69,20 +71,21 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/size_32dp"
+        android:layout_height="@dimen/size_32dp"
+        android:layout_marginStart="@dimen/size_64dp"
+        android:layout_marginTop="@dimen/size_16dp"
         android:src="@drawable/delay"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/tvDescriptionOfBreathing" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDescriptionOfBreathing"
+        android:contentDescription="@string/breathing_delay" />
 
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Затримка"
+        android:text="@string/breathing_delay"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView8"
         app:layout_constraintStart_toStartOf="@+id/imageView8"
@@ -101,10 +104,10 @@
         android:id="@+id/tvBreathingName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Перезагрузка"
+        android:layout_marginTop="@dimen/size_32dp"
+        tools:text="Перезагрузка"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="@dimen/textSize_24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,11 +117,11 @@
         android:id="@+id/tvDescriptionOfBreathing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_8dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         android:gravity="center"
-        android:text="Ця практика допоможе тобі справитись з стресом. Дихай глибше, щоб розслабити тіло і розум."
+        android:text="@string/description_of_breathing"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,28 +129,30 @@
 
     <ImageView
         android:id="@+id/ivBreathingType"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="@dimen/size_128dp"
+        android:layout_height="@dimen/size_128dp"
+        android:layout_marginTop="@dimen/size_64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/breathing_logo" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/size_32dp"
+        android:layout_height="@dimen/size_32dp"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp"
         android:src="@drawable/wind"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDescriptionOfBreathing" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDescriptionOfBreathing"
+        android:contentDescription="@string/breathing_type" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Вдих"
+        android:text="@string/breathing_breath"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
@@ -165,10 +170,10 @@
     <View
         android:id="@+id/view4"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_8dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         android:background="#EFEDED"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -178,9 +183,9 @@
         android:id="@+id/seekBarCountOfSets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginEnd="@dimen/size_32dp"
         android:min="1"
         android:max="10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -191,9 +196,9 @@
         android:id="@+id/tvCountOfSetsCover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="112dp"
-        android:text="Кількість сетів"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_112dp"
+        android:text="@string/set_count"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -203,8 +208,8 @@
         android:id="@+id/tvCountOfSets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:text="2 сета"
+        android:layout_marginTop="@dimen/size_96dp"
+        tools:text="2 сета"
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/tvTotalTime"
@@ -214,8 +219,8 @@
         android:id="@+id/tvTotalTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:text="01 хв 22 сек"
+        android:layout_marginEnd="@dimen/size_32dp"
+        tools:text="01 хв 22 сек"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvCountOfSets" />
@@ -224,10 +229,10 @@
         android:id="@+id/btnStartExercise"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="48dp"
-        android:text="Почати вправу"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginEnd="@dimen/size_32dp"
+        android:layout_marginBottom="@dimen/size_48dp"
+        android:text="@string/start_breathing_exersice"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

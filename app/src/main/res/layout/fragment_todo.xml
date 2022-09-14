@@ -9,21 +9,24 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/size_36dp"
+        android:layout_height="@dimen/size_36dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
         android:src="@drawable/man"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/avatar" />
 
     <LinearLayout
         android:id="@+id/linLayoutFirst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/size_8dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         android:orientation="horizontal"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,17 +35,18 @@
 
         <ImageView
             android:id="@+id/first"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/now" />
+            android:layout_width="@dimen/size_24dp"
+            android:layout_height="@dimen/size_24dp"
+            android:src="@drawable/now"
+            android:contentDescription="@string/important_and_now" />
 
         <TextView
             android:id="@+id/tv1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/size_8dp"
             android:layout_weight="1"
-            android:text="Термінові і важливі"
+            android:text="@string/important_and_now"
             android:textColor="@color/black"
             android:textStyle="normal" />
 
@@ -52,10 +56,11 @@
         android:id="@+id/linLayoutSecond"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/tv_pressed_selector"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/size_8dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,18 +68,19 @@
 
         <ImageView
             android:id="@+id/iv2"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/important" />
+            android:layout_width="@dimen/size_24dp"
+            android:layout_height="@dimen/size_24dp"
+            android:src="@drawable/important"
+            android:contentDescription="@string/important_not_now" />
 
         <TextView
             android:id="@+id/tv2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/size_8dp"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:text="Важливі, але не термінові" />
+            android:text="@string/important_not_now" />
 
     </LinearLayout>
 
@@ -82,9 +88,11 @@
         android:id="@+id/linLayoutThird"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/size_8dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,18 +101,19 @@
 
         <ImageView
             android:id="@+id/iv3"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/urgent" />
+            android:layout_width="@dimen/size_24dp"
+            android:layout_height="@dimen/size_24dp"
+            android:src="@drawable/urgent"
+            android:contentDescription="@string/now_not_important" />
 
         <TextView
             android:id="@+id/tv3"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/size_8dp"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:text="Термінові, але не важливі" />
+            android:text="@string/now_not_important" />
 
     </LinearLayout>
 
@@ -112,9 +121,11 @@
         android:id="@+id/linLayoutFourth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/size_8dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,28 +134,29 @@
 
         <ImageView
             android:id="@+id/iv4"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/dontimportant" />
+            android:layout_width="@dimen/size_24dp"
+            android:layout_height="@dimen/size_24dp"
+            android:src="@drawable/dontimportant"
+            android:contentDescription="@string/not_now_not_important" />
 
         <TextView
             android:id="@+id/tv4"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/size_8dp"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:text="Не термінові і не важливі" />
+            android:text="@string/not_now_not_important" />
 
     </LinearLayout>
 
     <View
         android:id="@+id/view3"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:layout_height="@dimen/size_1dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_24dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         android:background="#D4D4D4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,9 +166,11 @@
         android:id="@+id/linLayoutFifth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/size_8dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -165,18 +179,19 @@
 
         <ImageView
             android:id="@+id/iv5"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/myday" />
+            android:layout_width="@dimen/size_24dp"
+            android:layout_height="@dimen/size_24dp"
+            android:src="@drawable/myday"
+            android:contentDescription="@string/my_day" />
 
         <TextView
             android:id="@+id/tv5"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/size_8dp"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:text="Мій день" />
+            android:text="@string/my_day" />
 
     </LinearLayout>
 
@@ -184,9 +199,11 @@
         android:id="@+id/linLayoutSixth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/size_8dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -195,18 +212,19 @@
 
         <ImageView
             android:id="@+id/iv6"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/groceries" />
+            android:layout_width="@dimen/size_24dp"
+            android:layout_height="@dimen/size_24dp"
+            android:src="@drawable/groceries"
+            android:contentDescription="@string/goods" />
 
         <TextView
             android:id="@+id/tv6"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:text="Покупки" />
+            android:text="@string/goods" />
 
     </LinearLayout>
 
@@ -214,9 +232,11 @@
         android:id="@+id/linLayoutSeventh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/size_8dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -225,18 +245,19 @@
 
         <ImageView
             android:id="@+id/iv7"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/history" />
+            android:layout_width="@dimen/size_24dp"
+            android:layout_height="@dimen/size_24dp"
+            android:src="@drawable/history"
+            android:contentDescription="@string/history" />
 
         <TextView
             android:id="@+id/tv7"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/size_8dp"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:text="Історія" />
+            android:text="@string/history" />
 
     </LinearLayout>
 
@@ -244,14 +265,15 @@
         android:id="@+id/floatingActionButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="@dimen/size_16dp"
+        android:layout_marginBottom="@dimen/size_16dp"
         android:backgroundTint="@color/white"
-        android:clickable="true"
         android:src="@drawable/ic_create"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/add_new_task"
+        android:clickable="true"
+        android:focusable="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

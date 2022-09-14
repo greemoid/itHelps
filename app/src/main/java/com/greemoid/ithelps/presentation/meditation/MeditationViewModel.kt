@@ -40,7 +40,7 @@ class MeditationViewModel(
 
             override fun onFinish() {
                 _millis.value = "Done!"
-                //todo тут ошибка якшо береться вперше з бази даних то крашиться аппка
+                //gtodo тут ошибка якшо береться вперше з бази даних то крашиться аппка
                 viewModelScope.launch {
                     totalTime =
                         getLastMeditationSessionUseCase.getLastMeditationSession().totalTime + time

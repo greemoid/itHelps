@@ -5,8 +5,8 @@ import android.content.Context
 import android.content.Context.NOTIFICATION_SERVICE
 import android.content.Intent
 import android.os.Build
-import android.util.Log
 import android.view.View
+import com.google.android.material.snackbar.Snackbar
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentQuestionsAndAnswersBinding
 import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
@@ -41,7 +41,9 @@ class QuestionsAndAnswersFragment :
                 PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
             )
         } else {
-            Log.d("NOT", "bad ver")
+            Snackbar.make(binding.linearLayout,
+                "Sorry, you can't make notification because your version too small",
+                Snackbar.LENGTH_SHORT).show()
         }
 
         val alarmManager = activity?.getSystemService(Context.ALARM_SERVICE) as AlarmManager
@@ -52,6 +54,10 @@ class QuestionsAndAnswersFragment :
                 time,
                 pendingIntent
             )
+        } else {
+            Snackbar.make(binding.linearLayout,
+                "Sorry, you can't make notification because your version too small",
+                Snackbar.LENGTH_SHORT).show()
         }
         showAlert(time, title, message)
     }
@@ -80,7 +86,9 @@ class QuestionsAndAnswersFragment :
             minute = binding.timePicker.minute
             hour = binding.timePicker.hour
         } else {
-            Log.d("NOT", "bad ver")
+            Snackbar.make(binding.linearLayout,
+                "Sorry, you can't make notification because your version too small",
+                Snackbar.LENGTH_SHORT).show()
         }
         val day = binding.datePicker.dayOfMonth
         val month = binding.datePicker.month
@@ -92,26 +100,21 @@ class QuestionsAndAnswersFragment :
     }
 
     private fun createNotificationChannel() {
-        val name = "Notif Channel"
-        val desc = "A Description of the Channel"
-        val importance = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            NotificationManager.IMPORTANCE_DEFAULT
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val name = "Notif Channel"
+            val desc = "A Description of the Channel"
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+
+            val channel = NotificationChannel(channelID, name, importance)
+            channel.description = desc
+
+            val notificationManager =
+                activity?.getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
         } else {
-            Log.d("NOT", "bad ver")
-        }
-        var channel: NotificationChannel? = null
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            channel = NotificationChannel(channelID, name, importance)
-        } else {
-            Log.d("NOT", "bad ver")
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            channel?.description = desc
-        }
-        val notificationManager =
-            activity?.getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            notificationManager.createNotificationChannel(channel!!)
+            Snackbar.make(binding.linearLayout,
+                "Sorry, you can't make notification because your version too small",
+                Snackbar.LENGTH_SHORT).show()
         }
     }
 }
