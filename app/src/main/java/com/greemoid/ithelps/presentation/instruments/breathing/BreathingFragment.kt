@@ -8,17 +8,17 @@ import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentBreathingBinding
-import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
+import com.greemoid.ithelps.presentation.core.EmptyViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
 class BreathingFragment :
-    BaseFragment<DailyTasksViewModel, FragmentBreathingBinding>(FragmentBreathingBinding::inflate) {
+    BaseFragment<EmptyViewModel, FragmentBreathingBinding>(FragmentBreathingBinding::inflate) {
 
     //todo clean up init(); move it to customview
 
     private val args: BreathingFragmentArgs by navArgs()
-    override val viewModel: DailyTasksViewModel by sharedViewModel()
+    override val viewModel: EmptyViewModel by sharedViewModel()
     override val visibility: Int = View.GONE
 
     override fun init() {

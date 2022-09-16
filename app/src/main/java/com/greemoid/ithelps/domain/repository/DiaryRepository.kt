@@ -6,5 +6,7 @@ interface DiaryRepository {
 
     fun getAllDiaryNotes(): List<DiaryNote>
 
+    suspend fun getLastDiaryNote(): DiaryNote
+
     suspend fun upsertDiaryNote(diaryNote: DiaryNote)
 }

@@ -12,6 +12,9 @@ interface DiaryDao {
     @Query("SELECT * FROM diary_table")
     fun getAllDiaryNotes(): List<DiaryNoteDB>
 
+    @Query("SELECT * FROM diary_table ORDER BY id DESC LIMIT 1")
+    suspend fun getLastNoteDiary(): DiaryNoteDB
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertDiaryNote(diaryNote: DiaryNoteDB)
 

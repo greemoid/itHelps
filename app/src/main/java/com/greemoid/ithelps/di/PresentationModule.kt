@@ -1,6 +1,5 @@
 package com.greemoid.ithelps.di
 
-import com.greemoid.ithelps.core.presentation.BaseVibratorManager
 import com.greemoid.ithelps.presentation.core.Date
 import com.greemoid.ithelps.presentation.core.VibratorManager
 import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
@@ -36,6 +35,9 @@ val presentationModule = module {
 
     viewModel {
         DailyTasksViewModel(
+            getLastMeditationSessionUseCase = get(),
+            getLastMoodUseCase = get(),
+            getLastDiaryNoteUseCase = get(),
             date = Date()
         )
     }

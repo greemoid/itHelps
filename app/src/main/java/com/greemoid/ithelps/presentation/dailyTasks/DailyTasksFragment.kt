@@ -15,7 +15,19 @@ class DailyTasksFragment :
     override val visibility: Int = View.VISIBLE
 
     override fun init() {
+        viewModel.update()
         binding.tvDate.text = viewModel.day
+        viewModel.meditation.observe(this) {
+            binding.cbMeditation.isChecked = it
+        }
+
+        viewModel.mood.observe(this) {
+            binding.cbMood.isChecked = it
+        }
+
+        viewModel.note.observe(this) {
+            binding.cbDiary.isChecked = it
+        }
         binding.ivAvatar.setOnClickListener {
             findNavController()
                 .navigate(R.id.action_dailyTasksFragment_to_accountFragment)

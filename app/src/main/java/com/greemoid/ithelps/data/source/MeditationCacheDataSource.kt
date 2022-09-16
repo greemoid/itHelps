@@ -1,5 +1,6 @@
 package com.greemoid.ithelps.data.source
 
+import android.util.Log
 import com.greemoid.ithelps.data.db.MeditationDao
 import com.greemoid.ithelps.data.mapper.meditation.MeditationDBToMeditationMapper
 import com.greemoid.ithelps.data.mapper.meditation.MeditationListMapper
@@ -23,8 +24,14 @@ class MeditationCacheDataSource(
         return meditationListMapper.map(list)
     }
 
+    //todo fix
     override suspend fun getLastMeditationSession(): Meditation {
-        val meditationDB = meditationDao.getLastMeditationSession()
-        return meditationDBToMeditationMapper.map(meditationDB)
+        var meditation = Meditation(0, 0, 0, "")
+        try {
+            meditation = meditationDBToMeditationMapper.map(meditationDao.getLastMeditationSession())
+        } catch (e: Exception) {
+            Log.d("SOURCE", e.toString())
+        }
+        return meditation
     }
 }
