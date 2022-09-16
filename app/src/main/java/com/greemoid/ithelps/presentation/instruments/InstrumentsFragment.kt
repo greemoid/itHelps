@@ -2,22 +2,19 @@ package com.greemoid.ithelps.presentation.instruments
 
 import android.content.Intent
 import android.net.Uri
-import android.os.Bundle
 import android.view.View
-import androidx.annotation.IdRes
-import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentInstrumentsBinding
-import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
+import com.greemoid.ithelps.presentation.core.EmptyViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
 class InstrumentsFragment :
-    BaseFragment<DailyTasksViewModel, FragmentInstrumentsBinding>(FragmentInstrumentsBinding::inflate) {
+    BaseFragment<EmptyViewModel, FragmentInstrumentsBinding>(FragmentInstrumentsBinding::inflate) {
 
     override val visibility: Int = View.VISIBLE
-    override val viewModel: DailyTasksViewModel by sharedViewModel()
+    override val viewModel: EmptyViewModel by sharedViewModel()
 
     override fun init() {
         with(binding) {

@@ -9,15 +9,15 @@ import android.view.View
 import com.google.android.material.snackbar.Snackbar
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentQuestionsAndAnswersBinding
-import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
+import com.greemoid.ithelps.presentation.core.EmptyViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import java.util.*
 
 
 class QuestionsAndAnswersFragment :
-    BaseFragment<DailyTasksViewModel, FragmentQuestionsAndAnswersBinding>(
+    BaseFragment<EmptyViewModel, FragmentQuestionsAndAnswersBinding>(
         FragmentQuestionsAndAnswersBinding::inflate) {
-    override val viewModel: DailyTasksViewModel by sharedViewModel()
+    override val viewModel: EmptyViewModel by sharedViewModel()
     override val visibility: Int = View.GONE
 
     override fun init() {

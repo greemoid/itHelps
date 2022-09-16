@@ -6,5 +6,7 @@ interface MoodRepository {
 
     suspend fun getAllMoods(): List<Mood>
 
+    suspend fun getLastMood(): Mood
+
     suspend fun insertMood(mood: Mood)
 }

@@ -14,4 +14,7 @@ interface MoodDao {
 
     @Query("SELECT * FROM mood_table")
     suspend fun getAllMoods(): List<MoodDB>
+
+    @Query("SELECT * FROM mood_table ORDER BY id DESC LIMIT 1")
+    suspend fun getLastMood(): MoodDB
 }

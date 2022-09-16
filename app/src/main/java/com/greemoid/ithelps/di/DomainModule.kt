@@ -1,11 +1,13 @@
 package com.greemoid.ithelps.di
 
 import com.greemoid.ithelps.domain.usecases.diary.GetAllDiaryNotesUseCase
+import com.greemoid.ithelps.domain.usecases.diary.GetLastDiaryNoteUseCase
 import com.greemoid.ithelps.domain.usecases.diary.SaveDiaryNoteUseCase
 import com.greemoid.ithelps.domain.usecases.meditation.GetAllMeditationSessionsUseCase
 import com.greemoid.ithelps.domain.usecases.meditation.GetLastMeditationSessionUseCase
 import com.greemoid.ithelps.domain.usecases.meditation.SaveMeditationSessionUseCase
 import com.greemoid.ithelps.domain.usecases.mood.GetAllMoodsUseCase
+import com.greemoid.ithelps.domain.usecases.mood.GetLastMoodUseCase
 import com.greemoid.ithelps.domain.usecases.mood.SaveMoodUseCase
 import com.greemoid.ithelps.domain.usecases.todo.*
 import org.koin.dsl.module
@@ -80,6 +82,18 @@ val domainModule = module {
 
     single {
         GetAllDiaryNotesUseCase(
+            diaryRepository = get()
+        )
+    }
+
+    single {
+        GetLastMoodUseCase(
+            moodRepository = get()
+        )
+    }
+
+    single {
+        GetLastDiaryNoteUseCase(
             diaryRepository = get()
         )
     }

@@ -18,3 +18,13 @@ class DiaryDBToDiaryNoteMapper : Mapper<List<DiaryNoteDB>, List<DiaryNote>> {
         return list
     }
 }
+
+class LastDiaryNoteDBToNoteMapper : Mapper<DiaryNoteDB, DiaryNote> {
+    override fun map(input: DiaryNoteDB): DiaryNote {
+        return DiaryNote(
+            description = input.description,
+            date = input.date
+        )
+    }
+
+}

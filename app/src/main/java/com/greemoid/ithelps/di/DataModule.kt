@@ -2,9 +2,11 @@ package com.greemoid.ithelps.di
 
 import com.greemoid.ithelps.data.mapper.diary.DiaryDBToDiaryNoteMapper
 import com.greemoid.ithelps.data.mapper.diary.DiaryNoteToDiaryDBMapper
+import com.greemoid.ithelps.data.mapper.diary.LastDiaryNoteDBToNoteMapper
 import com.greemoid.ithelps.data.mapper.meditation.MeditationDBToMeditationMapper
 import com.greemoid.ithelps.data.mapper.meditation.MeditationListMapper
 import com.greemoid.ithelps.data.mapper.meditation.MeditationToMeditationDBMapper
+import com.greemoid.ithelps.data.mapper.mood.LastMoodDbToMoodMapper
 import com.greemoid.ithelps.data.mapper.mood.MoodDBToMoodMapper
 import com.greemoid.ithelps.data.mapper.mood.MoodToMoodDBMapper
 import com.greemoid.ithelps.data.mapper.todo.TaskDBToTaskMapper
@@ -25,6 +27,7 @@ val dataModule = module {
         DiaryCacheDataSource(
             diaryDao = get(),
             mapperToDomain = DiaryDBToDiaryNoteMapper(),
+            lastMapperToDomain = LastDiaryNoteDBToNoteMapper(),
             mapperToData = DiaryNoteToDiaryDBMapper()
         )
     }
@@ -33,6 +36,7 @@ val dataModule = module {
         MoodCacheDataSource(
             moodDao = get(),
             mapperToDomain = MoodDBToMoodMapper(),
+            mapperLastToDomain = LastMoodDbToMoodMapper(),
             mapperToData = MoodToMoodDBMapper()
         )
     }

@@ -7,15 +7,15 @@ import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentChoiceMoodBinding
 import com.greemoid.ithelps.domain.models.mood.MoodDataSet
-import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
+import com.greemoid.ithelps.presentation.core.EmptyViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
 class ChoiceMoodFragment :
-    BaseFragment<DailyTasksViewModel, FragmentChoiceMoodBinding>(FragmentChoiceMoodBinding::inflate) {
+    BaseFragment<EmptyViewModel, FragmentChoiceMoodBinding>(FragmentChoiceMoodBinding::inflate) {
 
     private lateinit var adapter: ChoiceMoodAdapter
-    override val viewModel: DailyTasksViewModel by sharedViewModel()
+    override val viewModel: EmptyViewModel by sharedViewModel()
     override val visibility: Int = View.GONE
 
     override fun init() {

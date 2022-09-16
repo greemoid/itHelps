@@ -7,14 +7,14 @@ import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentChoiceOfExerciseBinding
 import com.greemoid.ithelps.domain.models.breathing.BreathingType
-import com.greemoid.ithelps.presentation.dailyTasks.DailyTasksViewModel
+import com.greemoid.ithelps.presentation.core.EmptyViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
-class ChoiceOfExerciseFragment : BaseFragment<DailyTasksViewModel, FragmentChoiceOfExerciseBinding>(
+class ChoiceOfExerciseFragment : BaseFragment<EmptyViewModel, FragmentChoiceOfExerciseBinding>(
     FragmentChoiceOfExerciseBinding::inflate) {
 
-    override val viewModel: DailyTasksViewModel by sharedViewModel()
+    override val viewModel: EmptyViewModel by sharedViewModel()
     override val visibility: Int = View.GONE
     override fun init() {
         with(binding) {

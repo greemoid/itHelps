@@ -19,3 +19,14 @@ class MoodDBToMoodMapper : Mapper<List<MoodDB>, List<Mood>> {
         return list
     }
 }
+
+class LastMoodDbToMoodMapper : Mapper<MoodDB, Mood> {
+    override fun map(input: MoodDB): Mood {
+        return Mood(
+            moodType = input.moodType,
+            moodDescription = input.moodDescription,
+            date = input.date
+        )
+    }
+
+}
