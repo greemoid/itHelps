@@ -4,12 +4,13 @@ import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
+import com.greemoid.ithelps.databinding.FragmentDailyTaskBinding
 import com.greemoid.ithelps.databinding.FragmentDailyTasksBinding
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
 class DailyTasksFragment :
-    BaseFragment<DailyTasksViewModel, FragmentDailyTasksBinding>(FragmentDailyTasksBinding::inflate) {
+    BaseFragment<DailyTasksViewModel, FragmentDailyTaskBinding>(FragmentDailyTaskBinding::inflate) {
 
     override val viewModel: DailyTasksViewModel by sharedViewModel()
     override val visibility: Int = View.VISIBLE

@@ -13,6 +13,7 @@
         <entry key="..\:/Project/itHelps/app/src/main/res/layout-v26/fragment_breathing.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/activity_main.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/affirmations_slider_item_layout.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/diary_item_layout.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/drawer_header.xml" value="0.3067708333333333" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/empty_list_layout.xml" value="0.264" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_about.xml" value="0.3067708333333333" />
@@ -26,6 +27,7 @@
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_choice_of_exercise.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_choice_of_time_for_meditation.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_condition_control.xml" value="0.440625" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_daily_task.xml" value="0.4395833333333333" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_daily_tasks.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_diary.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/fragment_diary_list.xml" value="0.43697916666666664" />
@@ -52,6 +54,7 @@
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/insights_mood_item_layout.xml" value="0.43697916666666664" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/item.xml" value="0.440625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/item_habit.xml" value="0.3067708333333333" />
+        <entry key="..\:/Project/itHelps/app/src/main/res/layout/mood_item_layout.xml" value="0.390625" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/mood_items_layout.xml" value="0.4" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/plan_items_layout.xml" value="0.4395833333333333" />
         <entry key="..\:/Project/itHelps/app/src/main/res/layout/task_item_layout.xml" value="0.4" />
