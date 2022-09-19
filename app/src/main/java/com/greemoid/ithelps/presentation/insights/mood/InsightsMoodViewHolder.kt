@@ -3,10 +3,11 @@ package com.greemoid.ithelps.presentation.insights.mood
 import androidx.recyclerview.widget.RecyclerView
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.databinding.InsightsMoodItemLayoutBinding
+import com.greemoid.ithelps.databinding.MoodItemLayoutBinding
 import com.greemoid.ithelps.domain.models.mood.Mood
 import com.greemoid.ithelps.domain.models.mood.MoodNames
 
-class InsightsMoodViewHolder(val binding: InsightsMoodItemLayoutBinding) :
+class InsightsMoodViewHolder(val binding: MoodItemLayoutBinding) :
     RecyclerView.ViewHolder(binding.root) {
     fun bind(mood: Mood) {
         with(binding) {
@@ -35,6 +36,7 @@ class InsightsMoodViewHolder(val binding: InsightsMoodItemLayoutBinding) :
             }
             ivMood.setImageResource(drawable)
             tvMoodItem.text = mood.moodDescription
+            tvMoodTitle.text = mood.moodType
         }
     }
 }

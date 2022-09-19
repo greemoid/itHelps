@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.greemoid.ithelps.databinding.InsightsMoodItemLayoutBinding
+import com.greemoid.ithelps.databinding.MoodItemLayoutBinding
 import com.greemoid.ithelps.domain.models.diary.DiaryNote
 import com.greemoid.ithelps.domain.models.mood.Mood
 
@@ -13,7 +14,7 @@ class InsightsMoodAdapter(private val limit: Int) : RecyclerView.Adapter<Insight
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InsightsMoodViewHolder {
-        val binding = InsightsMoodItemLayoutBinding.inflate(LayoutInflater.from(parent.context),
+        val binding = MoodItemLayoutBinding.inflate(LayoutInflater.from(parent.context),
             parent,
             false)
         return InsightsMoodViewHolder(binding)

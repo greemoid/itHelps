@@ -44,5 +44,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvMyDairyCover"
-        tools:listitem="@layout/insights_mood_item_layout" />
+        tools:listitem="@layout/diary_item_layout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

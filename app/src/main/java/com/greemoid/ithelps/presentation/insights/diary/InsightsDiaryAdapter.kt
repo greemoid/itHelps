@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.greemoid.ithelps.data.models.TaskDB
+import com.greemoid.ithelps.databinding.DiaryItemLayoutBinding
 import com.greemoid.ithelps.databinding.InsightsDiaryItemLayoutBinding
 import com.greemoid.ithelps.domain.models.diary.DiaryNote
 
@@ -13,7 +14,7 @@ class InsightsDiaryAdapter(private val limit: Int) :
     RecyclerView.Adapter<InsightsDiaryViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InsightsDiaryViewHolder {
-        val binding = InsightsDiaryItemLayoutBinding.inflate(LayoutInflater.from(parent.context),
+        val binding = DiaryItemLayoutBinding.inflate(LayoutInflater.from(parent.context),
             parent,
             false)
         return InsightsDiaryViewHolder(binding)
