@@ -6,18 +6,23 @@ import android.content.Context.NOTIFICATION_SERVICE
 import android.content.Intent
 import android.os.Build
 import android.view.View
+import androidx.fragment.app.viewModels
 import com.google.android.material.snackbar.Snackbar
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentQuestionsAndAnswersBinding
 import com.greemoid.ithelps.presentation.core.EmptyViewModel
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import com.greemoid.ithelps.presentation.todo.add.channelID
+import com.greemoid.ithelps.presentation.todo.add.messageExtra
+import com.greemoid.ithelps.presentation.todo.add.notificationID
+import com.greemoid.ithelps.presentation.todo.add.titleExtra
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
-
+@AndroidEntryPoint
 class QuestionsAndAnswersFragment :
     BaseFragment<EmptyViewModel, FragmentQuestionsAndAnswersBinding>(
         FragmentQuestionsAndAnswersBinding::inflate) {
-    override val viewModel: EmptyViewModel by sharedViewModel()
+    override val viewModel: EmptyViewModel by viewModels()
     override val visibility: Int = View.GONE
 
     override fun init() {

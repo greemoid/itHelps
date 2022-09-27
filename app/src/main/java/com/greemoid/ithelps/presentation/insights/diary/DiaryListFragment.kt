@@ -1,15 +1,16 @@
 package com.greemoid.ithelps.presentation.insights.diary
 
 import android.view.View
+import androidx.fragment.app.viewModels
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentDiaryListBinding
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class DiaryListFragment :
     BaseFragment<DiaryListViewModel, FragmentDiaryListBinding>(FragmentDiaryListBinding::inflate) {
-    override val viewModel: DiaryListViewModel by sharedViewModel()
+    override val viewModel: DiaryListViewModel by viewModels()
     override val visibility: Int = View.GONE
     private val adapter = InsightsDiaryAdapter(0)
     override fun init() {

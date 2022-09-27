@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
     id 'kotlin-parcelize'
 }
 
@@ -45,11 +46,18 @@ dependencies {
     def glide_version = '4.13.2'
     def retrofit_version = '2.9.0'
     def room_version = '2.4.3'
+    def dagger_version = '2.41'
 
     implementation 'joda-time:joda-time:2.10.14'
 
     // Architectural Components
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    //Hilt
+    implementation "com.google.dagger:hilt-android:$dagger_version"
+    kapt "com.google.dagger:hilt-compiler:$dagger_version"
+    implementation "androidx.fragment:fragment-ktx:1.5.0"
+    implementation "androidx.activity:activity-ktx:1.5.0"
 
     // Navigation Components
     implementation "androidx.navigation:navigation-fragment-ktx:$lifecycle_version"
@@ -78,11 +86,6 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glide_version"
     kapt "com.github.bumptech.glide:compiler:$glide_version"
 
-    // Koin Core features
-    implementation "io.insert-koin:koin-core:$koin_version"
-    implementation "io.insert-koin:koin-android:$koin_version"
-    // Koin Test features
-    testImplementation "io.insert-koin:koin-test:$koin_version"
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'

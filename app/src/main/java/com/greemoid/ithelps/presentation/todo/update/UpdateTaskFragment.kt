@@ -1,6 +1,7 @@
 package com.greemoid.ithelps.presentation.todo.update
 
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
@@ -9,14 +10,14 @@ import com.greemoid.ithelps.data.models.TaskDB
 import com.greemoid.ithelps.databinding.FragmentUpdateTaskBinding
 import com.greemoid.ithelps.domain.models.todo.TaskTypes
 import com.greemoid.ithelps.presentation.core.Date
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class UpdateTaskFragment :
     BaseFragment<UpdateViewModel, FragmentUpdateTaskBinding>(FragmentUpdateTaskBinding::inflate) {
 
     private val args: UpdateTaskFragmentArgs by navArgs()
-    override val viewModel: UpdateViewModel by sharedViewModel()
+    override val viewModel: UpdateViewModel by viewModels()
     override val visibility: Int = View.GONE
 
     override fun init() {

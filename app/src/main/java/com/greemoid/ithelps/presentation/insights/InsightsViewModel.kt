@@ -7,11 +7,13 @@ import androidx.lifecycle.viewModelScope
 import com.greemoid.ithelps.domain.models.diary.DiaryNote
 import com.greemoid.ithelps.domain.models.mood.Mood
 import com.greemoid.ithelps.domain.usecases.diary.GetAllDiaryNotesUseCase
-import com.greemoid.ithelps.domain.usecases.meditation.GetAllMeditationSessionsUseCase
 import com.greemoid.ithelps.domain.usecases.mood.GetAllMoodsUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class InsightsViewModel(
+@HiltViewModel
+class InsightsViewModel @Inject constructor(
     private val getAllMoodsUseCase: GetAllMoodsUseCase,
     private val getAllDiaryNotesUseCase: GetAllDiaryNotesUseCase,
 ) : ViewModel() {

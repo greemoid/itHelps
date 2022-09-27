@@ -1,18 +1,18 @@
 package com.greemoid.ithelps.presentation.dailyTasks
 
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentDailyTaskBinding
-import com.greemoid.ithelps.databinding.FragmentDailyTasksBinding
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class DailyTasksFragment :
     BaseFragment<DailyTasksViewModel, FragmentDailyTaskBinding>(FragmentDailyTaskBinding::inflate) {
 
-    override val viewModel: DailyTasksViewModel by sharedViewModel()
+    override val viewModel: DailyTasksViewModel by viewModels()
     override val visibility: Int = View.VISIBLE
 
     override fun init() {

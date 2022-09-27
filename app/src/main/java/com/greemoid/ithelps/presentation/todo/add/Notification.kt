@@ -1,4 +1,4 @@
-package com.greemoid.ithelps.presentation.instruments.answers
+package com.greemoid.ithelps.presentation.todo.add
 
 import android.app.NotificationManager
 import android.content.BroadcastReceiver
@@ -6,12 +6,15 @@ import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationCompat
 import com.greemoid.ithelps.R
+import dagger.hilt.android.AndroidEntryPoint
+import java.util.*
 
 const val notificationID = 1
-const val channelID = "channel1"
+const val channelID = "1"
 const val titleExtra = "titleExtra"
 const val messageExtra = "messageExtra"
 
+@AndroidEntryPoint
 class Notification : BroadcastReceiver()
 {
     override fun onReceive(context: Context, intent: Intent)

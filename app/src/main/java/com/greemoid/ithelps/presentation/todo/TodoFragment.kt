@@ -2,19 +2,20 @@ package com.greemoid.ithelps.presentation.todo
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentTodoBinding
 import com.greemoid.ithelps.domain.models.todo.TaskTypes
 import com.greemoid.ithelps.presentation.core.EmptyViewModel
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class TodoFragment :
     BaseFragment<EmptyViewModel, FragmentTodoBinding>(FragmentTodoBinding::inflate) {
 
-    override val viewModel: EmptyViewModel by sharedViewModel()
+    override val viewModel: EmptyViewModel by viewModels()
     override val visibility: Int = View.VISIBLE
 
     override fun init() {

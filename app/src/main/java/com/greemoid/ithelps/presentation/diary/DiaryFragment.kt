@@ -1,19 +1,20 @@
 package com.greemoid.ithelps.presentation.diary
 
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentDiaryBinding
 import com.greemoid.ithelps.domain.models.diary.DiaryNote
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class DiaryFragment :
     BaseFragment<DiaryViewModel, FragmentDiaryBinding>(FragmentDiaryBinding::inflate) {
 
-    override val viewModel: DiaryViewModel by sharedViewModel()
+    override val viewModel: DiaryViewModel by viewModels()
     override val visibility: Int = View.GONE
 
     override fun init() {

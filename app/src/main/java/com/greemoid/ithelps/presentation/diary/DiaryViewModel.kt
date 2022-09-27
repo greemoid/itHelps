@@ -6,9 +6,12 @@ import androidx.lifecycle.viewModelScope
 import com.greemoid.ithelps.domain.models.diary.DiaryNote
 import com.greemoid.ithelps.domain.usecases.diary.SaveDiaryNoteUseCase
 import com.greemoid.ithelps.presentation.core.Date
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class DiaryViewModel(
+@HiltViewModel
+class DiaryViewModel @Inject constructor(
     private val useCase: SaveDiaryNoteUseCase,
     date: Date,
 ) : ViewModel() {

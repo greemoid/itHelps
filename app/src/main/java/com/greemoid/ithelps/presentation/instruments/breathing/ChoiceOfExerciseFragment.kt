@@ -2,19 +2,20 @@ package com.greemoid.ithelps.presentation.instruments.breathing
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentChoiceOfExerciseBinding
 import com.greemoid.ithelps.domain.models.breathing.BreathingType
 import com.greemoid.ithelps.presentation.core.EmptyViewModel
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ChoiceOfExerciseFragment : BaseFragment<EmptyViewModel, FragmentChoiceOfExerciseBinding>(
     FragmentChoiceOfExerciseBinding::inflate) {
 
-    override val viewModel: EmptyViewModel by sharedViewModel()
+    override val viewModel: EmptyViewModel by viewModels()
     override val visibility: Int = View.GONE
     override fun init() {
         with(binding) {

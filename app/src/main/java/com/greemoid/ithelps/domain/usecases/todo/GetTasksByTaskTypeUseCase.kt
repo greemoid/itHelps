@@ -3,8 +3,9 @@ package com.greemoid.ithelps.domain.usecases.todo
 import androidx.lifecycle.LiveData
 import com.greemoid.ithelps.data.models.TaskDB
 import com.greemoid.ithelps.domain.repository.TaskRepository
+import javax.inject.Inject
 
-class GetTasksByTaskTypeUseCase(
+class GetTasksByTaskTypeUseCase @Inject constructor(
     private val taskRepository: TaskRepository,
 ) {
 

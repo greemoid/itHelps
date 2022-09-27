@@ -8,14 +8,17 @@ import com.greemoid.ithelps.domain.usecases.diary.GetLastDiaryNoteUseCase
 import com.greemoid.ithelps.domain.usecases.meditation.GetLastMeditationSessionUseCase
 import com.greemoid.ithelps.domain.usecases.mood.GetLastMoodUseCase
 import com.greemoid.ithelps.presentation.core.Date
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class DailyTasksViewModel(
+@HiltViewModel
+class DailyTasksViewModel @Inject constructor(
     private val getLastMeditationSessionUseCase: GetLastMeditationSessionUseCase,
     private val getLastMoodUseCase: GetLastMoodUseCase,
     private val getLastDiaryNoteUseCase: GetLastDiaryNoteUseCase,
     private val date: Date,
-) : ViewModel(), DailyTasks {
+) : ViewModel() {
     val day = date.getCurrentDayAndDate()
 
     private val _meditation = MutableLiveData<Boolean>()
@@ -27,27 +30,27 @@ class DailyTasksViewModel(
     private val _note = MutableLiveData<Boolean>()
     val note: LiveData<Boolean> = _note
 
-    override fun update() {
+    fun update() {
         getLastMeditationSession()
         getLastMood()
         getLastDiaryNote()
     }
 
-    override fun getLastMeditationSession() {
+    fun getLastMeditationSession() {
         viewModelScope.launch {
             _meditation.value =
                 getLastMeditationSessionUseCase.getLastMeditationSession().date.equals(date.getCurrentFullDate())
         }
     }
 
-    override fun getLastDiaryNote() {
+    fun getLastDiaryNote() {
         viewModelScope.launch {
             _note.value =
                 getLastDiaryNoteUseCase.getLastNote().date.equals(date.getCurrentFullDate())
         }
     }
 
-    override fun getLastMood() {
+    fun getLastMood() {
         viewModelScope.launch {
             _mood.value =
                 getLastMoodUseCase.getLastMood().date.equals(date.getCurrentFullDate())

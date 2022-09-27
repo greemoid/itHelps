@@ -3,18 +3,19 @@ package com.greemoid.ithelps.presentation.instruments.breathing
 
 import android.view.View
 import android.view.animation.AnimationUtils
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentExerciseBreathingBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-
+@AndroidEntryPoint
 class ExerciseBreathingFragment :
     BaseFragment<ExerciseBreathingViewModel, FragmentExerciseBreathingBinding>(
         FragmentExerciseBreathingBinding::inflate) {
@@ -23,7 +24,7 @@ class ExerciseBreathingFragment :
 
     private val args: ExerciseBreathingFragmentArgs by navArgs()
     override val visibility: Int = View.GONE
-    override val viewModel: ExerciseBreathingViewModel by sharedViewModel()
+    override val viewModel: ExerciseBreathingViewModel by viewModels()
 
     override fun init() {
         val breathingTime = args.breathingTime

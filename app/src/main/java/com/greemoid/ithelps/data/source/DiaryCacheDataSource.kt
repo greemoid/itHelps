@@ -7,8 +7,9 @@ import com.greemoid.ithelps.data.mapper.diary.DiaryNoteToDiaryDBMapper
 import com.greemoid.ithelps.data.mapper.diary.LastDiaryNoteDBToNoteMapper
 import com.greemoid.ithelps.domain.models.diary.DiaryNote
 import com.greemoid.ithelps.domain.repository.DiaryRepository
+import javax.inject.Inject
 
-class DiaryCacheDataSource(
+class DiaryCacheDataSource @Inject constructor(
     private val diaryDao: DiaryDao,
     private val mapperToDomain: DiaryDBToDiaryNoteMapper,
     private val lastMapperToDomain: LastDiaryNoteDBToNoteMapper,

@@ -9,9 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.greemoid.ithelps.data.models.TaskDB
 import com.greemoid.ithelps.databinding.TaskItemLayoutBinding
 import com.greemoid.ithelps.domain.models.todo.TaskTypes
+import javax.inject.Inject
 
 
-class TodoTasksAdapter(val viewModel: TodoListTasksViewModel) :
+class TodoTasksAdapter @Inject constructor(val viewModel: TodoListTasksViewModel) :
     RecyclerView.Adapter<TodoTasksAdapter.TodoTasksViewHolder>() {
 
     //todo сюда приходить модель з бд а не з презентейшн або домейн хоча б
@@ -65,7 +66,7 @@ class TodoTasksAdapter(val viewModel: TodoListTasksViewModel) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoTasksViewHolder {
         val binding = TaskItemLayoutBinding
-                .inflate(LayoutInflater.from(parent.context), parent, false)
+            .inflate(LayoutInflater.from(parent.context), parent, false)
         return TodoTasksViewHolder(binding)
     }
 

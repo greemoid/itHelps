@@ -7,8 +7,9 @@ import com.greemoid.ithelps.data.mapper.meditation.MeditationListMapper
 import com.greemoid.ithelps.data.mapper.meditation.MeditationToMeditationDBMapper
 import com.greemoid.ithelps.domain.models.meditation.Meditation
 import com.greemoid.ithelps.domain.repository.MeditationRepository
+import javax.inject.Inject
 
-class MeditationCacheDataSource(
+class MeditationCacheDataSource @Inject constructor(
     private val meditationDao: MeditationDao,
     private val meditationDBToMeditationMapper: MeditationDBToMeditationMapper,
     private val meditationToMeditationDBMapper: MeditationToMeditationDBMapper,
@@ -19,7 +20,7 @@ class MeditationCacheDataSource(
         meditationDao.insertMeditationTime(meditationDB)
     }
 
-    override  fun getAllMeditationSessions(): List<Meditation> {
+    override fun getAllMeditationSessions(): List<Meditation> {
         val list = meditationDao.getAllMeditationSessions()
         return meditationListMapper.map(list)
     }
@@ -28,7 +29,8 @@ class MeditationCacheDataSource(
     override suspend fun getLastMeditationSession(): Meditation {
         var meditation = Meditation(0, 0, 0, "")
         try {
-            meditation = meditationDBToMeditationMapper.map(meditationDao.getLastMeditationSession())
+            meditation =
+                meditationDBToMeditationMapper.map(meditationDao.getLastMeditationSession())
         } catch (e: Exception) {
             Log.d("SOURCE", e.toString())
         }

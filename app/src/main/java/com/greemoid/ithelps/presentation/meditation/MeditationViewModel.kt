@@ -10,10 +10,13 @@ import com.greemoid.ithelps.domain.models.meditation.Meditation
 import com.greemoid.ithelps.domain.usecases.meditation.GetLastMeditationSessionUseCase
 import com.greemoid.ithelps.domain.usecases.meditation.SaveMeditationSessionUseCase
 import com.greemoid.ithelps.presentation.core.Date
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import java.util.*
+import javax.inject.Inject
 
-class MeditationViewModel(
+@HiltViewModel
+class MeditationViewModel @Inject constructor(
     private val saveMeditationSessionUseCase: SaveMeditationSessionUseCase,
     private val getLastMeditationSessionUseCase: GetLastMeditationSessionUseCase,
     private val date: Date,

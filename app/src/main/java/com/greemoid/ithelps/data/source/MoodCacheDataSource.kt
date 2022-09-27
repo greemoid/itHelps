@@ -7,8 +7,9 @@ import com.greemoid.ithelps.data.mapper.mood.MoodDBToMoodMapper
 import com.greemoid.ithelps.data.mapper.mood.MoodToMoodDBMapper
 import com.greemoid.ithelps.domain.models.mood.Mood
 import com.greemoid.ithelps.domain.repository.MoodRepository
+import javax.inject.Inject
 
-class MoodCacheDataSource(
+class MoodCacheDataSource @Inject constructor(
     private val moodDao: MoodDao,
     private val mapperToDomain: MoodDBToMoodMapper,
     private val mapperLastToDomain: LastMoodDbToMoodMapper,

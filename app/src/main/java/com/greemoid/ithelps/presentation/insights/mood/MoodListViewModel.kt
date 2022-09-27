@@ -6,9 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.greemoid.ithelps.domain.models.mood.Mood
 import com.greemoid.ithelps.domain.usecases.mood.GetAllMoodsUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class MoodListViewModel(
+@HiltViewModel
+class MoodListViewModel @Inject constructor(
     private val getAllMoodsUseCase: GetAllMoodsUseCase,
 ) : ViewModel() {
 

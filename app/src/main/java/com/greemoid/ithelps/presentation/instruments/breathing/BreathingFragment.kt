@@ -3,22 +3,23 @@ package com.greemoid.ithelps.presentation.instruments.breathing
 import android.os.Bundle
 import android.view.View
 import android.widget.SeekBar
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentBreathingBinding
 import com.greemoid.ithelps.presentation.core.EmptyViewModel
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class BreathingFragment :
     BaseFragment<EmptyViewModel, FragmentBreathingBinding>(FragmentBreathingBinding::inflate) {
 
     //todo clean up init(); move it to customview
 
     private val args: BreathingFragmentArgs by navArgs()
-    override val viewModel: EmptyViewModel by sharedViewModel()
+    override val viewModel: EmptyViewModel by viewModels()
     override val visibility: Int = View.GONE
 
     override fun init() {

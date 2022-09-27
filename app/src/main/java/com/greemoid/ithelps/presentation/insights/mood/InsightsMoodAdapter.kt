@@ -5,12 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.greemoid.ithelps.databinding.InsightsMoodItemLayoutBinding
 import com.greemoid.ithelps.databinding.MoodItemLayoutBinding
-import com.greemoid.ithelps.domain.models.diary.DiaryNote
 import com.greemoid.ithelps.domain.models.mood.Mood
+import javax.inject.Inject
 
-class InsightsMoodAdapter(private val limit: Int) : RecyclerView.Adapter<InsightsMoodViewHolder>() {
+class InsightsMoodAdapter @Inject constructor(private val limit: Int) :
+    RecyclerView.Adapter<InsightsMoodViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InsightsMoodViewHolder {
