@@ -1,245 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.todo.add.TodoAddFragment">
+    android:layout_height="wrap_content">
 
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/size_1dp"
-        android:layout_marginTop="@dimen/size_64dp"
-        android:background="#D4D4D4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/btnClose"
-        android:layout_width="@dimen/size_36dp"
-        android:layout_height="@dimen/size_36dp"
-        android:background="?android:attr/selectableItemBackgroundBorderless"
-        android:layout_marginStart="@dimen/size_16dp"
-        android:src="@drawable/ic_baseline_close_24"
-        app:layout_constraintBottom_toTopOf="@+id/view2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/button_back" />
-
-    <TextView
-        android:id="@+id/tvTodayCover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view2"
-        app:layout_constraintEnd_toStartOf="@+id/btnSave"
-        app:layout_constraintStart_toEndOf="@+id/btnClose"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Сьогодні" />
-
-    <ImageView
-        android:id="@+id/btnSave"
-        android:layout_width="@dimen/size_36dp"
-        android:layout_height="@dimen/size_36dp"
-        android:layout_marginEnd="@dimen/size_16dp"
-        android:background="?android:attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_baseline_done_24"
-        app:layout_constraintBottom_toTopOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/button_success" />
-
-    <TextView
-        android:id="@+id/tvQuestionTitle"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/size_24dp"
-        android:layout_marginTop="@dimen/size_8dp"
-        android:layout_marginEnd="@dimen/size_24dp"
-        android:text="@string/task_question"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textSize_18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        tools:context=".presentation.todo.add.TodoAddFragment">
 
-    <TextView
-        android:id="@+id/tvQuestionDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/size_24dp"
-        android:layout_marginTop="@dimen/size_24dp"
-        android:layout_marginEnd="@dimen/size_24dp"
-        android:text="@string/method_of_execution"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textSize_18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
 
-    <TextView
-        android:id="@+id/tvQuestionChapters"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/size_24dp"
-        android:layout_marginTop="@dimen/size_24dp"
-        android:layout_marginEnd="@dimen/size_24dp"
-        android:text="@string/task_chapter"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textSize_18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_1dp"
+            android:layout_marginTop="@dimen/size_64dp"
+            android:background="#D4D4D4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvQuestionDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/size_24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="@dimen/size_24dp"
-        android:text="@string/choose_date"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textSize_18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerChapters" />
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/size_36dp"
+            android:layout_height="@dimen/size_36dp"
+            android:layout_marginStart="@dimen/size_16dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/button_back"
+            android:src="@drawable/ic_baseline_close_24"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etTitle"
-        android:layout_width="@dimen/size_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/size_16dp"
-        android:layout_marginEnd="@dimen/size_16dp"
-        android:background="@drawable/multi_line_text_style"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/name_of_task"
-        android:inputType="textPersonName"
-        android:maxLines="1"
-        android:padding="@dimen/size_8dp"
-        android:textColor="#000000"
-        android:textColorLink="@color/black"
-        android:textCursorDrawable="@drawable/black_cursor"
-        android:textSize="@dimen/textSize_16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuestionTitle"
-        android:importantForAutofill="no" />
-
-    <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="@dimen/size_0dp"
-        android:layout_height="@dimen/size_146dp"
-        android:layout_marginStart="@dimen/size_16dp"
-        android:layout_marginEnd="@dimen/size_16dp"
-        android:background="@drawable/multi_line_text_style"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/type_description_of_task"
-        android:inputType="textMultiLine"
-        android:padding="@dimen/size_8dp"
-        android:textColor="#000000"
-        android:textColorLink="@color/black"
-        android:textCursorDrawable="@drawable/black_cursor"
-        android:textSize="@dimen/textSize_16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuestionDescription"
-        android:importantForAutofill="no" />
-
-    <Spinner
-        android:id="@+id/spinnerChapters"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/size_16dp"
-        android:layout_marginTop="@dimen/size_8dp"
-        android:layout_marginEnd="@dimen/size_16dp"
-        android:entries="@array/array_of_chapters"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuestionChapters" />
-
-    <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/size_24dp"
-        android:layout_marginEnd="@dimen/size_24dp"
-        android:calendarViewShown="false"
-        android:datePickerMode="spinner"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroupDates" />
-
-    <RadioGroup
-        android:id="@+id/radioGroupDates"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/size_24dp"
-        android:layout_marginTop="@dimen/size_8dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvQuestionDate">
-
-        <RadioButton
-            android:id="@+id/rbToday"
+        <TextView
+            android:id="@+id/tvTodayCover"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/size_8dp"
-            android:checked="true"
-            android:text="@string/today"
-            android:textSize="12sp" />
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toStartOf="@+id/btnSave"
+            app:layout_constraintStart_toEndOf="@+id/btnClose"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Сьогодні" />
 
-        <RadioButton
-            android:id="@+id/rbTomorrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:text="@string/tomorrow"
-            android:textSize="12sp" />
-
-        <RadioButton
-            android:id="@+id/rbCustom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/btnSave"
+            android:layout_width="@dimen/size_36dp"
+            android:layout_height="@dimen/size_36dp"
             android:layout_marginEnd="@dimen/size_16dp"
-            tools:text="12.08.2022"
-            android:textSize="@dimen/textSize_12sp" />
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/button_success"
+            android:src="@drawable/ic_baseline_done_24"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </RadioGroup>
+        <TextView
+            android:id="@+id/tvQuestionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_24dp"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:layout_marginEnd="@dimen/size_24dp"
+            android:text="@string/task_question"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-    <Button
-        android:id="@+id/btnCustomDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/size_24dp"
-        android:text="@string/custom_date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/radioGroupDates"
-        app:layout_constraintTop_toTopOf="@+id/radioGroupDates" />
+        <TextView
+            android:id="@+id/tvQuestionDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_24dp"
+            android:layout_marginTop="@dimen/size_24dp"
+            android:layout_marginEnd="@dimen/size_24dp"
+            android:text="@string/method_of_execution"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etTitle" />
 
-    <Button
-        android:id="@+id/btnSaveDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/save"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/radioGroupDates"
-        app:layout_constraintTop_toTopOf="@+id/radioGroupDates" />
+        <TextView
+            android:id="@+id/tvQuestionChapters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_24dp"
+            android:layout_marginTop="@dimen/size_24dp"
+            android:layout_marginEnd="@dimen/size_24dp"
+            android:text="@string/task_chapter"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+        <TextView
+            android:id="@+id/tvQuestionDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="@dimen/size_24dp"
+            android:text="@string/choose_date"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerChapters" />
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_16dp"
+            android:layout_marginEnd="@dimen/size_16dp"
+            android:background="@drawable/multi_line_text_style"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/name_of_task"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:padding="@dimen/size_8dp"
+            android:textColor="#000000"
+            android:textColorLink="@color/black"
+            android:textCursorDrawable="@drawable/black_cursor"
+            android:textSize="@dimen/textSize_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestionTitle" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="@dimen/size_146dp"
+            android:layout_marginStart="@dimen/size_16dp"
+            android:layout_marginEnd="@dimen/size_16dp"
+            android:background="@drawable/multi_line_text_style"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/type_description_of_task"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/size_8dp"
+            android:textColor="#000000"
+            android:textColorLink="@color/black"
+            android:textCursorDrawable="@drawable/black_cursor"
+            android:textSize="@dimen/textSize_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestionDescription" />
+
+        <Spinner
+            android:id="@+id/spinnerChapters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_16dp"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:layout_marginEnd="@dimen/size_16dp"
+            android:entries="@array/array_of_chapters"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestionChapters" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_24dp"
+            android:layout_marginEnd="@dimen/size_24dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupDates" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupDates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_24dp"
+            android:layout_marginTop="@dimen/size_8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvQuestionDate">
+
+            <RadioButton
+                android:id="@+id/rbToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size_8dp"
+                android:checked="true"
+                android:text="@string/today"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rbTomorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/tomorrow"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rbCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size_16dp"
+                android:textSize="@dimen/textSize_12sp"
+                tools:text="12.08.2022" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnCustomDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/size_24dp"
+            android:text="@string/custom_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioGroupDates"
+            app:layout_constraintTop_toTopOf="@+id/radioGroupDates" />
+
+        <Button
+            android:id="@+id/btnSaveDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radioGroupDates"
+            app:layout_constraintTop_toTopOf="@+id/radioGroupDates" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCustomDate">
+
+            <DatePicker
+                android:id="@+id/datePickerNotification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginRight="-30dp"
+                android:layout_weight="1"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:scaleX="0.7"
+                android:scaleY="0.7" />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-30dp"
+                android:layout_marginRight="-30dp"
+                android:layout_weight="1"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:timePickerMode="spinner" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/schedule_notification"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
