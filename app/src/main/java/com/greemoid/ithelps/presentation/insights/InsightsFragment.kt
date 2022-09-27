@@ -1,17 +1,19 @@
 package com.greemoid.ithelps.presentation.insights
 
 import android.view.View
+import androidx.fragment.app.viewModels
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentInsightsBinding
 import com.greemoid.ithelps.presentation.insights.diary.InsightsDiaryAdapter
 import com.greemoid.ithelps.presentation.insights.mood.InsightsMoodAdapter
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class InsightsFragment :
     BaseFragment<InsightsViewModel, FragmentInsightsBinding>(FragmentInsightsBinding::inflate) {
 
-    override val viewModel: InsightsViewModel by sharedViewModel()
+    override val viewModel: InsightsViewModel by viewModels()
     override val visibility: Int = View.VISIBLE
     private val adapterMood: InsightsMoodAdapter = InsightsMoodAdapter(5)
     private val adapterDiary: InsightsDiaryAdapter = InsightsDiaryAdapter(5)

@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.greemoid.ithelps.R
@@ -14,15 +15,14 @@ import com.greemoid.ithelps.databinding.FragmentTodoAddBinding
 import com.greemoid.ithelps.domain.models.todo.Task
 import com.greemoid.ithelps.domain.models.todo.TaskTypes
 import com.greemoid.ithelps.presentation.core.Date
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
-import kotlin.properties.Delegates
 
-
+@AndroidEntryPoint
 class TodoAddFragment :
     BaseFragment<TodoAddViewModel, FragmentTodoAddBinding>(FragmentTodoAddBinding::inflate) {
 
-    override val viewModel: TodoAddViewModel by sharedViewModel()
+    override val viewModel: TodoAddViewModel by viewModels()
     override val visibility: Int = View.GONE
 
     override fun init() {

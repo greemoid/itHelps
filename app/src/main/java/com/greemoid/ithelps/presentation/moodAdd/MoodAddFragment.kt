@@ -1,6 +1,7 @@
 package com.greemoid.ithelps.presentation.moodAdd
 
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
@@ -8,13 +9,14 @@ import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentMoodAddBinding
 import com.greemoid.ithelps.domain.models.mood.Mood
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MoodAddFragment :
     BaseFragment<MoodAddViewModel, FragmentMoodAddBinding>(FragmentMoodAddBinding::inflate) {
 
     private val args: MoodAddFragmentArgs by navArgs()
-    override val viewModel: MoodAddViewModel by sharedViewModel()
+    override val viewModel: MoodAddViewModel by viewModels()
     override val visibility: Int = View.GONE
 
     override fun init() {

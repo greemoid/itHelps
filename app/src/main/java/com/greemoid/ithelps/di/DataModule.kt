@@ -1,5 +1,9 @@
 package com.greemoid.ithelps.di
 
+import com.greemoid.ithelps.data.db.DiaryDao
+import com.greemoid.ithelps.data.db.MeditationDao
+import com.greemoid.ithelps.data.db.MoodDao
+import com.greemoid.ithelps.data.db.TasksDao
 import com.greemoid.ithelps.data.mapper.diary.DiaryDBToDiaryNoteMapper
 import com.greemoid.ithelps.data.mapper.diary.DiaryNoteToDiaryDBMapper
 import com.greemoid.ithelps.data.mapper.diary.LastDiaryNoteDBToNoteMapper
@@ -19,42 +23,52 @@ import com.greemoid.ithelps.domain.repository.DiaryRepository
 import com.greemoid.ithelps.domain.repository.MeditationRepository
 import com.greemoid.ithelps.domain.repository.MoodRepository
 import com.greemoid.ithelps.domain.repository.TaskRepository
-import org.koin.dsl.module
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
-val dataModule = module {
+@Module
+@InstallIn(SingletonComponent::class)
+class DataModule {
 
-    single<DiaryRepository> {
+    @Provides
+    @Singleton
+    fun provideDiaryDataSource(diaryDao: DiaryDao): DiaryRepository =
         DiaryCacheDataSource(
-            diaryDao = get(),
+            diaryDao = diaryDao,
             mapperToDomain = DiaryDBToDiaryNoteMapper(),
             lastMapperToDomain = LastDiaryNoteDBToNoteMapper(),
             mapperToData = DiaryNoteToDiaryDBMapper()
         )
-    }
 
-    single<MoodRepository> {
+    @Provides
+    @Singleton
+    fun provideMoodCacheDataSource(moodDao: MoodDao): MoodRepository =
         MoodCacheDataSource(
-            moodDao = get(),
+            moodDao = moodDao,
             mapperToDomain = MoodDBToMoodMapper(),
             mapperLastToDomain = LastMoodDbToMoodMapper(),
             mapperToData = MoodToMoodDBMapper()
         )
-    }
 
-    single<TaskRepository> {
+    @Provides
+    @Singleton
+    fun provideTaskCacheDataSource(tasksDao: TasksDao): TaskRepository =
         TasksCacheDataSource(
-            tasksDao = get(),
+            tasksDao = tasksDao,
             dataToDomainMapper = TaskDBToTaskMapper(),
             domainToDataMapper = TaskToTaskDBMapper()
         )
-    }
 
-    single<MeditationRepository> {
+    @Provides
+    @Singleton
+    fun provideMeditationDataSource(meditationDao: MeditationDao): MeditationRepository =
         MeditationCacheDataSource(
-            meditationDao = get(),
+            meditationDao = meditationDao,
             meditationDBToMeditationMapper = MeditationDBToMeditationMapper(),
             meditationToMeditationDBMapper = MeditationToMeditationDBMapper(),
             meditationListMapper = MeditationListMapper()
         )
-    }
 }

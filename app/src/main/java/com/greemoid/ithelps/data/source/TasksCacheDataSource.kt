@@ -7,8 +7,9 @@ import com.greemoid.ithelps.data.mapper.todo.TaskToTaskDBMapper
 import com.greemoid.ithelps.data.models.TaskDB
 import com.greemoid.ithelps.domain.models.todo.Task
 import com.greemoid.ithelps.domain.repository.TaskRepository
+import javax.inject.Inject
 
-class TasksCacheDataSource(
+class TasksCacheDataSource @Inject constructor(
     private val tasksDao: TasksDao,
     private val dataToDomainMapper: TaskDBToTaskMapper,
     private val domainToDataMapper: TaskToTaskDBMapper,

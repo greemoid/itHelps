@@ -5,8 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.greemoid.ithelps.databinding.MoodItemsLayoutBinding
 import com.greemoid.ithelps.domain.models.mood.MoodType
+import javax.inject.Inject
 
-class ChoiceMoodAdapter(
+class ChoiceMoodAdapter @Inject constructor(
     private val dataSource: List<MoodType>,
 ) : RecyclerView.Adapter<ChoiceMoodAdapter.ChoiceMoodViewHolder>() {
     inner class ChoiceMoodViewHolder(val binding: MoodItemsLayoutBinding) :

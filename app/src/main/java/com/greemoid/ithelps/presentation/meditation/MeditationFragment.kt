@@ -5,17 +5,18 @@ import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentMeditationBinding
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MeditationFragment :
     BaseFragment<MeditationViewModel, FragmentMeditationBinding>(FragmentMeditationBinding::inflate) {
 
-    override val viewModel: MeditationViewModel by sharedViewModel()
+    override val viewModel: MeditationViewModel by viewModels()
     override val visibility: Int = View.GONE
 
     //todo move it to another file and make init smaller

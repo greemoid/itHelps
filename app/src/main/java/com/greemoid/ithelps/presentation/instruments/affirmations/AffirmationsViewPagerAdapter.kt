@@ -11,8 +11,9 @@ import androidx.viewpager.widget.PagerAdapter
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.data.models.Affirmation
 import java.util.*
+import javax.inject.Inject
 
-class AffirmationsViewPagerAdapter(
+class AffirmationsViewPagerAdapter @Inject constructor(
     private val context: Context,
     private val affirmationsList: List<Affirmation>,
 ) : PagerAdapter() {

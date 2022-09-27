@@ -5,8 +5,9 @@ import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import com.greemoid.ithelps.core.presentation.BaseVibratorManager
+import javax.inject.Inject
 
-class VibratorManager(private val context: Context) : BaseVibratorManager {
+class VibratorManager @Inject constructor(private val context: Context) : BaseVibratorManager {
     override fun vibrate() {
         val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         if (Build.VERSION.SDK_INT >= 26) {

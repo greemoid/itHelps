@@ -5,13 +5,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.greemoid.ithelps.data.models.TaskDB
-import com.greemoid.ithelps.domain.models.todo.Task
 import com.greemoid.ithelps.domain.usecases.todo.GetAllTasksUseCase
 import com.greemoid.ithelps.domain.usecases.todo.GetTasksByTaskTypeUseCase
 import com.greemoid.ithelps.domain.usecases.todo.UpdateTaskUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class TodoListTasksViewModel(
+@HiltViewModel
+class TodoListTasksViewModel @Inject constructor(
     private val updateTaskUseCase: UpdateTaskUseCase,
     private val getAllTasksUseCase: GetAllTasksUseCase,
     private val getTasksByTaskTypeUseCase: GetTasksByTaskTypeUseCase,

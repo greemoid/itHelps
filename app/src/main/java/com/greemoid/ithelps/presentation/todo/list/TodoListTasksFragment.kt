@@ -2,18 +2,19 @@ package com.greemoid.ithelps.presentation.todo.list
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.greemoid.ithelps.R
 import com.greemoid.ithelps.core.presentation.BaseFragment
 import com.greemoid.ithelps.databinding.FragmentTodoListTasksBinding
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class TodoListTasksFragment :
     BaseFragment<TodoListTasksViewModel, FragmentTodoListTasksBinding>(FragmentTodoListTasksBinding::inflate) {
 
-    override val viewModel: TodoListTasksViewModel by sharedViewModel()
+    override val viewModel: TodoListTasksViewModel by viewModels()
     private lateinit var adapter: TodoTasksAdapter
     override val visibility: Int = View.GONE
 

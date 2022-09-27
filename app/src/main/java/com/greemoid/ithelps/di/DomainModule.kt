@@ -1,5 +1,9 @@
 package com.greemoid.ithelps.di
 
+import com.greemoid.ithelps.domain.repository.DiaryRepository
+import com.greemoid.ithelps.domain.repository.MeditationRepository
+import com.greemoid.ithelps.domain.repository.MoodRepository
+import com.greemoid.ithelps.domain.repository.TaskRepository
 import com.greemoid.ithelps.domain.usecases.diary.GetAllDiaryNotesUseCase
 import com.greemoid.ithelps.domain.usecases.diary.GetLastDiaryNoteUseCase
 import com.greemoid.ithelps.domain.usecases.diary.SaveDiaryNoteUseCase
@@ -10,92 +14,69 @@ import com.greemoid.ithelps.domain.usecases.mood.GetAllMoodsUseCase
 import com.greemoid.ithelps.domain.usecases.mood.GetLastMoodUseCase
 import com.greemoid.ithelps.domain.usecases.mood.SaveMoodUseCase
 import com.greemoid.ithelps.domain.usecases.todo.*
-import org.koin.dsl.module
+import dagger.Module
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
 
-val domainModule = module {
+@Module
+@InstallIn(ViewModelComponent::class)
+class DomainModule {
 
-    single {
-        SaveDiaryNoteUseCase(
-            diaryRepository = get()
-        )
-    }
+    @Provides
+    fun provideSaveDiaryNoteUseCase(diaryRepository: DiaryRepository) =
+        SaveDiaryNoteUseCase(diaryRepository = diaryRepository)
 
-    single {
-        SaveMoodUseCase(
-            moodRepository = get()
-        )
-    }
+    @Provides
+    fun provideSaveMoodUseCase(moodRepository: MoodRepository) =
+        SaveMoodUseCase(moodRepository = moodRepository)
 
-    single {
-        SaveTaskUseCase(
-            taskRepository = get()
-        )
-    }
+    @Provides
+    fun provideSaveTaskUseCase(taskRepository: TaskRepository) =
+        SaveTaskUseCase(taskRepository = taskRepository)
 
-    single {
-        GetAllTasksUseCase(
-            taskRepository = get()
-        )
-    }
+    @Provides
+    fun provideGetAllTasksUseCase(taskRepository: TaskRepository) =
+        GetAllTasksUseCase(taskRepository = taskRepository)
 
-    single {
-        GetTasksByTaskTypeUseCase(
-            taskRepository = get()
-        )
-    }
+    @Provides
+    fun provideGetTasksByTaskTypeUseCase(taskRepository: TaskRepository) =
+        GetTasksByTaskTypeUseCase(taskRepository = taskRepository)
 
-    single {
-        DeleteTaskUseCase(
-            taskRepository = get()
-        )
-    }
+    @Provides
+    fun provideDeleteTaskUseCase(taskRepository: TaskRepository) =
+        DeleteTaskUseCase(taskRepository = taskRepository)
 
-    single {
-        UpdateTaskUseCase(
-            repository = get()
-        )
-    }
+    @Provides
+    fun provideUpdateTaskUseCase(taskRepository: TaskRepository) =
+        UpdateTaskUseCase(repository = taskRepository)
 
-    single {
-        SaveMeditationSessionUseCase(
-            meditationRepository = get()
-        )
-    }
+    @Provides
+    fun provideSaveMeditationSessionUseCase(meditationRepository: MeditationRepository) =
+        SaveMeditationSessionUseCase(meditationRepository = meditationRepository)
 
-    single {
-        GetLastMeditationSessionUseCase(
-            meditationRepository = get()
-        )
-    }
+    @Provides
+    fun provideGetLastMeditationSessionUseCase(meditationRepository: MeditationRepository) =
+        GetLastMeditationSessionUseCase(meditationRepository = meditationRepository)
 
-    single {
-        GetAllMeditationSessionsUseCase(
-            meditationRepository = get()
-        )
-    }
+    @Provides
+    fun provideGetAllMeditationSessionsUseCase(meditationRepository: MeditationRepository) =
+        GetAllMeditationSessionsUseCase(meditationRepository = meditationRepository)
 
-    single {
-        GetAllMoodsUseCase(
-            moodRepository = get()
-        )
-    }
+    @Provides
+    fun provideGetAllMoodsUseCase(moodRepository: MoodRepository) =
+        GetAllMoodsUseCase(moodRepository = moodRepository)
 
-    single {
-        GetAllDiaryNotesUseCase(
-            diaryRepository = get()
-        )
-    }
+    @Provides
+    fun provideGetAllDiaryNotesUseCase(diaryRepository: DiaryRepository) =
+        GetAllDiaryNotesUseCase(diaryRepository = diaryRepository)
 
-    single {
-        GetLastMoodUseCase(
-            moodRepository = get()
-        )
-    }
+    @Provides
+    fun provideGetLastMoodUseCase(moodRepository: MoodRepository) =
+        GetLastMoodUseCase(moodRepository = moodRepository)
 
-    single {
-        GetLastDiaryNoteUseCase(
-            diaryRepository = get()
-        )
-    }
+    @Provides
+    fun provideGetLastDiaryNoteUseCase(diaryRepository: DiaryRepository) =
+        GetLastDiaryNoteUseCase(diaryRepository = diaryRepository)
 
 }
