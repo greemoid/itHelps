@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    
+    <!--New colors-->
+    <color name="main_background">#FFFFFF</color>
+    <color name="background_for_views">#e4e4ec</color>
+    <color name="for_second_text">#5c5a6e</color>
+    <color name="for_title_text">#07080c</color>
+    <color name="for_other_views">#bebfd4</color>
+    <color name="for_instruments_title_text">#909090</color>
+
+    <color name="main_circle">#d5d4e2</color>
+    <color name="second_circle">#a1a0b0</color>
+    <color name="inside_circle">#4e4d5f</color>
 </resources>

@@ -8,20 +8,20 @@
         />
 
     <item
-        android:icon="@drawable/todo"
+        android:icon="@drawable/dtodo"
         android:id="@+id/todoFragment"
-        android:title="Home"
+        android:title="Todo"
         />
 
     <item
-        android:icon="@drawable/habit"
+        android:icon="@drawable/dinsights"
         android:id="@+id/insightsFragment"
-        android:title="Home" />
+        android:title="Insights" />
 
     <item
-        android:icon="@drawable/instruments"
+        android:icon="@drawable/dinstruments"
         android:id="@+id/instrumentsFragment"
-        android:title="Home"
+        android:title="Instruments"
         />
 
 </menu>

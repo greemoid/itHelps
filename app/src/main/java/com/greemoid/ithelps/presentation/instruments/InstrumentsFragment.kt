@@ -22,7 +22,6 @@ class InstrumentsFragment :
             btnMoodTracker.navigate(R.id.action_instrumentsFragment_to_choiceMoodFragment)
             btnDiary.navigate(R.id.action_instrumentsFragment_to_diaryFragment)
             btnMeditation.navigate(R.id.action_instrumentsFragment_to_meditationFragment)
-            btnAnswers.navigate(R.id.action_instrumentsFragment_to_questionsAndAnswersFragment)
             btnControl.navigate(R.id.action_instrumentsFragment_to_conditionControlFragment)
             btnAffirmations.navigate(R.id.action_instrumentsFragment_to_affirmationsFragment)
             btnQuotes.navigate(R.id.action_instrumentsFragment_to_quotesFragment)

@@ -22,10 +22,14 @@
         android:id="@+id/bottomNavView"
         android:layout_width="match_parent"
         android:layout_height="@dimen/size_55dp"
-        app:menu="@menu/bottom_menu"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bottom_nav_view"
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
