@@ -41,6 +41,10 @@ class ExerciseBreathingFragment :
             breathingTime.secondDelay)
         val zoomIn = AnimationUtils.loadAnimation(requireContext(), R.anim.zoom_in)
         val zoomOut = AnimationUtils.loadAnimation(requireContext(), R.anim.zoom_out)
+        binding.progressBar.max = breathingTime.totalTime
+        viewModel.timeForProgress.observe(viewLifecycleOwner) {
+            binding.progressBar.progress = it
+        }
         viewModel.millisBreath.observe(viewLifecycleOwner) {
             binding.tvTime.text = it
         }
@@ -51,9 +55,9 @@ class ExerciseBreathingFragment :
             zoomIn.duration = it
             zoomOut.duration = it
         }
-        viewModel.totalTime.observe(viewLifecycleOwner) {
+        /*viewModel.totalTime.observe(viewLifecycleOwner) {
             binding.tvTotalTime.text = it
-        }
+        }*/
         binding.btnBack.setOnClickListener {
             viewModel.cancelTimer()
             findNavController()

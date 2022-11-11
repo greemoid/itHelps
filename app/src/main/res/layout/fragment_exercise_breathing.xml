@@ -4,42 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_for_views"
     tools:context=".presentation.instruments.breathing.ExerciseBreathingFragment">
 
+
     <ImageView
-        android:id="@+id/ivBreathAnimation"
-        android:layout_width="@dimen/size_200dp"
-        android:layout_height="@dimen/size_200dp"
-        android:src="@drawable/delay"
+        android:id="@+id/firstCircle"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:contentDescription="@string/breathing_animation"
+        android:src="@drawable/first_circle_breathing"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/breathing_animation" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/ivBreathAnimation"
+        android:layout_width="@dimen/size_128dp"
+        android:layout_height="@dimen/size_128dp"
+        android:contentDescription="@string/breathing_animation"
+        android:src="@drawable/second_circle_breathing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/SecondCircle"
+        android:layout_width="@dimen/size_128dp"
+        android:layout_height="@dimen/size_128dp"
+        android:contentDescription="@string/breathing_animation"
+        android:src="@drawable/third_circle_breathing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--
 
     <TextView
         android:id="@+id/tvTotalTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="1:56"
         android:textColor="@color/black"
         android:textSize="@dimen/textSize_22sp"
+        android:layout_marginTop="@dimen/size_72dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+        app:layout_constraintTop_toTopOf="@+id/btnBack"
+        tools:text="1:56" />
+-->
 
     <TextView
         android:id="@+id/tvBreath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Видих"
-        android:textColor="@color/white"
-        android:textSize="@dimen/textSize_18sp"
+        android:textColor="#444557"
+        android:textSize="@dimen/textSize_24sp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/ivBreathAnimation"
         app:layout_constraintStart_toStartOf="@+id/ivBreathAnimation"
-        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+        app:layout_constraintTop_toBottomOf="@+id/firstCircle"
+        tools:text="Видих" />
+
 
     <ImageView
         android:id="@+id/btnBack"
@@ -48,24 +78,35 @@
         android:layout_marginStart="@dimen/size_16dp"
         android:layout_marginTop="@dimen/size_16dp"
         android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/button_back"
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/button_back" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="5"
+        android:includeFontPadding="false"
         android:textColor="@color/white"
         android:textSize="@dimen/textSize_32sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/ivBreathAnimation"
-        app:layout_constraintEnd_toEndOf="@id/ivBreathAnimation"
-        app:layout_constraintStart_toStartOf="@id/ivBreathAnimation"
-        app:layout_constraintTop_toTopOf="@id/ivBreathAnimation"
-        app:layout_constraintVertical_bias="0.38" />
+        app:layout_constraintBottom_toBottomOf="@+id/SecondCircle"
+        app:layout_constraintEnd_toEndOf="@+id/SecondCircle"
+        app:layout_constraintStart_toStartOf="@+id/SecondCircle"
+        app:layout_constraintTop_toTopOf="@+id/SecondCircle"
+        tools:text="5" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/size_128dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,9 @@ class ExerciseBreathingViewModel : ViewModel() {
     private val _breathTimeForAnim = MutableLiveData<Long>(0)
     val breathTimeForAnim: LiveData<Long> = _breathTimeForAnim
 
+    private val _timeForProgress = MutableLiveData<Int>(0)
+    val timeForProgress: LiveData<Int> = _timeForProgress
+
 
     private val _isBreathTimer = MutableLiveData(false)
     val isBreathTimer: LiveData<Boolean> = _isBreathTimer
@@ -49,6 +52,8 @@ class ExerciseBreathingViewModel : ViewModel() {
                 val seconds = millisUntilFinished / 1000
                 val minutes = (seconds % 3600) / 60
                 val secs = seconds % 60
+
+                _timeForProgress.value = seconds.toInt()
 
                 _totalTime.value = String
                     .format(Locale.getDefault(), "%02d:%02d", minutes, secs)
