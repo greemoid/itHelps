@@ -15,27 +15,9 @@ class InsightsFragment :
 
     override val viewModel: InsightsViewModel by viewModels()
     override val visibility: Int = View.VISIBLE
-    private val adapterMood: InsightsMoodAdapter = InsightsMoodAdapter(5)
-    private val adapterDiary: InsightsDiaryAdapter = InsightsDiaryAdapter(5)
 
     override fun init() {
-        setupRecyclerView()
-        viewModel.listMoods.observe(viewLifecycleOwner) {
-            adapterMood.differ.submitList(it.asReversed())
-        }
-
-        viewModel.listDiary.observe(viewLifecycleOwner) {
-            adapterDiary.differ.submitList(it.asReversed())
-        }
-        binding.btnDiary.navigate(R.id.action_insightsFragment_to_diaryListFragment)
-        binding.btnMoods.navigate(R.id.action_insightsFragment_to_moodListFragment)
+        binding.btnGoToNotes.navigate(R.id.action_insightsFragment_to_diaryListFragment)
+        binding.btnGoToMood.navigate(R.id.action_insightsFragment_to_moodListFragment)
     }
-
-    private fun setupRecyclerView() {
-        val recyclerViewMood = binding.rvMoods
-        val recyclerViewDiary = binding.rvDiary
-        recyclerViewMood.adapter = adapterMood
-        recyclerViewDiary.adapter = adapterDiary
-    }
-
 }

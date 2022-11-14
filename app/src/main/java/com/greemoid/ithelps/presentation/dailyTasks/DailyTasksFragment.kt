@@ -29,10 +29,6 @@ class DailyTasksFragment :
         viewModel.note.observe(this) {
             binding.cbDiary.isChecked = it
         }
-        binding.ivAvatar.setOnClickListener {
-            findNavController()
-                .navigate(R.id.action_dailyTasksFragment_to_accountFragment)
-        }
         binding.diaryLayout.setOnClickListener {
             findNavController()
                 .navigate(R.id.action_dailyTasksFragment_to_diaryFragment)

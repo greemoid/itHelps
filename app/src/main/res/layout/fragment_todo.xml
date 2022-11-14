@@ -7,13 +7,16 @@
     tools:context=".presentation.todo.TodoFragment">
 
 
-    <ImageView
+    <TextView
         android:id="@+id/imageView2"
-        android:layout_width="@dimen/size_36dp"
-        android:layout_height="@dimen/size_36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/size_16dp"
         android:layout_marginTop="@dimen/size_16dp"
-        android:src="@drawable/man"
+        android:text="@string/plans"
+        android:textColor="@color/for_title_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/avatar" />

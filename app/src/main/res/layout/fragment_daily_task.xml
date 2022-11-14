@@ -2,68 +2,44 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/main_background"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/main_background">
 
     <TextView
         android:id="@+id/tvCoverPlan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_16dp"
         android:text="Твій план успіху"
         android:textColor="@color/for_title_text"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        tools:text="понеділок, сер. 1"
+        android:layout_marginTop="@dimen/size_16dp"
         android:textColor="@color/for_second_text"
         android:textSize="@dimen/textSize_14"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGreeting" />
-
-    <ImageView
-        android:id="@+id/ivAvatar"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/man"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvGreeting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Добрий день \nІлля"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/ivAvatar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivAvatar" />
+        app:layout_constraintStart_toEndOf="@+id/cbMood"
+        app:layout_constraintTop_toBottomOf="@+id/tvCoverPlan"
+        tools:text="понеділок, сер. 1" />
 
     <CheckBox
         android:id="@+id/cbMood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:enabled="false"
         android:layout_marginStart="@dimen/size_8dp"
+        android:buttonTint="@color/for_second_text"
+        android:enabled="false"
         android:minWidth="@dimen/size_0dp"
         android:minHeight="@dimen/size_0dp"
-        android:buttonTint="@color/for_second_text"
         app:layout_constraintBottom_toBottomOf="@+id/cardViewFirst"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardViewFirst" />
@@ -73,13 +49,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:cardCornerRadius="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_8dp"
+        android:layout_marginEnd="@dimen/size_16dp"
         app:cardBackgroundColor="@color/background_for_views"
+        app:cardCornerRadius="@dimen/size_16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cbMood"
-        app:layout_constraintTop_toBottomOf="@+id/tvCoverPlan">
+        app:layout_constraintTop_toBottomOf="@+id/tvDate">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/moodLayout"
@@ -131,11 +107,11 @@
         android:id="@+id/cbDiary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:enabled="false"
         android:layout_marginStart="@dimen/size_8dp"
+        android:buttonTint="@color/for_second_text"
+        android:enabled="false"
         android:minWidth="@dimen/size_0dp"
         android:minHeight="@dimen/size_0dp"
-        android:buttonTint="@color/for_second_text"
         app:layout_constraintBottom_toBottomOf="@+id/cardViewSecond"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardViewSecond" />
@@ -147,8 +123,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:cardCornerRadius="@dimen/size_16dp"
         app:cardBackgroundColor="@color/background_for_views"
+        app:cardCornerRadius="@dimen/size_16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/cbDiary"
         app:layout_constraintTop_toBottomOf="@+id/cardViewFirst">
@@ -203,11 +179,11 @@
         android:id="@+id/cbMeditation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:enabled="false"
         android:layout_marginStart="@dimen/size_8dp"
+        android:buttonTint="@color/for_second_text"
+        android:enabled="false"
         android:minWidth="@dimen/size_0dp"
         android:minHeight="@dimen/size_0dp"
-        android:buttonTint="@color/for_second_text"
         app:layout_constraintBottom_toBottomOf="@+id/cardViewThird"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardViewSecond" />
@@ -220,9 +196,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/background_for_views"
         app:cardCornerRadius="16dp"
         app:cardElevation="@dimen/size_0dp"
-        app:cardBackgroundColor="@color/background_for_views"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cbMeditation"
         app:layout_constraintTop_toBottomOf="@+id/cardViewSecond">

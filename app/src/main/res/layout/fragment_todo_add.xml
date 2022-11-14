@@ -245,52 +245,6 @@
             app:layout_constraintStart_toEndOf="@+id/radioGroupDates"
             app:layout_constraintTop_toTopOf="@+id/radioGroupDates" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnCustomDate">
-
-            <DatePicker
-                android:id="@+id/datePickerNotification"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="-30dp"
-                android:layout_marginRight="-30dp"
-                android:layout_weight="1"
-                android:calendarViewShown="false"
-                android:datePickerMode="spinner"
-                android:scaleX="0.7"
-                android:scaleY="0.7" />
-
-            <TimePicker
-                android:id="@+id/timePicker"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="-30dp"
-                android:layout_marginRight="-30dp"
-                android:layout_weight="1"
-                android:scaleX="0.7"
-                android:scaleY="0.7"
-                android:timePickerMode="spinner" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="@string/schedule_notification"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linearLayout" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
