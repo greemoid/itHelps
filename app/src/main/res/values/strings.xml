@@ -181,6 +181,7 @@
     <string name="save">Save</string>
     <string name="date_layout">Date layout</string>
     <string name="plans">Планування</string>
+    <string name="what_happened">Що тебе турбувало %s?</string>
     <string-array name="priorities">
         <item>Низкий</item>
         <item>Средний</item>
